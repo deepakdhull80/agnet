@@ -22,7 +22,9 @@ class AGTrainer(Trainer):
             model_version=model_version,
             optim=optim,
             loss_fn=loss_fn,
-            metric=metric
+            metric=metric,
+            **kwargs
+
         )
     
     def get_optimier(self):

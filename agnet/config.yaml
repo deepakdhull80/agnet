@@ -18,3 +18,4 @@ model:
   fp: fp32
   model_version: v1
   epochs: 128
+  tqdm_enable: true
