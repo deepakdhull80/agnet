@@ -34,7 +34,7 @@ class Trainer:
                 raise NotImplementedError()
                 x, y = batch[0].to(self.device).half(), batch[1].to(self.device)
             else:
-                x, y = batch[0].float().to(self.device), batch[1].float().to(self.device)
+                x, y = batch[0].float().to(self.device), batch[1].unsqueeze(1).float().to(self.device)
             y_h = self.model(x)
             loss = self.loss_fn(y_h,y)
             loss.backward()
