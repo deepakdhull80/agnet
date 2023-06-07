@@ -1,0 +1,19 @@
+data:
+  file_path: D:\WORK\freelance\agnet\dataset\face_kaggle.csv
+  image_base_path: D:\WORK\freelance\agnet
+  target_fields:
+    - age
+  batch_size: 2
+  workers: 1
+  n_splits: 1
+  train_size: 0.8
+  random_state: 7
+  image_size: 256
+
+model: 
+  name: AGNet
+  description: age and gender classification neural network
+  lr: 0.002
+  fp: fp32
+  model_version: v1
+  epochs: 128
