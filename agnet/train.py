@@ -37,6 +37,8 @@ def argparser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config-file",'-c', dest="config_file", required=True)
     parser.add_argument("--model-version",'-vv', dest="model_version", default=1)
+    parser.add_argument("--file-path",'-fp',dest='file_path', default=None)
+    parser.add_argument("--image_base_path",'-ip', dest="image_base_path", default=None)
     parser.add_argument("--device",'-d',dest="device",default="cpu",choices=['cpu','cuda'])
     return parser.parse_args()
 
@@ -44,7 +46,10 @@ def run(args):
     
     config = yaml.load(open(args.config_file,'r'))
     print(config)
-    
+    if args.file_path:
+        config['data']['file_path'] = args.file_path
+    if args.image_base_path:
+        config['data']['image_base_path'] = args.image_base_path
     train_dl, val_dl = prep_dataloader(config['data']['file_path'], config['data'])
     base_model = VGG("VGG19", output_dim=1, image_size=config['data']['image_size'])
     model = AGNet(base_model, output_dim=1)
