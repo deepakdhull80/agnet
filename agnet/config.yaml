@@ -19,3 +19,4 @@ model:
   model_version: v1
   epochs: 128
   tqdm_enable: true
+  output_dim: 1

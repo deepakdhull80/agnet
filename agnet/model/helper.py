@@ -23,6 +23,7 @@ class Trainer:
         self.optim = kwargs.get('optim')
         self.metric = kwargs.get('metric')
         self.tqdm_enable = kwargs.get("tqdm_enable",True)
+        self.output_dim = kwargs.get("output_dim", 1)
     
     def train_step(self, dataloader, epoch):
         if self.tqdm_enable:
@@ -38,11 +39,11 @@ class Trainer:
                 raise NotImplementedError()
                 x, y = batch[0].to(self.device).half(), batch[1].to(self.device)
             else:
-                x, y = batch[0].float().to(self.device), batch[1].view(-1, 1).float().to(self.device)
+                x, y = batch[0].float().to(self.device), batch[1].view(-1, self.output_dim).float().to(self.device)
             y_h = self.model(x)
             loss = self.loss_fn(y_h,y)
             loss.backward()
-            torch.utils.clip_grad_norm_(self.parameters(), 2)
+            # torch.utils.clip_grad_norm_(self.parameters(), 2)
             self.optim.step()
 
             loss = loss.detach().item()
@@ -73,9 +74,9 @@ class Trainer:
         for indx, batch in tqdm_iter:
             if self.fp == 'fp16':
                 raise NotImplementedError()
-                x, y = batch[0].to(self.device).half(), batch[1].view(-1, 1).float().to(self.device)
+                x, y = batch[0].to(self.device).half(), batch[1].view(-1, self.output_dim).float().to(self.device)
             else:
-                x, y = batch[0].to(self.device), batch[1].view(-1, 1).float().to(self.device)
+                x, y = batch[0].to(self.device), batch[1].view(-1, self.output_dim).float().to(self.device)
             y_h = self.model(x)
             loss = self.loss_fn(y_h,y)
             
