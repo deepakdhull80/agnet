@@ -8,7 +8,7 @@ def get_train_test_dl(df, train_idx, test_idx, image_base_path= "./", target_fie
     train_df, test_df = df.iloc[train_idx], df.iloc[test_idx]
 
     train_dl = DataLoader(
-        AGDataset(train_df, base_path=image_base_path, target_field=target_fields),
+        AGDataset(train_df, base_path=image_base_path, target_field=target_fields, **kwargs),
         batch_size=batch_size,
         shuffle=True,
         sampler=None,
@@ -17,7 +17,7 @@ def get_train_test_dl(df, train_idx, test_idx, image_base_path= "./", target_fie
     )
 
     test_dl = DataLoader(
-        AGDataset(test_df, base_path=image_base_path, target_field=target_fields),
+        AGDataset(test_df, base_path=image_base_path, target_field=target_fields, **kwargs),
         batch_size=batch_size,
         shuffle=True,
         sampler=None,

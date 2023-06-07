@@ -11,6 +11,10 @@ class AGDataset(Dataset):
         self._max = 100
         
         self.base_path = base_path
+        self.target_field = target_field
+        self.image_size = kwargs.get("image_size", 256)
+        self.scale = kwargs.get("scale_factor", 10)
+
         self.transforms1 = torchvision.transforms.Compose([
             torchvision.transforms.PILToTensor(),
             torchvision.transforms.ConvertImageDtype(torch.float)
@@ -18,11 +22,9 @@ class AGDataset(Dataset):
         self.transforms2 = torchvision.transforms.Compose([
             torchvision.transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         ])
-        self.target_field = target_field
-        self.image_size = kwargs.get("image_size", 256)
 
     def age_scale(self,x):
-        return (x-self._min)/(self._max - self._min)
+        return self.scale * (x-self._min)/(self._max - self._min)
     
     def __getitem__(self, index: Any) -> Any:
         row = self.df.iloc[index]

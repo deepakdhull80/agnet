@@ -50,7 +50,9 @@ def run(args):
         config['data']['file_path'] = args.file_path
     if args.image_base_path:
         config['data']['image_base_path'] = args.image_base_path
+    
     train_dl, val_dl = prep_dataloader(config['data']['file_path'], config['data'])
+    
     base_model = VGG("VGG19", output_dim=1, image_size=config['data']['image_size'])
     model = AGNet(base_model, output_dim=1)
     device = torch.device(args.device)

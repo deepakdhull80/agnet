@@ -95,14 +95,15 @@ class Trainer:
     
     def fit(self, dataloader, val_dataloader=None, epochs=120):
 
-        global_loss = 1e3
+        self.global_loss = 1e3
         for epoch in range(epochs):
             print("*"*20)
             print(f"EPOCH: {epoch} started")
             self.train_step(dataloader, epoch)
             if val_dataloader is not None:
                 v_loss, v_score = self.val_step(val_dataloader, epoch)
-                if global_loss > v_loss:
+                if self.global_loss > v_loss:
+                    self.global_loss = v_loss
                     self.save_weights(epoch, v_loss, v_score)
                     print(">>>model weight saved<<<")
     
