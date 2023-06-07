@@ -1,0 +1,14 @@
+Field,Label,Value
+created,Created,2020-06-29T06:49:31.887667
+description,Description,India 100m Age structures in 2020
+format,File Format,GeoTIFF
+download_url,Download URL,https://data.worldpop.org/GIS/AgeSex_structures/Global_2000_2020/2020/IND/ind_m_80_2020.tif
+id,Resource ID,144ea510-9a65-4b48-8ed1-1ef202a41ab1
+last_modified,Updated,2020-06-29T06:49:31.352124
+metadata_modified,Metadata Updated,2021-09-19T22:34:34.706776
+microdata,Microdata,False
+dataset_id,Dataset ID,0ec699b3-0f58-4105-b1ec-71659d40adda
+resource_type,Resource Type,api
+name,Resource Name,ind_m_80_2020.tif
+mimetype,MIME Type,
+size,Size,
