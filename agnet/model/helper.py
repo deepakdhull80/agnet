@@ -42,6 +42,7 @@ class Trainer:
             y_h = self.model(x)
             loss = self.loss_fn(y_h,y)
             loss.backward()
+            torch.utils.clip_grad_norm(self.parameters(),5)
             self.optim.step()
 
             loss = loss.detach().item()
