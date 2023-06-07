@@ -7,6 +7,9 @@ from torch.utils.data import Dataset
 class AGDataset(Dataset):
     def __init__(self, df, base_path, target_field=['age','gender'], **kwargs):
         self.df = df
+        self._min = 1
+        self._max = 100
+        
         self.base_path = base_path
         self.transforms1 = torchvision.transforms.Compose([
             torchvision.transforms.PILToTensor(),
@@ -18,6 +21,9 @@ class AGDataset(Dataset):
         self.target_field = target_field
         self.image_size = kwargs.get("image_size", 256)
 
+    def age_scale(self,x):
+        return (x-self._min)/(self._max - self._min)
+    
     def __getitem__(self, index: Any) -> Any:
         row = self.df.iloc[index]
         image = Image.open(f"{self.base_path}/{row['file_path']}")
@@ -27,10 +33,11 @@ class AGDataset(Dataset):
         if image.shape[0] == 1:
             # grey scale
             image = torch.concat([image, image, image], axis=0)
-        image = self.transforms2(image)
+        image = image/255.
+        # image = self.transforms2(image)
         assert isinstance(image, torch.Tensor), f"image dtype should be torch.Tensor but found {type(image)}"
-        target = row[self.target_field].to_list()
-        return image, *target
+        target = self.age_scale(row['age'])
+        return image, target
     
     def __len__(self):
         return self.df.shape[0]
