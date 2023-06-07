@@ -38,7 +38,7 @@ class Trainer:
                 raise NotImplementedError()
                 x, y = batch[0].to(self.device).half(), batch[1].to(self.device)
             else:
-                x, y = batch[0].float().to(self.device), batch[1].unsqueeze(1).float().to(self.device)
+                x, y = batch[0].float().to(self.device), batch[1].view(-1, 1).float().to(self.device)
             y_h = self.model(x)
             loss = self.loss_fn(y_h,y)
             loss.backward()
@@ -71,9 +71,10 @@ class Trainer:
         self.model = self.model.eval()
         for indx, batch in tqdm_iter:
             if self.fp == 'fp16':
-                x, y = batch[0].to(self.device).half(), batch[1].to(self.device)
+                raise NotImplementedError()
+                x, y = batch[0].to(self.device).half(), batch[1].view(-1, 1).float().to(self.device)
             else:
-                x, y = batch[0].to(self.device), batch[1].to(self.device)
+                x, y = batch[0].to(self.device), batch[1].view(-1, 1).float().to(self.device)
             y_h = self.model(x)
             loss = self.loss_fn(y_h,y)
             
