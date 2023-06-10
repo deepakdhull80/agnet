@@ -41,6 +41,8 @@ class Trainer:
             else:
                 x, y = batch[0].float().to(self.device), batch[1].view(-1, self.output_dim).float().to(self.device)
             y_h = self.model(x)
+            if y_h.shape[-1]>1:
+                y_h = torch.softmax(y_h,dim=-1)
             loss = self.loss_fn(y_h,y)
             loss.backward()
             # torch.utils.clip_grad_norm_(self.parameters(), 2)
@@ -78,6 +80,8 @@ class Trainer:
             else:
                 x, y = batch[0].to(self.device), batch[1].view(-1, self.output_dim).float().to(self.device)
             y_h = self.model(x)
+            if y_h.shape[-1]>1:
+                y_h = torch.softmax(y_h,dim=-1)
             loss = self.loss_fn(y_h,y)
             
             loss = loss.item()

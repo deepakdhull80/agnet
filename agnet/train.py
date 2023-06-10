@@ -34,7 +34,7 @@ class AGTrainer(Trainer):
     
     def get_loss_fn(self):
         if self.output_dim>1:
-            return nn.BCEWithLogitsLoss()
+            return nn.CrossEntropyLoss()
         else:
             return nn.MSELoss()
 
