@@ -3,6 +3,7 @@ import yaml
 
 import torch
 import torch.nn as nn
+import torchvision
 import torchmetrics
 
 from data import prep_dataloader
@@ -15,7 +16,7 @@ class AGTrainer(Trainer):
         
         optim = self.get_optimier()
         loss_fn = self.get_loss_fn()
-        metric = None
+        metric = self.get_metric(kwargs['output_dim'])
         super().__init__(
             model, 
             device, fp=fp, 
@@ -28,12 +29,15 @@ class AGTrainer(Trainer):
         )
     
     def get_optimier(self):
-        optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+        optimizer = torch.optim.Adam(filter(lambda x: x.requires_grad, self.model.parameters()), lr=self.lr)
         return optimizer
     
     def get_loss_fn(self):
-        return nn.MSELoss()
+        return nn.BCEWithLogitsLoss()
 
+    def get_metric(self, output_dim, top_k=10):
+        return None
+        return torchmetrics.Accuracy(task="multiclass", num_classes=output_dim, top_k=top_k)
 
 def argparser():
     parser = argparse.ArgumentParser()
@@ -55,8 +59,15 @@ def run(args):
     
     train_dl, val_dl = prep_dataloader(config['data']['file_path'], config['data'])
     
-    base_model = VGG("VGG19", output_dim=1, image_size=config['data']['image_size'])
-    model = AGNet(base_model, output_dim=1)
+    if config['model']['base_model'] == '_vgg':
+        base_model = VGG("VGG19", output_dim=1, image_size=config['data']['image_size'])
+    elif config['model']['base_model'] == 'vgg':
+        raise NotImplementedError()
+    else:
+        print("base_model")
+        base_model = getattr(torchvision.models, config['model']['base_model'])(pretrained=True)
+
+    model = AGNet(base_model, output_dim=config['model']['output_dim'], base_model_name=config['model']['base_model'])
     device = torch.device(args.device)
 
     trainer = AGTrainer(model, device, **config['model'])

@@ -38,7 +38,9 @@ class AGDataset(Dataset):
         image = image/255.
         # image = self.transforms2(image)
         assert isinstance(image, torch.Tensor), f"image dtype should be torch.Tensor but found {type(image)}"
-        target = self.age_scale(row['age'])
+        # target = self.age_scale(row['age'])
+        
+        target = torch.nn.functional.one_hot(torch.tensor(int(row['age']) - 1), num_classes=100)
         return image, target
     
     def __len__(self):

@@ -8,15 +8,16 @@ data:
   n_splits: 1
   train_size: 0.8
   random_state: 7
-  image_size: 256
+  image_size: 768
   scale_factor: 10
 
 model: 
   name: AGNet
+  base_model: resnet34
   description: age and gender classification neural network
-  lr: 0.002
+  lr: 0.01
   fp: fp32
   model_version: v1
   epochs: 128
   tqdm_enable: true
-  output_dim: 1
+  output_dim: 100
