@@ -10,6 +10,7 @@ data:
   random_state: 7
   image_size: 768
   scale_factor: 10
+  output_dim: 1
 
 model: 
   name: AGNet
@@ -17,7 +18,7 @@ model:
   description: age and gender classification neural network
   lr: 0.01
   fp: fp32
-  model_version: v1
+  model_version: age_estimation_resnet34
   epochs: 128
   tqdm_enable: true
-  output_dim: 100
+  output_dim: 1

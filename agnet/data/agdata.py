@@ -14,7 +14,7 @@ class AGDataset(Dataset):
         self.target_field = target_field
         self.image_size = kwargs.get("image_size", 256)
         self.scale = kwargs.get("scale_factor", 10)
-
+        self.target_output_dim = kwargs.get("output_dim",100)
         self.transforms1 = torchvision.transforms.Compose([
             torchvision.transforms.PILToTensor(),
             torchvision.transforms.ConvertImageDtype(torch.float)
@@ -39,8 +39,10 @@ class AGDataset(Dataset):
         # image = self.transforms2(image)
         assert isinstance(image, torch.Tensor), f"image dtype should be torch.Tensor but found {type(image)}"
         # target = self.age_scale(row['age'])
-        
-        target = torch.nn.functional.one_hot(torch.tensor(int(row['age']) - 1), num_classes=100)
+        if self.target_output_dim != 1:
+            target = torch.nn.functional.one_hot(torch.tensor(int(row['age']) - 1), num_classes=self.target_output_dim)
+        else:
+            target = torch.tensor(int(row['age']))
         return image, target
     
     def __len__(self):

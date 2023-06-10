@@ -13,10 +13,10 @@ class AGTrainer(Trainer):
     def __init__(self, model, device, fp='fp32', model_version="v1", **kwargs):
         self.model = model.to(device)
         self.lr = kwargs['lr']
-        
+        self.output_dim = kwargs['output_dim']
         optim = self.get_optimier()
         loss_fn = self.get_loss_fn()
-        metric = self.get_metric(kwargs['output_dim'])
+        metric = self.get_metric(self.output_dim)
         super().__init__(
             model, 
             device, fp=fp, 
@@ -33,7 +33,10 @@ class AGTrainer(Trainer):
         return optimizer
     
     def get_loss_fn(self):
-        return nn.BCEWithLogitsLoss()
+        if self.output_dim>1:
+            return nn.BCEWithLogitsLoss()
+        else:
+            return nn.MSELoss()
 
     def get_metric(self, output_dim, top_k=10):
         return None
