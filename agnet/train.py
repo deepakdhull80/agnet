@@ -1,5 +1,7 @@
 import argparse
 import yaml
+import warnings
+warnings.filterwarnings('ignore')
 
 import torch
 import torch.nn as nn
