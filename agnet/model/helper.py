@@ -3,6 +3,8 @@ import torch
 from tqdm import tqdm
 from typing import *
 
+from torch.cuda.amp import autocast, GradScaler
+
 class Trainer:
     """
     ## Trainer
@@ -34,21 +36,29 @@ class Trainer:
             tqdm_iter = enumerate(dataloader)
         total_loss = 0
         total_score = 0
+        scaler = GradScaler()
         self.model = self.model.train(True)
         for indx, batch in tqdm_iter:
             self.optim.zero_grad()
             if self.fp == 'fp16':
-                raise NotImplementedError()
-                x, y = batch[0].to(self.device).half(), batch[1].to(self.device)
+                # raise NotImplementedError()
+                with autocast():
+                    x, y = batch[0].to(self.device), batch[1].to(self.device)
+                    y_h = self.model(x)
             else:
                 x, y = batch[0].float().to(self.device), batch[1].view(-1, self.output_dim).float().to(self.device)
-            y_h = self.model(x)
+                y_h = self.model(x)
             if y_h.shape[-1]>1:
                 y_h = torch.softmax(y_h,dim=-1)
+            
             loss = self.loss_fn(y_h,y)
-            loss.backward()
-            # torch.utils.clip_grad_norm_(self.parameters(), 2)
-            self.optim.step()
+            if self.fp == 'fp32':
+                loss.backward()
+                self.optim.step()
+            else:
+                scaler.scale(loss).backward()
+                scaler.step(self.optim)
+                scaler.update()
 
             loss = loss.detach().item()
             total_loss += loss
@@ -76,11 +86,8 @@ class Trainer:
         total_score = 0
         self.model = self.model.eval()
         for indx, batch in tqdm_iter:
-            if self.fp == 'fp16':
-                raise NotImplementedError()
-                x, y = batch[0].to(self.device).half(), batch[1].view(-1, self.output_dim).float().to(self.device)
-            else:
-                x, y = batch[0].to(self.device), batch[1].view(-1, self.output_dim).float().to(self.device)
+            
+            x, y = batch[0].to(self.device), batch[1].view(-1, self.output_dim).float().to(self.device)
             y_h = self.model(x)
             if y_h.shape[-1]>1:
                 y_h = torch.softmax(y_h,dim=-1)

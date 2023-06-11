@@ -17,11 +17,11 @@ model:
   # resnet50, resnet34, efficientnet_b5
   # for efficientnet_b5 image_size should be 456
   _base_model: efficientnet_b5
-  transfer_learning: true
+  transfer_learning: false
   mlp_layer_name: classifier # fc or classifier
   description: age and gender classification neural network
   lr: 0.001
-  fp: fp32
+  fp: fp16
   model_version: age_estimation_resnet34
   epochs: 128
   tqdm_enable: true
