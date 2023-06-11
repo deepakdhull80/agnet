@@ -17,6 +17,7 @@ class AGTrainer(Trainer):
         optim = self.get_optimier()
         loss_fn = self.get_loss_fn()
         metric = self.get_metric(self.output_dim)
+        scheduler = nn.optim.StepLR(optim, step_size=kwargs.get('scheduler_step_size',9), gamma=kwargs.get('scheduler_gamma',0.6))
         super().__init__(
             model, 
             device, fp=fp, 
@@ -24,6 +25,7 @@ class AGTrainer(Trainer):
             optim=optim,
             loss_fn=loss_fn,
             metric=metric,
+            scheduler=scheduler
             **kwargs
 
         )

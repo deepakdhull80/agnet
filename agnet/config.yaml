@@ -14,7 +14,7 @@ data:
 
 model: 
   name: AGNet
-  base_model: resnet34
+  base_model: resnet50
   description: age and gender classification neural network
   lr: 0.01
   fp: fp32

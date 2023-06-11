@@ -1,6 +1,7 @@
 import os
 import torch
 from tqdm import tqdm
+from typing import *
 
 class Trainer:
     """
@@ -24,6 +25,7 @@ class Trainer:
         self.metric = kwargs.get('metric')
         self.tqdm_enable = kwargs.get("tqdm_enable",True)
         self.output_dim = kwargs.get("output_dim", 1)
+        self.scheduler: Optional[torch.optim.lr_scheduler.StepLR] = kwargs.get('scheduler',None)
     
     def train_step(self, dataloader, epoch):
         if self.tqdm_enable:
@@ -112,6 +114,7 @@ class Trainer:
                     self.global_loss = v_loss
                     self.save_weights(epoch, v_loss, v_score)
                     print(">>>model weight saved<<<")
+                self.scheduler.step()
     
     def save_weights(self, epoch, loss, score):
         os.makedirs("cp", exist_ok=True)
