@@ -31,7 +31,21 @@ class AGNet(nn.Module):
                         param.requires_grad = False
             self.base_model = base_model
             self.base_model.fc = nn.Sequential(*[
-                nn.Linear(512, output_dim)
+                nn.Linear(512, 256),
+                nn.ReLU(),
+                nn.Linear(256, 128),
+                nn.ReLU(),
+                nn.Linear(128, 64),
+                nn.ReLU(),
+                nn.Linear(64, output_dim),
+                nn.ReLU()
+            ]) if output_dim == 1 else nn.Sequential(*[
+                nn.Linear(512, 256),
+                nn.ReLU(),
+                nn.Linear(256, 128),
+                nn.ReLU(),
+                nn.Linear(128, output_dim),
+                nn.ReLU()
             ])
 
     
