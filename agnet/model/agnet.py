@@ -67,10 +67,11 @@ resnet_output_mapping = {
 }
 
 class AGNet(nn.Module):
-    def __init__(self, base_model, output_dim, base_model_name='_vgg'):
+    def __init__(self, base_model, **kwargs):
         super().__init__()
-        self.base_model_name = base_model_name
-        if base_model_name == '_vgg':
+        self._base_model = kwargs.get("_base_model",'resnet34')
+        
+        if self._base_model == '_vgg':
             self.base_model = base_model.features
             feat_dim = base_model.feat_dim
             self.fc = nn.Sequential(*[
@@ -80,28 +81,30 @@ class AGNet(nn.Module):
                 nn.Linear(4096, 1204),
                 nn.ReLU(True),
                 nn.Dropout(),
-                nn.Linear(1204, output_dim),
+                nn.Linear(1204, kwargs.get("output_dim",100)),
                 nn.ReLU()
             ])
         else:
             
             # freeze_layers = False
-            # if freeze_layers:
-            #     for name, param in base_model.named_parameters():
-            #         if 'fc' not in name:
-            #             print(name)
-            #             param.requires_grad = False
+            print(kwargs['mlp_layer_name'], kwargs['_base_model'])
+            if kwargs['transfer_learning']:
+                for name, param in base_model.named_parameters():
+                    if kwargs['mlp_layer_name'] not in name:
+                        print(name)
+                        param.requires_grad = False
             self.base_model = base_model
-            if "resnet" in base_model_name:
-                self.base_model.fc = nn.Sequential(*resnet_output_mapping[base_model_name]['rfc'])
-            elif "efficient" in base_model_name:
-                self.base_model.classifier = nn.Sequential(*resnet_output_mapping[base_model_name]['rfc'])
+            if "resnet" in self._base_model:
+                self.base_model.fc = nn.Sequential(*resnet_output_mapping[self._base_model]['rfc'])
+            elif "efficient" in self._base_model:
+                print("***EfficientNet MLP***")
+                self.base_model.classifier = nn.Sequential(*resnet_output_mapping[self._base_model]['rfc'])
             else:
                 raise ValueError()
 
     
     def forward(self, x):
-        if self.base_model_name == '_vgg':
+        if self._base_model == '_vgg':
             b = x.shape[0]
             x = self.base_model(x)
             x = x.view(b,-1)

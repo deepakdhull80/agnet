@@ -66,15 +66,15 @@ def run(args):
     
     train_dl, val_dl = prep_dataloader(config['data']['file_path'], config['data'])
     
-    if config['model']['base_model'] == '_vgg':
+    if config['model']['_base_model'] == '_vgg':
         base_model = VGG("VGG19", output_dim=1, image_size=config['data']['image_size'])
-    elif config['model']['base_model'] == 'vgg':
+    elif config['model']['_base_model'] == 'vgg':
         raise NotImplementedError()
     else:
         print("base_model")
-        base_model = getattr(torchvision.models, config['model']['base_model'])(pretrained=True)
+        base_model = getattr(torchvision.models, config['model']['_base_model'])(pretrained=True)
 
-    model = AGNet(base_model, output_dim=config['model']['output_dim'], base_model_name=config['model']['base_model'])
+    model = AGNet(base_model,  **config['model'])
     print(model(torch.randn(1,3,config['data']['image_size'],config['data']['image_size'])).shape)
     device = torch.device(args.device)
 

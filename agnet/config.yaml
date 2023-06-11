@@ -8,14 +8,17 @@ data:
   n_splits: 1
   train_size: 0.8
   random_state: 7
-  image_size: 768
+  image_size: 456
   scale_factor: 10
   output_dim: 1
 
 model: 
   name: AGNet
   # resnet50, resnet34, efficientnet_b5
-  base_model: resnet50
+  # for efficientnet_b5 image_size should be 456
+  _base_model: efficientnet_b5
+  transfer_learning: true
+  mlp_layer_name: classifier # fc or classifier
   description: age and gender classification neural network
   lr: 0.001
   fp: fp32
