@@ -16,7 +16,7 @@ class AGDataset(Dataset):
         self.df = df
         self._min = 1
         self._max = 100
-        
+        self.fp = kwargs.get("fp", 'fp32')
         self.base_path = base_path
         self.target_field = target_field
         self.image_size = kwargs.get("image_size", 256)
@@ -52,7 +52,7 @@ class AGDataset(Dataset):
             target = torch.nn.functional.one_hot(torch.tensor(int(row['age']) - 1), num_classes=self.target_output_dim)
         else:
             target = torch.tensor(int(row['age']))
-        return image, target
+        return image, target.float() if self.fp == 'fp32' else target.half()
     
     def __len__(self):
         return self.df.shape[0]

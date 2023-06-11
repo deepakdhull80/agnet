@@ -11,6 +11,7 @@ data:
   image_size: 456
   scale_factor: 10
   output_dim: 1
+  fp: fp16
 
 model: 
   name: AGNet
