@@ -27,3 +27,4 @@ model:
   epochs: 128
   tqdm_enable: true
   output_dim: 1
+  model_save_path: ./
