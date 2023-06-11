@@ -22,11 +22,13 @@ class AGNet(nn.Module):
         elif base_model_name == 'resnet34':
             
             ### freeze cnn layers
-            for name, param in base_model.named_parameters():
-            #     print(name)
-                if 'fc' not in name:
-                    print(name)
-                    param.requires_grad = False
+            freeze_layers = False
+            if freeze_layers:
+                for name, param in base_model.named_parameters():
+                #     print(name)
+                    if 'fc' not in name:
+                        print(name)
+                        param.requires_grad = False
             self.base_model = base_model
             self.base_model.fc = nn.Sequential(*[
                 nn.Linear(512, output_dim)

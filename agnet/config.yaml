@@ -4,13 +4,13 @@ data:
   target_fields:
     - age
   batch_size: 2
-  workers: 1
+  workers: 2
   n_splits: 1
   train_size: 0.8
   random_state: 7
   image_size: 768
   scale_factor: 10
-  output_dim: 100
+  output_dim: 1
 
 model: 
   name: AGNet
@@ -21,4 +21,4 @@ model:
   model_version: age_estimation_resnet34
   epochs: 128
   tqdm_enable: true
-  output_dim: 100
+  output_dim: 1
