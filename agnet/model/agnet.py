@@ -4,6 +4,7 @@ import torch.nn as nn
 
 resnet_output_mapping = {
     'resnet34':{
+        'fc':'fc',
         'dim': 512,
         'rfc':[
             nn.Linear(512, 256),
@@ -24,6 +25,7 @@ resnet_output_mapping = {
         ]
     },
     'resnet50':{
+        'fc':'fc',
         'dim': 2048,
         'rfc': [
             nn.Linear(2048, 1024),
@@ -47,16 +49,18 @@ resnet_output_mapping = {
             nn.Linear(128,100)
         ]
     },
-    'vit_l_32':{
-        'dim': 1024,
+    'efficientnet_b5':{
+        'fc':'classifier',
         'rfc':[
+            nn.Linear(2048, 1024),
+            nn.ReLU(),
             nn.Linear(1024, 512),
             nn.ReLU(),
             nn.Linear(512, 128),
             nn.ReLU(),
-            nn.Linear(128, 32),
+            nn.Linear(128,32),
             nn.ReLU(),
-            nn.Linear(32, 1),
+            nn.Linear(32,1),
             nn.ReLU()
         ]
     }
@@ -88,8 +92,13 @@ class AGNet(nn.Module):
             #             print(name)
             #             param.requires_grad = False
             self.base_model = base_model
-            self.base_model.fc = nn.Sequential(*resnet_output_mapping[base_model_name]['rfc'])
-            
+            if "resnet" in base_model_name:
+                self.base_model.fc = nn.Sequential(*resnet_output_mapping[base_model_name]['rfc'])
+            elif "efficient" in base_model_name:
+                self.base_model.classifier = nn.Sequential(*resnet_output_mapping[base_model_name]['rfc'])
+            else:
+                raise ValueError()
+
     
     def forward(self, x):
         if self.base_model_name == '_vgg':
