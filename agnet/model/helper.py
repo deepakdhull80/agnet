@@ -27,6 +27,7 @@ class Trainer:
         self.metric = kwargs.get('metric')
         self.tqdm_enable = kwargs.get("tqdm_enable",True)
         self.output_dim = kwargs.get("output_dim", 1)
+        self.model_save_path = kwargs.get('model_save_path','./')
         self.scheduler: Optional[torch.optim.lr_scheduler.StepLR] = kwargs.get('scheduler',None)
     
     def train_step(self, dataloader, epoch):
@@ -124,7 +125,8 @@ class Trainer:
                 self.scheduler.step()
     
     def save_weights(self, epoch, loss, score):
-        os.makedirs("cp", exist_ok=True)
+        sv_path = os.path.join(self.model_save_path, "cp")
+        os.makedirs(sv_path, exist_ok=True)
         torch.save(
             {
                 "state_dict": self.model.state_dict(),
@@ -132,7 +134,7 @@ class Trainer:
                 "loss":loss,
                 "score":score
             },
-            f"cp/model_{self.model_version}_{epoch}.pt"
+            f"{sv_path}/model_{self.model_version}_{epoch}.pt"
         )
 
     def load_model_weights(self, model_path):
