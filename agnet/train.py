@@ -14,6 +14,7 @@ class AGTrainer(Trainer):
         self.model = model.to(device)
         self.lr = kwargs['lr']
         self.output_dim = kwargs['output_dim']
+        print(self.model.parameters())
         optim = self.get_optimier()
         loss_fn = self.get_loss_fn()
         metric = self.get_metric(self.output_dim)
@@ -31,7 +32,8 @@ class AGTrainer(Trainer):
         )
     
     def get_optimier(self):
-        optimizer = torch.optim.Adam(filter(lambda x: x.requires_grad, self.model.parameters()), lr=self.lr)
+        # optimizer = torch.optim.Adam(filter(lambda x: x.requires_grad, self.model.parameters()), lr=self.lr)
+        optimizer = torch.optim.Adagrad(self.model.parameters(), lr=self.lr)
         return optimizer
     
     def get_loss_fn(self):
