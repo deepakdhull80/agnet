@@ -16,7 +16,7 @@ model:
   name: AGNet
   base_model: resnet50
   description: age and gender classification neural network
-  lr: 0.01
+  lr: 0.001
   fp: fp32
   model_version: age_estimation_resnet34
   epochs: 128

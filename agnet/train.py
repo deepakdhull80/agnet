@@ -14,11 +14,10 @@ class AGTrainer(Trainer):
         self.model = model.to(device)
         self.lr = kwargs['lr']
         self.output_dim = kwargs['output_dim']
-        print(self.model.parameters())
         optim = self.get_optimier()
         loss_fn = self.get_loss_fn()
         metric = self.get_metric(self.output_dim)
-        scheduler = nn.optim.StepLR(optim, step_size=kwargs.get('scheduler_step_size',9), gamma=kwargs.get('scheduler_gamma',0.6))
+        scheduler = torch.optim.lr_scheduler.StepLR(optim, step_size=kwargs.get('scheduler_step_size',9), gamma=kwargs.get('scheduler_gamma',0.6))
         super().__init__(
             model, 
             device, fp=fp, 
@@ -26,14 +25,15 @@ class AGTrainer(Trainer):
             optim=optim,
             loss_fn=loss_fn,
             metric=metric,
-            scheduler=scheduler
+            scheduler=scheduler,
             **kwargs
 
         )
     
     def get_optimier(self):
-        # optimizer = torch.optim.Adam(filter(lambda x: x.requires_grad, self.model.parameters()), lr=self.lr)
-        optimizer = torch.optim.Adagrad(self.model.parameters(), lr=self.lr)
+        optimizer = torch.optim.Adam(filter(lambda x: x.requires_grad, self.model.parameters()), lr=self.lr)
+        # print('')
+        # optimizer = torch.optim.Adagrad(self.model.parameters(), lr=self.lr)
         return optimizer
     
     def get_loss_fn(self):
@@ -75,6 +75,7 @@ def run(args):
         base_model = getattr(torchvision.models, config['model']['base_model'])(pretrained=True)
 
     model = AGNet(base_model, output_dim=config['model']['output_dim'], base_model_name=config['model']['base_model'])
+    print(model(torch.randn(1,3,config['data']['image_size'],config['data']['image_size'])).shape)
     device = torch.device(args.device)
 
     trainer = AGTrainer(model, device, **config['model'])
