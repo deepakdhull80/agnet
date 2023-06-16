@@ -32,6 +32,7 @@ class Trainer:
         self.scheduler: Optional[torch.optim.lr_scheduler.StepLR] = kwargs.get('scheduler',None)
 
         _last_checkpoint_path = os.path.join(self.model_save_path, 'cp')
+        self._epoch = 0
         print(_last_checkpoint_path)
         if os.path.exists(_last_checkpoint_path):
             _paths = sorted(os.listdir(_last_checkpoint_path), reverse=True)
@@ -41,7 +42,7 @@ class Trainer:
                 _save_dict = torch.load(model_path)
                 print(f"path: {model_path}, epochs= {_save_dict['epoch']}, loss={_save_dict['loss']}")
                 print(self.model.load_state_dict(_save_dict['state_dict']))
-                
+                self._epoch = _save_dict['epoch']
     
     def train_step(self, dataloader, epoch):
         if self.tqdm_enable:
@@ -125,7 +126,7 @@ class Trainer:
     def fit(self, dataloader, val_dataloader=None, epochs=120):
 
         self.global_loss = 1e3
-        for epoch in range(epochs):
+        for epoch in range(self._epoch, epochs):
             print("*"*20)
             print(f"EPOCH: {epoch} started")
             self.train_step(dataloader, epoch)
