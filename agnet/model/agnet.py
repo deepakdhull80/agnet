@@ -7,14 +7,14 @@ resnet_output_mapping = {
         'fc':'fc',
         'dim': 512,
         'rfc':[
-            nn.Linear(512, 256),
-            nn.ReLU(),
-            nn.Linear(256, 128),
-            nn.ReLU(),
-            nn.Linear(128, 32),
-            nn.ReLU(),
-            nn.Linear(32, 1),
+            nn.Linear(512, 1),
             nn.ReLU()
+            # nn.Linear(256, 128),
+            # nn.ReLU(),
+            # nn.Linear(128, 32),
+            # nn.ReLU(),
+            # nn.Linear(32, 1),
+            # nn.ReLU()
         ],
         'cfc':[
             nn.Linear(512, 256),

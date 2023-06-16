@@ -17,7 +17,7 @@ model:
   name: AGNet
   # resnet50, resnet34, efficientnet_b5
   # for efficientnet_b5 image_size should be 456
-  _base_model: efficientnet_b5
+  _base_model: resnet34
   transfer_learning: false
   mlp_layer_name: classifier # fc or classifier
   description: age and gender classification neural network
