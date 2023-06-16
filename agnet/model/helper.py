@@ -15,7 +15,7 @@ class Trainer:
         get_metric [Optional]
         predict [optional] 
     """
-    def __init__(self, model, device, fp='fp16', model_version="v1", **kwargs):
+    def __init__(self, model: torch.nn.Module, device: torch.device, fp='fp16', model_version="v1", **kwargs):
         self.model_version = model_version
         self.model = model.to(device)
         self.device = device
@@ -28,7 +28,20 @@ class Trainer:
         self.tqdm_enable = kwargs.get("tqdm_enable",True)
         self.output_dim = kwargs.get("output_dim", 1)
         self.model_save_path = kwargs.get('model_save_path','./')
+        self.load_last_checkpoint = kwargs.get('load_last_checkpoint', True)
         self.scheduler: Optional[torch.optim.lr_scheduler.StepLR] = kwargs.get('scheduler',None)
+
+        _last_checkpoint_path = os.path.join(self.model_save_path, 'cp')
+        print(_last_checkpoint_path)
+        if os.path.exists(_last_checkpoint_path):
+            _paths = sorted(os.listdir(_last_checkpoint_path), reverse=True)
+            if self.load_last_checkpoint and len(_paths) > 0 and os.path.exists(os.path.join(_last_checkpoint_path,_paths[0])):
+                # load last checkpoint of the model for continuing the training
+                model_path = os.path.join(_last_checkpoint_path,_paths[0])
+                _save_dict = torch.load(model_path)
+                print(f"path: {model_path}, epochs= {_save_dict['epoch']}, loss={_save_dict['loss']}")
+                print(self.model.load_state_dict(_save_dict['state_dict']))
+                
     
     def train_step(self, dataloader, epoch):
         if self.tqdm_enable:

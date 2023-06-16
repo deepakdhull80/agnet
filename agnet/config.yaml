@@ -23,7 +23,7 @@ model:
   description: age and gender classification neural network
   lr: 0.001
   fp: fp16
-  model_version: age_estimation_resnet34
+  model_version: age_estimation_efficient_b5
   epochs: 128
   tqdm_enable: true
   output_dim: 1
