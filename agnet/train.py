@@ -77,11 +77,11 @@ def run(args):
         base_model = getattr(torchvision.models, config['model']['_base_model'])(pretrained=True)
 
     model = AGNet(base_model,  **config['model'])
+    print(model)
     print(model(torch.randn(1,3,config['data']['image_size'],config['data']['image_size'])).shape)
     device = torch.device(args.device)
 
     trainer = AGTrainer(model, device, **config['model'])
-
     trainer.fit(train_dl, val_dl, epochs=config['model']['epochs'])
     
 if __name__ == "__main__":
