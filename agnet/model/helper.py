@@ -39,10 +39,13 @@ class Trainer:
             if self.load_last_checkpoint and len(_paths) > 0 and os.path.exists(os.path.join(_last_checkpoint_path,_paths[0])):
                 # load last checkpoint of the model for continuing the training
                 model_path = os.path.join(_last_checkpoint_path,_paths[0])
-                _save_dict = torch.load(model_path)
-                print(f"path: {model_path}, epochs= {_save_dict['epoch']}, loss={_save_dict['loss']}")
-                print(self.model.load_state_dict(_save_dict['state_dict']))
-                self._epoch = _save_dict['epoch']
+                if kwargs.get("_base_model") in model_path:
+                    _save_dict = torch.load(model_path)
+                    print(f"path: {model_path}, epochs= {_save_dict['epoch']}, loss={_save_dict['loss']}")
+                    print(self.model.load_state_dict(_save_dict['state_dict']))
+                    self._epoch = _save_dict['epoch']
+                else:
+                    print(f"path: {model_path}, not for this model {kwargs.get('_base_model')}")
     
     def train_step(self, dataloader, epoch):
         if self.tqdm_enable:
