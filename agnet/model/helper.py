@@ -92,8 +92,8 @@ class Trainer:
                 desc += f", m={score.item():.3f}, a_m={total_score/(1+indx):.3f}"
             if self.tqdm_enable:
                 tqdm_iter.set_description(desc)
-            # elif indx % 200 == 0:
-            #     print(desc)
+            elif indx % 20 == 0:
+                print(desc)
         print(desc)
         return total_loss/len(dataloader), total_score/len(dataloader)
     
