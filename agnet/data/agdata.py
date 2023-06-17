@@ -25,7 +25,8 @@ class AGDataset(Dataset):
         self.transforms1 = torchvision.transforms.Compose([
             torchvision.transforms.PILToTensor(),
             torchvision.transforms.ConvertImageDtype(torch.float),
-            torchvision.transforms.Resize(self.image_size, interpolation=torchvision.transforms.InterpolationMode.BICUBIC)
+            # torchvision.transforms.Resize(self.image_size, interpolation=torchvision.transforms.InterpolationMode.BICUBIC)
+            # torchvision.transforms.Resize(self.image_size)
         ])
         self.transforms2 = torchvision.transforms.Compose([
             Rescale(),
@@ -38,7 +39,7 @@ class AGDataset(Dataset):
     def __getitem__(self, index: Any) -> Any:
         row = self.df.iloc[index]
         image = Image.open(f"{self.base_path}/{row['file_path']}")
-        # image = image.resize((self.image_size,self.image_size))
+        image = image.resize((self.image_size,self.image_size))
         
         image = self.transforms1(image)
         if image.shape[0] == 1:

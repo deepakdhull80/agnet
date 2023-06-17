@@ -1,5 +1,5 @@
 data:
-  file_path: D:\WORK\freelance\agnet\dataset\face_kaggle.csv
+  file_path: D:\WORK\freelance\agnet\dataset\gender.csv
   image_base_path: D:\WORK\freelance\agnet
   target_fields:
     - gender
