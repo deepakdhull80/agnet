@@ -42,11 +42,11 @@ class AGTrainer(Trainer):
         if self.output_dim>1:
             return nn.CrossEntropyLoss()
         else:
-            return nn.MSELoss()
+            return nn.BCEWithLogitsLoss()
 
     def get_metric(self, output_dim, top_k=10):
-        return None
-        return torchmetrics.Accuracy(task="multiclass", num_classes=output_dim, top_k=top_k)
+        # return None
+        return torchmetrics.Accuracy(task="binary")
 
 def argparser():
     parser = argparse.ArgumentParser()

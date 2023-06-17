@@ -2,7 +2,7 @@ data:
   file_path: D:\WORK\freelance\agnet\dataset\face_kaggle.csv
   image_base_path: D:\WORK\freelance\agnet
   target_fields:
-    - age
+    - gender
   batch_size: 2
   workers: 2
   n_splits: 1
@@ -11,7 +11,7 @@ data:
   image_size: 456
   scale_factor: 10
   output_dim: 1
-  fp: fp16
+  fp: fp32
 
 model: 
   name: AGNet
@@ -22,8 +22,8 @@ model:
   mlp_layer_name: classifier # fc or classifier
   description: age and gender classification neural network
   lr: 0.001
-  fp: fp16
-  model_version: age_estimation_efficient_b5
+  fp: fp32
+  model_version: gender_estimation_resnet34
   epochs: 128
   tqdm_enable: true
   output_dim: 1

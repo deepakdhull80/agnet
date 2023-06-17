@@ -48,10 +48,15 @@ class AGDataset(Dataset):
         # image = self.transforms2(image)
         assert isinstance(image, torch.Tensor), f"image dtype should be torch.Tensor but found {type(image)}"
         # target = self.age_scale(row['age'])
-        if self.target_output_dim != 1:
-            target = torch.nn.functional.one_hot(torch.tensor(int(row['age']) - 1), num_classes=self.target_output_dim)
+        if 'age' in self.target_field:
+            if self.target_output_dim != 1:
+                target = torch.nn.functional.one_hot(torch.tensor(int(row['age']) - 1), num_classes=self.target_output_dim)
+            else:
+                target = torch.tensor(int(row['age']))
+        elif 'gender' in self.target_field:
+            target = torch.tensor(int(row['gender']))
         else:
-            target = torch.tensor(int(row['age']))
+            ValueError(f"{self.target_field} not in ['gender', 'age']")
         return image, target.float() if self.fp == 'fp32' else target.half()
     
     def __len__(self):
