@@ -43,12 +43,15 @@ resnet_output_mapping = {
             nn.ReLU(),
             nn.Linear(1024, 512),
             nn.ReLU(),
-            nn.Linear(512, 128),
-            nn.ReLU(),
-            nn.Linear(128,32),
-            nn.ReLU(),
-            nn.Linear(32,1),
+            nn.Linear(512, 1),
             nn.ReLU()
+        ],
+        'cfc':[
+            nn.Linear(2048, 1024),
+            nn.ReLU(),
+            nn.Linear(1024, 512),
+            nn.ReLU(),
+            nn.Linear(512, 1)
         ]
     }
 }
