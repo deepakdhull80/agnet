@@ -7,14 +7,7 @@ resnet_output_mapping = {
         'fc':'fc',
         'dim': 512,
         'rfc':[
-            nn.Linear(512, 1),
-            nn.ReLU()
-            # nn.Linear(256, 128),
-            # nn.ReLU(),
-            # nn.Linear(128, 32),
-            # nn.ReLU(),
-            # nn.Linear(32, 1),
-            # nn.ReLU()
+            nn.Linear(512, 1)
         ],
         'cfc':[
             nn.Linear(512, 1)
@@ -89,10 +82,10 @@ class AGNet(nn.Module):
                         param.requires_grad = False
             self.base_model = base_model
             if "resnet" in self._base_model:
-                self.base_model.fc = nn.Sequential(*resnet_output_mapping[self._base_model]['rfc'])
+                self.base_model.fc = nn.Sequential(*resnet_output_mapping[self._base_model]['cfc'])
             elif "efficient" in self._base_model:
                 print("***EfficientNet MLP***")
-                self.base_model.classifier = nn.Sequential(*resnet_output_mapping[self._base_model]['rfc'])
+                self.base_model.classifier = nn.Sequential(*resnet_output_mapping[self._base_model]['cfc'])
             else:
                 raise ValueError()
 
