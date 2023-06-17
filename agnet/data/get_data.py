@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader, default_collate
 from data import AGDataset
 
 def my_collate(d):
-    a = [i for i in d if i.shape[0] == 3]
+    a = [i for i in d if i[0].shape[0] == 3]
     return default_collate(a)
 
 def get_train_test_dl(df, train_idx, test_idx, image_base_path= "./", target_fields = ['age', 'gender'], batch_size=32, workers=1, *args, **kwargs):
