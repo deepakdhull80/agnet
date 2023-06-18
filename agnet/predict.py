@@ -92,7 +92,7 @@ class Predictor:
         return torch.sigmoid(x)
     
     @torch.no_grad()
-    def predict(self, image: Image.Image):
+    def predict(self, image: Image.Image, margin = 10):
         boxes, logits = self.detect_face(image)
         
         boxes = boxes[logits>self.face_present_threshold]
@@ -103,6 +103,7 @@ class Predictor:
         }
         predict = []
         for face, prob in zip(boxes, logits):
+            face = face+[-margin,-margin,margin,margin]
             face_image = image.crop(face)
 
             input_image = self.preprocess(face_image)
@@ -132,7 +133,7 @@ class Predictor:
         result['predict'] = predict
         return result
 
-    def predict_byfile(self, image_path: str):
+    def predict_byfile(self, image_path: str, margin=10):
         """_summary_
 
         Args:
@@ -164,7 +165,7 @@ class Predictor:
         image = Image.open(image_path)
         # image = image.resize((self.image_size, self.image_size))
 
-        res = self.predict(image)
+        res = self.predict(image, margin)
         res['file_path'] = image_path
         return res
     
@@ -281,7 +282,7 @@ if __name__ == '__main__':
     args = argparser()
     predictor = get_predictor(args)
 
-    image_path = "test/images/owen-cannon-6TLCSMj8zgE-unsplash.jpg"
+    image_path = "D:/WORK/freelance/agnet/dataset/utkface/part3/25_1_3_20170119172052720.jpg"
     # image_path = "dataset/utkface/part3/21_0_3_20170119154213179.jpg"
     test_save_path = "D:\WORK/freelance/agnet/test\images\predict/test-image1.jpg"
     
@@ -289,20 +290,22 @@ if __name__ == '__main__':
     # res = predictor.predict_byfile(image_path)
     # print(res)
 
-    ## test by numpy array
-    # image = cv.imread(image_path)
-    # image = cv.cvtColor(image, cv.COLOR_RGB2BGR)
-    # res = predictor.predict_byarray(image)
-    # print(res)
+    # test by numpy array
+    image = cv.imread(image_path)
+    image = cv.cvtColor(image, cv.COLOR_RGB2BGR)
+    res = predictor.predict_byarray(image)
+    print(res)
 
-    # # test predict and save image
-    # predictor.predict_and_write(
-    #     image_path,
-    #     test_save_path,
-    #     query = {
-    #         'gender': ['female']
-    #     }
-    # )
+    # test predict and save image
+    predictor.predict_and_write(
+        image_path,
+        test_save_path,
+        query = {
+            'gender': ['female','male']
+        }
+    )
+
+    exit()
 
     from glob import glob
     import pandas as pd
