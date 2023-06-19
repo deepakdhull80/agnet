@@ -84,10 +84,10 @@ class Trainer:
             
             if self.metric is not None:
                 with torch.no_grad():
-                    name, score = self.metric(y_h.detach(), y)
+                    score = self.metric(torch.softmax(y_h.detach(),dim=1), torch.argmax(y,dim=1))
                 assert isinstance(score, torch.Tensor), f"metric score should be tensor but found {type(score)}"
                 total_score += score.item()
-                desc += f", {name}={score.item():.3f}, avg_{name}:{total_score/(1+indx):.3f}"
+                desc += f", m={score.item():.3f}, a_m:{total_score/(1+indx):.3f}"
             if self.tqdm_enable:
                 tqdm_iter.set_description(desc)
             elif indx % 200 == 0:
@@ -117,10 +117,10 @@ class Trainer:
             desc = f"(Eval) epoch={epoch} batch={indx} loss={loss:.3f}, avg_loss={total_loss/(1+indx): .3f}"
             
             if self.metric is not None:
-                name, score = self.metric(y_h, y)
+                score = self.metric(torch.softmax(y_h.detach(),dim=1), torch.argmax(y,dim=1))
                 assert isinstance(score, torch.Tensor), f"metric score should be tensor but found {type(score)}"
                 total_score += score.item()
-                desc += f", {name}={score.item():.3f}, avg_{name}:{total_score/(1+indx):.3f}"
+                desc += f", m={score.item():.3f}, a_m:{total_score/(1+indx):.3f}"
             if self.tqdm_enable:
                 tqdm_iter.set_description(desc)
         print(desc)
