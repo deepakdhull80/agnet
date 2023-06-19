@@ -13,6 +13,7 @@ from model import Trainer, AGNet, VGG
 
 class AGTrainer(Trainer):
     def __init__(self, model, device, fp='fp32', model_version="v1", **kwargs):
+        self.device = device
         self.model = model.to(device)
         self.lr = kwargs['lr']
         self.output_dim = kwargs['output_dim']
@@ -45,8 +46,8 @@ class AGTrainer(Trainer):
             return nn.MSELoss()
 
     def get_metric(self, output_dim, top_k=10):
-        return None
-        return torchmetrics.Accuracy(task="multiclass", num_classes=output_dim, top_k=top_k)
+        # return None
+        return torchmetrics.Accuracy(task="multiclass", num_classes=output_dim, top_k=top_k).to(self.device)
 
 def argparser():
     parser = argparse.ArgumentParser()
