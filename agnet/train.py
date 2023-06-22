@@ -45,7 +45,7 @@ class AGTrainer(Trainer):
         else:
             return nn.MSELoss()
 
-    def get_metric(self, output_dim, top_k=10):
+    def get_metric(self, output_dim, top_k=1):
         # return None
         return torchmetrics.Accuracy(task="multiclass", num_classes=output_dim, top_k=top_k).to(self.device)
 

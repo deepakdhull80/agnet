@@ -21,7 +21,7 @@ resnet_output_mapping = {
             nn.ReLU(),
             nn.Linear(256, 128),
             nn.ReLU(),
-            nn.Linear(128, 100),
+            nn.Linear(128, 10),
         ]
     },
     'resnet50':{
@@ -46,7 +46,7 @@ resnet_output_mapping = {
             nn.ReLU(),
             nn.Linear(512, 128),
             nn.ReLU(),
-            nn.Linear(128,100)
+            nn.Linear(128,10)
         ]
     },
     'efficientnet_b5':{
@@ -62,7 +62,7 @@ resnet_output_mapping = {
         'cfc':[
             nn.Linear(2048, 1024),
             nn.ReLU(),
-            nn.Linear(1024, 100)
+            nn.Linear(1024, 10)
         ]
     }
 }
