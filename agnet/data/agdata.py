@@ -4,12 +4,6 @@ import torch
 import torchvision
 from torch.utils.data import Dataset
 
-class Rescale(object):
-    def __init__(self, _min=0, _max=255):
-        self.min = _min
-        self.max = _max
-    def __call__(self, image):
-        return (image-self.min)/(self.max - self.min)
 
 class AGDataset(Dataset):
     def __init__(self, df, base_path, target_field=['age','gender'], **kwargs):
@@ -28,7 +22,6 @@ class AGDataset(Dataset):
             torchvision.transforms.Resize(self.image_size, interpolation=torchvision.transforms.InterpolationMode.BICUBIC)
         ])
         self.transforms2 = torchvision.transforms.Compose([
-            Rescale(),
             torchvision.transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         ])
 
