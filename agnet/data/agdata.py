@@ -42,7 +42,7 @@ class AGDataset(Dataset):
         assert isinstance(image, torch.Tensor), f"image dtype should be torch.Tensor but found {type(image)}"
         # target = self.age_scale(row['age'])
         if self.target_output_dim != 1:
-            target = torch.nn.functional.one_hot(torch.tensor(int(row['age']) - 1), num_classes=self.target_output_dim)
+            target = torch.nn.functional.one_hot(torch.tensor(int(row['age'])), num_classes=self.target_output_dim)
         else:
             target = torch.tensor(int(row['age']))
         return image, target.float() if self.fp == 'fp32' else target.half()
