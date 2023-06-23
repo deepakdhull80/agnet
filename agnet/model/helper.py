@@ -130,6 +130,7 @@ class Trainer:
     def fit(self, dataloader, val_dataloader=None, epochs=120):
 
         self.global_loss = 1e3
+        self.global_acc = 0
         for epoch in range(self._epoch, epochs):
             print("*"*20)
             print(f"EPOCH: {epoch} started")
@@ -140,10 +141,15 @@ class Trainer:
                     self.global_loss = v_loss
                     self.save_weights(epoch, v_loss, v_score)
                     print(">>>model weight saved<<<")
+                elif self.global_acc<v_score:
+                    self.global_acc = v_score
+                    self.save_weights(epoch, v_loss, v_score, prefix="cp_acc")
+                    print(">>>model weight saved[accuracy]<<<")
+                    
                 self.scheduler.step()
     
-    def save_weights(self, epoch, loss, score):
-        sv_path = os.path.join(self.model_save_path, "cp")
+    def save_weights(self, epoch, loss, score, prefix='cp'):
+        sv_path = os.path.join(self.model_save_path, prefix)
         os.makedirs(sv_path, exist_ok=True)
         torch.save(
             {
