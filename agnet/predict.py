@@ -91,6 +91,21 @@ class Predictor:
         x = self.gender_model(x)
         return torch.sigmoid(x)
     
+    def extract_face(self, image, label, save_base_path, counter):
+        boxes, logits = self.detect_face(image)
+        
+        boxes = boxes[logits>self.face_present_threshold]
+        logits = logits[logits>self.face_present_threshold]
+        
+        # margin = margin if margin is not None else self._gender_face_margin
+        margin = 10
+        
+        for face, prob in zip(boxes, logits):
+            face = face+[-margin,-margin,margin,margin]
+            face_image = image.crop(face)
+            prob = int(prob*100)
+            face_image.save(f"{save_base_path}/face_image_{label}_{counter}_{prob}.jpg")
+
     @torch.no_grad()
     def predict(self, image: Image.Image, margin = None):
         boxes, logits = self.detect_face(image)
@@ -318,9 +333,19 @@ if __name__ == '__main__':
 
     exit()
 
-    from glob import glob
-    import pandas as pd
-    paths = glob("D:\WORK/freelance/agnet/dataset/utkface/*/*.jpg")
+    # from glob import glob
+    # import pandas as pd
+    # paths = glob("D:\WORK/freelance/agnet/dataset/utkface/*/*.jpg")
+    # save_path = "D:\WORK/freelance/agnet\dataset/utkface_cropped"
+    # for i, p in tqdm(enumerate(paths), total=len(paths)):
+    #     try:
+    #         image = Image.open(p)
+    #         label = int(p.split("/")[-1].split("_")[1])
+    #         predictor.extract_face(image,label,save_path,i)
+    #     except:
+    #         pass
+    # exit()
+
     df = pd.DataFrame()
     df['file_paths'] = paths
     df['file_paths'] = df['file_paths'].map(lambda x: x.replace("\\",'/'))
