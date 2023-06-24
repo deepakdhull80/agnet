@@ -6,12 +6,12 @@ data:
 
 model: 
   name: AGNet
-  FACE_MARGIN: 10
+  GENDER_FACE_MARGIN: 10
   description: age and gender classification neural network
   # resnet50, resnet34, efficientnet_b5
   # for efficientnet_b5 image_size should be 456
-  age_base_model: efficientnet_b5
+  age_base_model: resnet34
   age_model_path: null
   gender_base_model: resnet34
-  gender_model_path: cp/model_gender_estimation_resnet34_8.pt
+  gender_model_path: cp/model_gender_estimation_resnet34_27.pt
   FACE_PRESENT_THRESHOLD: 0.9

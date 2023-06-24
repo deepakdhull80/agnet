@@ -48,7 +48,7 @@ class Predictor:
             self.gender_model = gender_model.to(device)
             self.gender_model.eval()
         self._gender_predict_threshold = kwargs.get('GENDER_PREDICT_THRESHOLD',0.5)
-        
+        self._gender_face_margin = kwargs.get('GENDER_FACE_MARGIN',10)
         if age_model is not None:
             self.age_model = age_model.to(device)
             self.age_model.eval()
@@ -92,7 +92,7 @@ class Predictor:
         return torch.sigmoid(x)
     
     @torch.no_grad()
-    def predict(self, image: Image.Image, margin = 10):
+    def predict(self, image: Image.Image, margin = None):
         boxes, logits = self.detect_face(image)
         
         boxes = boxes[logits>self.face_present_threshold]
@@ -102,6 +102,9 @@ class Predictor:
             "total_face_present": len(boxes),
         }
         predict = []
+        margin = margin if margin is not None else self._gender_face_margin
+        # margin = 10
+        print(margin)
         for face, prob in zip(boxes, logits):
             face = face+[-margin,-margin,margin,margin]
             face_image = image.crop(face)
@@ -133,7 +136,7 @@ class Predictor:
         result['predict'] = predict
         return result
 
-    def predict_byfile(self, image_path: str, margin=10):
+    def predict_byfile(self, image_path: str):
         """_summary_
 
         Args:
@@ -165,7 +168,7 @@ class Predictor:
         image = Image.open(image_path)
         # image = image.resize((self.image_size, self.image_size))
 
-        res = self.predict(image, margin)
+        res = self.predict(image)
         res['file_path'] = image_path
         return res
     
@@ -258,6 +261,7 @@ def get_predictor(args):
     mtcnn = MTCNN(image_size=config['data']['IMAGE_SIZE'], device=device)
     
     GENDER_PREDICT_THRESHOLD = 0.5
+    GENDER_FACE_MARGIN = config['model']['GENDER_FACE_MARGIN']
     gender_base_model = getattr(torchvision.models, config['model']['gender_base_model'])()
     gender_dict = dict(
         _base_model=config['model']['gender_base_model'],
@@ -276,34 +280,41 @@ def get_predictor(args):
         face_image_size=config['data']['FACE_IMAGE_SIZE'],
         FACE_PRESENT_THRESHOLD=FACE_PRESENT_THRESHOLD,
         GENDER_PREDICT_THRESHOLD=GENDER_PREDICT_THRESHOLD,
+        GENDER_FACE_MARGIN=GENDER_FACE_MARGIN
     )
 
 if __name__ == '__main__':
     args = argparser()
     predictor = get_predictor(args)
 
-    image_path = "D:/WORK/freelance/agnet/dataset/utkface/part3/25_1_3_20170119172052720.jpg"
+    image_path = "D:\WORK/freelance/agnet/test\images/samples"
+    file_names = os.listdir(image_path)
+    # image_path = image_path.replace("\\",'/')
     # image_path = "dataset/utkface/part3/21_0_3_20170119154213179.jpg"
-    test_save_path = "D:\WORK/freelance/agnet/test\images\predict/test-image1.jpg"
+    test_save_path = "D:\WORK/freelance/agnet/test\images\predict"
     
     ## test by file
     # res = predictor.predict_byfile(image_path)
     # print(res)
 
     # test by numpy array
-    image = cv.imread(image_path)
-    image = cv.cvtColor(image, cv.COLOR_RGB2BGR)
-    res = predictor.predict_byarray(image)
-    print(res)
+    # image = cv.imread(image_path)
+    # image = cv.cvtColor(image, cv.COLOR_RGB2BGR)
+    # # print(image)
+    # res = predictor.predict_byarray(image)
+    # print(res)
 
     # test predict and save image
-    predictor.predict_and_write(
-        image_path,
-        test_save_path,
-        query = {
-            'gender': ['female','male']
-        }
-    )
+    for file in file_names:
+        
+        predictor.predict_and_write(
+            os.path.join(image_path,file),
+            os.path.join(test_save_path,file),
+            query = {
+                'gender': ['male','female']
+            }
+        )
+        print(file, "completed")
 
     exit()
 
