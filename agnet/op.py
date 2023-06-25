@@ -12,12 +12,14 @@ def argparser():
     parser.add_argument("--file-path",'-f', dest="file_path")
     parser.add_argument("--write-path",'-o',dest="write_path", default="infer/output")
     parser.add_argument("--fps", dest="fps", default=10)
+    parser.add_argument("--h-invert", dest="h_invert", default=False)
+    parser.add_argument("--display-video", dest="display_video",default=True)
     return parser.parse_args()
 
 def cvt_color(image):
     return cv.cvtColor(image, cv.COLOR_RGB2BGR)
 
-def video_inference(predictor: Predictor, video_path: str, write_path:str, config, frame_rate: int = 32, display_video=True) -> str:
+def video_inference(predictor: Predictor, video_path: str, write_path:str, config, frame_rate: int = 32, h_invert=False, display_video=True) -> str:
     file_name = video_path.rsplit("/",1)[-1]
     output_file = f"{write_path}/{file_name}"
     cap = cv.VideoCapture(video_path)
@@ -38,7 +40,8 @@ def video_inference(predictor: Predictor, video_path: str, write_path:str, confi
             break
 
         frame = cvt_color(frame)
-        frame = cv.flip(frame,0)
+        if h_invert:
+            frame = cv.flip(frame,0)
         try:
             frame = predictor.infer(frame)
         except:
@@ -91,6 +94,7 @@ if __name__ == '__main__':
     predictor = get_predictor(args)
     os.makedirs(args.write_path,exist_ok=True)
     # predictor.predict_byarray(npimage)
+    print(args.h_invert)
     if args.action_type == 'video':
         pth = video_inference(
             predictor,
@@ -98,7 +102,8 @@ if __name__ == '__main__':
             args.write_path,
             config,
             frame_rate= int(args.fps),
-            display_video=True
+            h_invert=True if args.h_invert == 'true' else False,
+            display_video=bool(args.display_video)
         )
         print(f'Video inference completed,: {pth}')
     

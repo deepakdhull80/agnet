@@ -395,7 +395,7 @@ if __name__ == '__main__':
     # print(res)
 
     ## test predict and save image
-    for file in file_names[1:]:
+    for file in file_names:
         
         predictor.predict_and_write(
             os.path.join(image_path,file),

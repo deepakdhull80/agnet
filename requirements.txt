@@ -3,3 +3,4 @@ pyyaml==5.4.1
 torch
 torchvision
 torchmetrics
+opencv-python==4.6.0
