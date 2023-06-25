@@ -1,6 +1,6 @@
 data:
-  file_path: D:\WORK\freelance\agnet\dataset\face_kaggle.csv
-  image_base_path: D:\WORK\freelance\agnet
+  file_path: D:\WORK\freelance\agnet\dataset\face_kaggle_2.csv
+  image_base_path: D:\WORK\freelance\agnet/dataset
   target_fields:
     - age
   batch_size: 2
