@@ -1,7 +1,11 @@
 import pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, default_collate
 from data import AGDataset
+
+def my_collate(d):
+    a = [i for i in d if i[0].shape[0] == 3]
+    return default_collate(a)
 
 def get_train_test_dl(df, train_idx, test_idx, image_base_path= "./", target_fields = ['age', 'gender'], batch_size=32, workers=1, *args, **kwargs):
     # split dataframe in train and eval set
@@ -13,7 +17,8 @@ def get_train_test_dl(df, train_idx, test_idx, image_base_path= "./", target_fie
         shuffle=True,
         sampler=None,
         pin_memory=True,
-        num_workers=workers
+        num_workers=workers,
+        collate_fn=my_collate
     )
 
     test_dl = DataLoader(
@@ -22,7 +27,8 @@ def get_train_test_dl(df, train_idx, test_idx, image_base_path= "./", target_fie
         shuffle=True,
         sampler=None,
         pin_memory=True,
-        num_workers=workers
+        num_workers=workers,
+        collate_fn=my_collate
     )
     return train_dl, test_dl
 

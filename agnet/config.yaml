@@ -1,8 +1,8 @@
 data:
-  file_path: D:\WORK\freelance\agnet\dataset\face_kaggle.csv
+  file_path: D:\WORK\freelance\agnet\dataset\gender.csv
   image_base_path: D:\WORK\freelance\agnet
   target_fields:
-    - age
+    - gender
   batch_size: 2
   workers: 2
   n_splits: 1
@@ -23,7 +23,7 @@ model:
   description: age and gender classification neural network
   lr: 0.001
   fp: fp32
-  model_version: age_estimation_efficient_b5
+  model_version: gender_estimation_resnet34
   epochs: 128
   tqdm_enable: true
   output_dim: 1

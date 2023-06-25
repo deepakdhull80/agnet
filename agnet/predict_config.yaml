@@ -1,0 +1,19 @@
+data:
+  file_path: D:\WORK\freelance\agnet\dataset\gender.csv
+  image_base_path: D:\WORK\freelance\agnet
+  IMAGE_SIZE: 512
+  FACE_IMAGE_SIZE: 456
+
+model: 
+  name: AGNet
+  GENDER_FACE_MARGIN: 10
+  AGE_FACE_MARGIN: 10
+  age_mae: 6.8
+  description: age and gender classification neural network
+  # resnet50, resnet34, efficientnet_b5
+  # for efficientnet_b5 image_size should be 456
+  age_base_model: resnet34
+  age_model_path: cp/model_age_estimator_resnet34_22.pt
+  gender_base_model: resnet34
+  gender_model_path: cp/model_gender_estimation_resnet34_12_better.pt
+  FACE_PRESENT_THRESHOLD: 0.98

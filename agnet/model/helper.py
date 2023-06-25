@@ -29,6 +29,7 @@ class Trainer:
         self.output_dim = kwargs.get("output_dim", 1)
         self.model_save_path = kwargs.get('model_save_path','./')
         self.load_last_checkpoint = kwargs.get('load_last_checkpoint', True)
+        self.global_loss = 1e3
         self.scheduler: Optional[torch.optim.lr_scheduler.StepLR] = kwargs.get('scheduler',None)
 
         _last_checkpoint_path = os.path.join(self.model_save_path, 'cp')
@@ -43,6 +44,7 @@ class Trainer:
                     _save_dict = torch.load(model_path)
                     print(f"path: {model_path}, epochs= {_save_dict['epoch']}, loss={_save_dict['loss']}")
                     print(self.model.load_state_dict(_save_dict['state_dict']))
+                    self.global_loss = _save_dict['loss']
                     self._epoch = _save_dict['epoch']
                 else:
                     print(f"path: {model_path}, not for this model {kwargs.get('_base_model')}")
@@ -80,17 +82,17 @@ class Trainer:
 
             loss = loss.detach().item()
             total_loss += loss
-            desc = f"(Train) epoch={epoch} batch={indx} loss={loss:.3f}, avg_loss={total_loss/(1+indx): .3f}"
+            desc = f"(Train) e={epoch} b={indx} l={loss:.3f}, a_l={total_loss/(1+indx): .3f}"
             
             if self.metric is not None:
                 with torch.no_grad():
-                    name, score = self.metric(y_h.detach(), y)
+                    score = self.metric(y_h.detach(), y)
                 assert isinstance(score, torch.Tensor), f"metric score should be tensor but found {type(score)}"
                 total_score += score.item()
-                desc += f", {name}={score.item():.3f}, avg_{name}:{total_score/(1+indx):.3f}"
+                desc += f", m={score.item():.3f}, a_m={total_score/(1+indx):.3f}"
             if self.tqdm_enable:
                 tqdm_iter.set_description(desc)
-            elif indx % 200 == 0:
+            elif indx % 20 == 0:
                 print(desc)
         print(desc)
         return total_loss/len(dataloader), total_score/len(dataloader)
@@ -114,13 +116,13 @@ class Trainer:
             
             loss = loss.item()
             total_loss += loss
-            desc = f"(Eval) epoch={epoch} batch={indx} loss={loss:.3f}, avg_loss={total_loss/(1+indx): .3f}"
+            desc = f"(Eval) e={epoch} b={indx} l={loss:.3f}, a_l={total_loss/(1+indx): .3f}"
             
             if self.metric is not None:
-                name, score = self.metric(y_h, y)
+                score = self.metric(y_h, y)
                 assert isinstance(score, torch.Tensor), f"metric score should be tensor but found {type(score)}"
                 total_score += score.item()
-                desc += f", {name}={score.item():.3f}, avg_{name}:{total_score/(1+indx):.3f}"
+                desc += f", m={score.item():.3f}, a_m={total_score/(1+indx):.3f}"
             if self.tqdm_enable:
                 tqdm_iter.set_description(desc)
         print(desc)
@@ -129,7 +131,6 @@ class Trainer:
     
     def fit(self, dataloader, val_dataloader=None, epochs=120):
 
-        self.global_loss = 1e3
         for epoch in range(self._epoch, epochs):
             print("*"*20)
             print(f"EPOCH: {epoch} started")
