@@ -6,18 +6,22 @@ resnet_output_mapping = {
     'resnet34':{
         'fc':'fc',
         'dim': 512,
-        'rfc':[
-            nn.Linear(512, 1)
+        'age':[
+            nn.Linear(512, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
+            nn.ReLU(),
+            nn.Linear(128, 100),
         ],
-        'cfc':[
+        'gender':[
             nn.Linear(512, 1)
         ]
     },
     'resnet50':{
         'fc':'fc',
         'dim': 2048,
-        'rfc': [
-            nn.Linear(2048, 1024),
+        'age': [
+             nn.Linear(2048, 1024),
             nn.ReLU(),
             nn.Linear(1024, 512),
             nn.ReLU(),
@@ -25,10 +29,10 @@ resnet_output_mapping = {
             nn.ReLU(),
             nn.Linear(128,32),
             nn.ReLU(),
-            nn.Linear(32, 1),
+            nn.Linear(32, 10),
             nn.ReLU()
         ],
-        'cfc':[
+        'gender':[
             nn.Linear(2048, 512),
             nn.ReLU(),
             nn.Linear(512, 128),
@@ -38,15 +42,12 @@ resnet_output_mapping = {
     },
     'efficientnet_b5':{
         'fc':'classifier',
-        'rfc':[
+        'age':[
             nn.Linear(2048, 1024),
             nn.ReLU(),
-            nn.Linear(1024, 512),
-            nn.ReLU(),
-            nn.Linear(512, 1),
-            nn.ReLU()
+            nn.Linear(1024, 10)
         ],
-        'cfc':[
+        'gender':[
             nn.Linear(2048, 1024),
             nn.ReLU(),
             nn.Linear(1024, 512),
@@ -60,7 +61,7 @@ class AGNet(nn.Module):
     def __init__(self, base_model, **kwargs):
         super().__init__()
         self._base_model = kwargs.get("_base_model",'resnet34')
-        
+        self.estimator = kwargs.get("estimator",'gender')
         if self._base_model == '_vgg':
             self.base_model = base_model.features
             feat_dim = base_model.feat_dim
@@ -85,10 +86,10 @@ class AGNet(nn.Module):
                         param.requires_grad = False
             self.base_model = base_model
             if "resnet" in self._base_model:
-                self.base_model.fc = nn.Sequential(*resnet_output_mapping[self._base_model]['cfc'])
+                self.base_model.fc = nn.Sequential(*resnet_output_mapping[self._base_model][self.estimator])
             elif "efficient" in self._base_model:
                 print("***EfficientNet MLP***")
-                self.base_model.classifier = nn.Sequential(*resnet_output_mapping[self._base_model]['cfc'])
+                self.base_model.classifier = nn.Sequential(*resnet_output_mapping[self._base_model][self.estimator])
             else:
                 raise ValueError()
 

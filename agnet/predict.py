@@ -53,6 +53,7 @@ class Predictor:
             self.age_model = age_model.to(device)
             self.age_model.eval()
         self._age_predict_threshold = kwargs.get('AGE_PREDICT_THRESHOLD',0.5)
+        self._age_face_margin = kwargs.get('AGE_FACE_MARGIN',10)
 
         self.image2tensor = torchvision.transforms.PILToTensor()
         self.transforms1 = torchvision.transforms.Compose([
@@ -85,7 +86,9 @@ class Predictor:
     
     @torch.no_grad()
     def predict_age(self, x:torch.Tensor):
-        pass
+        x = self.age_model(x)
+        return x
+
     @torch.no_grad()
     def predict_gender(self, x: torch.Tensor):
         x = self.gender_model(x)
@@ -93,18 +96,21 @@ class Predictor:
     
     def extract_face(self, image, label, save_base_path, counter):
         boxes, logits = self.detect_face(image)
-        
-        boxes = boxes[logits>self.face_present_threshold]
-        logits = logits[logits>self.face_present_threshold]
+
+        boxes = boxes[logits>=self.face_present_threshold]
+        logits = logits[logits>=self.face_present_threshold]
         
         # margin = margin if margin is not None else self._gender_face_margin
-        margin = 10
+        margin = 30
+        path = f"{save_base_path}/{label}"
+        if not os.path.exists(path):
+            os.makedirs(path,exist_ok=True)
         
         for face, prob in zip(boxes, logits):
             face = face+[-margin,-margin,margin,margin]
             face_image = image.crop(face)
             prob = int(prob*100)
-            face_image.save(f"{save_base_path}/face_image_{label}_{counter}_{prob}.jpg")
+            face_image.save(f"{path}/face_image_{counter}_{prob}.jpg")
 
     @torch.no_grad()
     def predict(self, image: Image.Image, margin = None):
@@ -119,7 +125,6 @@ class Predictor:
         predict = []
         margin = margin if margin is not None else self._gender_face_margin
         # margin = 10
-        print(margin)
         for face, prob in zip(boxes, logits):
             face = face+[-margin,-margin,margin,margin]
             face_image = image.crop(face)
@@ -143,8 +148,13 @@ class Predictor:
 
             if hasattr(self, 'age_model'):
                 age_predict = self.predict_age(input_image.unsqueeze(0).to(self.device)).cpu()
-                age = age_predict[0]
+                
+                age_predict = age_predict.softmax(dim=1)
+                score = int(age_predict.max())
+                
+                age = int(torch.argmax(age_predict))
                 face_predict['age'] = age
+                face_predict['age_score'] = score
             
             # append face related predictions
             predict.append(face_predict)
@@ -230,23 +240,28 @@ class Predictor:
             draw_rec_enable = False
             top_pad = 10
             
+            if 'age' in face_predict and face_predict['age'] in range(query['age']):
+                if 'age' not in query and not face_predict['age'] in query['age']:
+                    continue
+                draw_rec_enable = True
+                # write age over the box
+                txt_strt_point = (x0,y0-top_pad)
+                top_pad += 15
+                image = cv.putText(image, f"age:{face_predict['age']: .2f}", 
+                                   txt_strt_point, cv.FONT_HERSHEY_SIMPLEX, 0.5, color, 1
+                                   )
+
             if 'gender' in face_predict:
                 if 'gender' not in query or face_predict['gender'] not in query['gender']:
                     continue
                 draw_rec_enable = True
                 # write gender over the box
                 txt_strt_point = (x0,y0-top_pad)
-                top_pad += 10
+                top_pad += 15
                 image = cv.putText(image, f"{face_predict['gender']}, prob: {face_predict['gender_score']:0.2f}", 
                                    txt_strt_point, cv.FONT_HERSHEY_SIMPLEX, 0.5, color, 1
                                    )
             
-            if 'age' in face_predict and face_predict['age'] in range(query['age']):
-                if 'age' not in query and not face_predict['age'] in query['age']:
-                    continue
-                draw_rec_enable = True
-                # write age over the box
-                pass
 
             if draw_rec_enable:
                 image = cv.rectangle(image, strt_point, end_point, color, border_thickness)
@@ -282,20 +297,36 @@ def get_predictor(args):
         _base_model=config['model']['gender_base_model'],
         output_dim=1,
         mlp_layer_name="",
-        transfer_learning=False
+        transfer_learning=False,
+        estimator='gender'
     )
     gender_model = AGNet(gender_base_model,  **gender_dict)
     gender_model = load_weights(gender_model, config['model']['gender_model_path'])
+
+    AGE_FACE_MARGIN = config['model']['AGE_FACE_MARGIN']
+    
+    age_base_model = getattr(torchvision.models, config['model']['age_base_model'])()
+    age_dict = dict(
+        _base_model=config['model']['age_base_model'],
+        output_dim=1,
+        mlp_layer_name="",
+        transfer_learning=False,
+        estimator='age'
+    )
+    age_model = AGNet(age_base_model,  **age_dict)
+    age_model = load_weights(age_model, config['model']['age_model_path'])
     
     return Predictor(
         mtcnn, 
-        gender_model=gender_model, 
+        gender_model=gender_model,
+        age_model=age_model,
         device=device,
         image_size=config['data']['IMAGE_SIZE'],
         face_image_size=config['data']['FACE_IMAGE_SIZE'],
         FACE_PRESENT_THRESHOLD=FACE_PRESENT_THRESHOLD,
         GENDER_PREDICT_THRESHOLD=GENDER_PREDICT_THRESHOLD,
-        GENDER_FACE_MARGIN=GENDER_FACE_MARGIN
+        GENDER_FACE_MARGIN=GENDER_FACE_MARGIN,
+        AGE_FACE_MARGIN=AGE_FACE_MARGIN
     )
 
 if __name__ == '__main__':
@@ -304,13 +335,15 @@ if __name__ == '__main__':
 
     image_path = "D:\WORK/freelance/agnet/test\images/samples"
     file_names = os.listdir(image_path)
+    print(file_names)
     # image_path = image_path.replace("\\",'/')
     # image_path = "dataset/utkface/part3/21_0_3_20170119154213179.jpg"
     test_save_path = "D:\WORK/freelance/agnet/test\images\predict"
     
     ## test by file
-    # res = predictor.predict_byfile(image_path)
+    # res = predictor.predict_byfile(os.path.join(image_path,file_names[1]))
     # print(res)
+    # exit()
 
     # test by numpy array
     # image = cv.imread(image_path)
@@ -319,14 +352,15 @@ if __name__ == '__main__':
     # res = predictor.predict_byarray(image)
     # print(res)
 
-    # test predict and save image
-    for file in file_names:
+    ## test predict and save image
+    for file in file_names[1:]:
         
         predictor.predict_and_write(
             os.path.join(image_path,file),
             os.path.join(test_save_path,file),
             query = {
-                'gender': ['male','female']
+                'gender': ['male','female'],
+                'age': 100
             }
         )
         print(file, "completed")
@@ -336,11 +370,11 @@ if __name__ == '__main__':
     # from glob import glob
     # import pandas as pd
     # paths = glob("D:\WORK/freelance/agnet/dataset/utkface/*/*.jpg")
-    # save_path = "D:\WORK/freelance/agnet\dataset/utkface_cropped"
+    # save_path = "D:\WORK/freelance/agnet\dataset/age-dataset"
     # for i, p in tqdm(enumerate(paths), total=len(paths)):
     #     try:
     #         image = Image.open(p)
-    #         label = int(p.split("/")[-1].split("_")[1])
+    #         label = int(p.split("/")[-1].split("\\")[-1].split("_")[0])
     #         predictor.extract_face(image,label,save_path,i)
     #     except:
     #         pass
