@@ -402,7 +402,7 @@ if __name__ == '__main__':
             os.path.join(test_save_path,file),
             query = {
                 'gender': ['male','female'],
-                'age': 100
+                'age': (1, 100)
             }
         )
         print(file, "completed")

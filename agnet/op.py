@@ -38,6 +38,7 @@ def video_inference(predictor: Predictor, video_path: str, write_path:str, confi
             break
 
         frame = cvt_color(frame)
+        frame = cv.flip(frame,0)
         try:
             frame = predictor.infer(frame)
         except:
@@ -60,8 +61,9 @@ def image_inference(predictor: Predictor, image_path: str, write_path: str) -> s
     file_name = image_path.rsplit("/",1)[-1]
     predictor.predict_and_write(image_path, f"{write_path}/{file_name}")
 
-def camera_inference(predictor: Predictor, device:int = 0, **kwargs):
+def camera_inference(predictor: Predictor, device:int = 0, frame_rate=10, **kwargs):
     cap = cv.VideoCapture(device)
+    frame_delay = int(round(1000 / frame_rate))
     print("Start")
     while cap.isOpened():
         ret, frame = cap.read()
@@ -74,7 +76,7 @@ def camera_inference(predictor: Predictor, device:int = 0, **kwargs):
             continue
         cv.imshow('Frame', frame)
         
-        if cv.waitKey(1) & 0xFF == ord('q'):
+        if cv.waitKey(frame_delay) & 0xFF == ord('q'):
             break
 
     # Release the resources
