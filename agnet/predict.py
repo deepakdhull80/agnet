@@ -115,7 +115,8 @@ class Predictor:
     @torch.no_grad()
     def predict(self, image: Image.Image, margin = None):
         boxes, logits = self.detect_face(image)
-        
+        if logits is None:
+            return None
         boxes = boxes[logits>self.face_present_threshold]
         logits = logits[logits>self.face_present_threshold]
         result = {
@@ -124,8 +125,6 @@ class Predictor:
         }
         predict = []
         margin = margin if margin is not None else self._gender_face_margin
-        print(margin)
-        # margin = 10
         for face, prob in zip(boxes, logits):
             face = face+[-margin,-margin,margin,margin]
             face_image = image.crop(face)
@@ -190,6 +189,8 @@ class Predictor:
         # image = image.resize((self.image_size, self.image_size))
 
         res = self.predict(image)
+        if res is None:
+            return None
         res['file_path'] = image_path
         return res
     
@@ -222,6 +223,10 @@ class Predictor:
     
     def predict_and_write(self, image_path, image_write_path, color=(36,255,12), border_thickness=1, query={'gender':['male','female'],'age':(1,100)}):
         res = self.predict_byfile(image_path)
+        if res is None:
+            raise Exception(
+                'Face not found in frame'
+            )
         image = cv.cvtColor(np.array(res['image']), cv.COLOR_BGR2RGB)
         
         for face_predict in res['predict']:
@@ -236,9 +241,8 @@ class Predictor:
             draw_rec_enable = False
             top_pad = 10
             
-            if 'age' in face_predict and face_predict['age'] in range(query['age']):
-                if 'age' not in query and not face_predict['age'] in query['age']:
-                    continue
+            if 'age' in face_predict and 'age' in query and face_predict['age'] in range(*query['age']):
+                
                 draw_rec_enable = True
                 # write age over the box
                 txt_strt_point = (x0,y0-top_pad)
@@ -264,7 +268,48 @@ class Predictor:
         
         cv.imwrite(image_write_path,image)
         print(f"Image saved at {image_write_path} and total number of faces found: {res['total_face_present']}")
+        return image_write_path
+    
+    def infer(self, image, color=(36,255,12), border_thickness=1):
+        res = self.predict_byarray(image)
+        if res is None:
+            return None
+        image = cv.cvtColor(np.array(res['image']), cv.COLOR_BGR2RGB)
+        
+        for face_predict in res['predict']:
+            if face_predict['face_logits']<self.face_present_threshold:
+                continue
+            box = np.int32(face_predict['box'])
+            x0, y0, x1, y1 = map(int, map(round, box))
+            strt_point = (x0, y0)
+            end_point = (x1, y1)
+            
+            ### query
+            draw_rec_enable = False
+            top_pad = 10
+            
+            if 'age' in face_predict:
+                draw_rec_enable = True
+                # write age over the box
+                txt_strt_point = (x0,y0-top_pad)
+                top_pad += 15
+                image = cv.putText(image, f"age:{face_predict['age']: .2f} +|- {self.age_mae}", 
+                                   txt_strt_point, cv.FONT_HERSHEY_SIMPLEX, 0.5, color, 1
+                                   )
 
+            if 'gender' in face_predict:
+                draw_rec_enable = True
+                # write gender over the box
+                txt_strt_point = (x0,y0-top_pad)
+                top_pad += 15
+                image = cv.putText(image, f"{face_predict['gender']}, prob: {face_predict['gender_score']:0.2f}", 
+                                   txt_strt_point, cv.FONT_HERSHEY_SIMPLEX, 0.5, color, 1
+                                   )
+            
+
+            if draw_rec_enable:
+                image = cv.rectangle(image, strt_point, end_point, color, border_thickness)
+        return image
 
 def argparser():
     parser = argparse.ArgumentParser()

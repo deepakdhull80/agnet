@@ -1,7 +1,7 @@
 data:
   file_path: D:\WORK\freelance\agnet\dataset\gender.csv
   image_base_path: D:\WORK\freelance\agnet
-  IMAGE_SIZE: 720
+  IMAGE_SIZE: 512
   FACE_IMAGE_SIZE: 456
 
 model: 
