@@ -1,7 +1,7 @@
 # agnet
 
 ## About
-
+AGNET - age and gender network
 ## Dataset
 
 ## Training
