@@ -7,11 +7,8 @@ resnet_output_mapping = {
         'fc':'fc',
         'dim': 512,
         'age':[
-            nn.Linear(512, 256),
-            nn.ReLU(),
-            nn.Linear(256, 128),
-            nn.ReLU(),
-            nn.Linear(128, 100),
+            nn.Linear(512, 1),
+            nn.ReLU()
         ],
         'gender':[
             nn.Linear(512, 1)

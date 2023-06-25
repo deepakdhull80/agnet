@@ -54,7 +54,7 @@ class Predictor:
             self.age_model.eval()
         self._age_predict_threshold = kwargs.get('AGE_PREDICT_THRESHOLD',0.5)
         self._age_face_margin = kwargs.get('AGE_FACE_MARGIN',10)
-
+        self.age_mae = kwargs.get("age_mae",0)
         self.image2tensor = torchvision.transforms.PILToTensor()
         self.transforms1 = torchvision.transforms.Compose([
             torchvision.transforms.PILToTensor(),
@@ -124,6 +124,7 @@ class Predictor:
         }
         predict = []
         margin = margin if margin is not None else self._gender_face_margin
+        print(margin)
         # margin = 10
         for face, prob in zip(boxes, logits):
             face = face+[-margin,-margin,margin,margin]
@@ -148,14 +149,9 @@ class Predictor:
 
             if hasattr(self, 'age_model'):
                 age_predict = self.predict_age(input_image.unsqueeze(0).to(self.device)).cpu()
-                
-                age_predict = age_predict.softmax(dim=1)
-                score = int(age_predict.max())
-                
-                age = int(torch.argmax(age_predict))
+                age = int(age_predict[0][0])
                 face_predict['age'] = age
-                face_predict['age_score'] = score
-            
+                
             # append face related predictions
             predict.append(face_predict)
         result['predict'] = predict
@@ -247,7 +243,7 @@ class Predictor:
                 # write age over the box
                 txt_strt_point = (x0,y0-top_pad)
                 top_pad += 15
-                image = cv.putText(image, f"age:{face_predict['age']: .2f}", 
+                image = cv.putText(image, f"age:{face_predict['age']: .2f} +|- {self.age_mae}", 
                                    txt_strt_point, cv.FONT_HERSHEY_SIMPLEX, 0.5, color, 1
                                    )
 
@@ -326,7 +322,8 @@ def get_predictor(args):
         FACE_PRESENT_THRESHOLD=FACE_PRESENT_THRESHOLD,
         GENDER_PREDICT_THRESHOLD=GENDER_PREDICT_THRESHOLD,
         GENDER_FACE_MARGIN=GENDER_FACE_MARGIN,
-        AGE_FACE_MARGIN=AGE_FACE_MARGIN
+        AGE_FACE_MARGIN=AGE_FACE_MARGIN,
+        age_mae=config['model'].get('age_mae',0)
     )
 
 if __name__ == '__main__':
