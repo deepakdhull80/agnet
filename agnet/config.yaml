@@ -10,7 +10,7 @@ data:
   random_state: 7
   image_size: 456
   scale_factor: 10
-  output_dim: 10
+  output_dim: 1
   fp: fp32
 
 model: 
@@ -26,5 +26,5 @@ model:
   model_version: age_estimation_efficient_b5
   epochs: 128
   tqdm_enable: true
-  output_dim: 10
+  output_dim: 1
   model_save_path: ./

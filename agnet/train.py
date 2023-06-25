@@ -20,7 +20,7 @@ class AGTrainer(Trainer):
         optim = self.get_optimier()
         loss_fn = self.get_loss_fn()
         metric = self.get_metric(self.output_dim)
-        scheduler = torch.optim.lr_scheduler.StepLR(optim, step_size=kwargs.get('scheduler_step_size',9), gamma=kwargs.get('scheduler_gamma',0.6))
+        scheduler = torch.optim.lr_scheduler.StepLR(optim, step_size=kwargs.get('scheduler_step_size',4), gamma=kwargs.get('scheduler_gamma',0.6))
         super().__init__(
             model, 
             device, fp=fp, 
@@ -43,11 +43,11 @@ class AGTrainer(Trainer):
         if self.output_dim>1:
             return nn.CrossEntropyLoss()
         else:
-            return nn.MSELoss()
+            return nn.L1Loss()
 
     def get_metric(self, output_dim, top_k=1):
-        # return None
-        return torchmetrics.Accuracy(task="multiclass", num_classes=output_dim, top_k=top_k).to(self.device)
+        return None
+        # return torchmetrics.Accuracy(task="multiclass", num_classes=output_dim, top_k=top_k).to(self.device)
 
 def argparser():
     parser = argparse.ArgumentParser()

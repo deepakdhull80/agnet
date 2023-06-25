@@ -96,7 +96,7 @@ class AGNet(nn.Module):
                         param.requires_grad = False
             self.base_model = base_model
             if "resnet" in self._base_model:
-                self.base_model.fc = nn.Sequential(*resnet_output_mapping[self._base_model]['cfc'])
+                self.base_model.fc = nn.Sequential(*resnet_output_mapping[self._base_model]['rfc'])
             elif "efficient" in self._base_model:
                 print("***EfficientNet MLP***")
                 self.base_model.classifier = nn.Sequential(*resnet_output_mapping[self._base_model]['cfc'])
