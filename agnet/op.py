@@ -45,7 +45,7 @@ def video_inference(predictor: Predictor, video_path: str, write_path:str, confi
         try:
             frame = predictor.infer(frame)
         except:
-            continue
+            print("face not found")
         out.write(frame)
 
         # Display the frame (optional)
@@ -70,13 +70,14 @@ def camera_inference(predictor: Predictor, device:int = 0, frame_rate=10, **kwar
     print("Start")
     while cap.isOpened():
         ret, frame = cap.read()
+        frame = cv.flip(frame, 1)
         if not ret:
             break
         frame = cvt_color(frame)
         try:
             frame = predictor.infer(frame)
         except:
-            continue
+            print("Face not found warning")
         cv.imshow('Frame', frame)
         
         if cv.waitKey(frame_delay) & 0xFF == ord('q'):

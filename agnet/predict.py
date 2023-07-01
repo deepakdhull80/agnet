@@ -58,10 +58,11 @@ class Predictor:
         self.image2tensor = torchvision.transforms.PILToTensor()
         self.transforms1 = torchvision.transforms.Compose([
             torchvision.transforms.PILToTensor(),
-            torchvision.transforms.ConvertImageDtype(torch.float),
-            # torchvision.transforms.Resize(self.image_size, interpolation=torchvision.transforms.InterpolationMode.BICUBIC)
-            # torchvision.transforms.Resize(self.image_size)
+            torchvision.transforms.ConvertImageDtype(torch.float)
         ])
+        self.age_buckets = {}
+        for i in range(10):
+            self.age_buckets[i] = [i*10, (i+1)*10]
 
     def preprocess(self, image):
         if isinstance(image, Image.Image):
@@ -229,6 +230,10 @@ class Predictor:
             )
         image = cv.cvtColor(np.array(res['image']), cv.COLOR_BGR2RGB)
         
+        age_buckets = {}
+        for i in range(100//10):
+            age_buckets[i] = f'[{i*10}-{(i+1)*10}]'
+
         for face_predict in res['predict']:
             if face_predict['face_logits']<self.face_present_threshold:
                 continue
@@ -247,7 +252,8 @@ class Predictor:
                 # write age over the box
                 txt_strt_point = (x0,y0-top_pad)
                 top_pad += 15
-                image = cv.putText(image, f"age:{face_predict['age']: .2f} +|- {self.age_mae}", 
+                t = int(face_predict['age'] // 10) if face_predict['age'] < 100 else 9
+                image = cv.putText(image, f"age:{age_buckets[t]}", 
                                    txt_strt_point, cv.FONT_HERSHEY_SIMPLEX, 0.5, color, 1
                                    )
 
@@ -293,7 +299,9 @@ class Predictor:
                 # write age over the box
                 txt_strt_point = (x0,y0-top_pad)
                 top_pad += 15
-                image = cv.putText(image, f"age:{face_predict['age']: .2f} +|- {self.age_mae}", 
+                t = face_predict['age']// 10 if face_predict['age']<100 else 9
+                age_bucket = self.age_buckets[t]
+                image = cv.putText(image, f"age:[{age_bucket[0]}-{age_bucket[1]}]", 
                                    txt_strt_point, cv.FONT_HERSHEY_SIMPLEX, 0.5, color, 1
                                    )
 

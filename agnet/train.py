@@ -9,7 +9,7 @@ import torchvision
 import torchmetrics
 
 from data import prep_dataloader
-from model import Trainer, AGNet, VGG
+from model import Trainer, AGNet
 
 class AGTrainer(Trainer):
     def __init__(self, model, device, fp='fp32', model_version="v1", **kwargs):
@@ -68,13 +68,8 @@ def run(args):
     
     train_dl, val_dl = prep_dataloader(config['data']['file_path'], config['data'])
     
-    if config['model']['_base_model'] == '_vgg':
-        base_model = VGG("VGG19", output_dim=1, image_size=config['data']['image_size'])
-    elif config['model']['_base_model'] == 'vgg':
-        raise NotImplementedError()
-    else:
-        print("base_model")
-        base_model = getattr(torchvision.models, config['model']['_base_model'])(pretrained=True)
+    print("base_model")
+    base_model = getattr(torchvision.models, config['model']['_base_model'])(pretrained=True)
 
     model = AGNet(base_model,  **config['model'])
     print(model)

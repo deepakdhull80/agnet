@@ -16,4 +16,4 @@ model:
   age_model_path: cp/model_age_estimator_resnet34_20_better.pt
   gender_base_model: resnet34
   gender_model_path: cp/model_gender_estimation_resnet34_12_better.pt
-  FACE_PRESENT_THRESHOLD: 0.8
+  FACE_PRESENT_THRESHOLD: 0.9
