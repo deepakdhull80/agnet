@@ -22,6 +22,7 @@ model:
   mlp_layer_name: classifier # fc or classifier
   description: age and gender classification neural network
   lr: 0.001
+  scheduler_step_size: 3
   fp: fp32
   model_version: gender_estimation_resnet34
   epochs: 128

@@ -1,0 +1,1833 @@
+14.3s 1 (49726, 2)
+14.3s 2 /tmp/ipykernel_22/2806766160.py:1: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+14.3s 3 df = df1.append(df2)
+16.5s 4 Cloning into 'agnet'...
+17.2s 5 remote: Enumerating objects: 379, done.[K
+17.2s 6 remote: Counting objects:   1% (1/71)[Kremote: Counting objects:   2% (2/71)[Kremote: Counting objects:   4% (3/71)[Kremote: Counting objects:   5% (4/71)[Kremote: Counting objects:   7% (5/71)[Kremote: Counting objects:   8% (6/71)[Kremote: Counting objects:   9% (7/71)[Kremote: Counting objects:  11% (8/71)[Kremote: Counting objects:  12% (9/71)[Kremote: Counting objects:  14% (10/71)[Kremote: Counting objects:  15% (11/71)[Kremote: Counting objects:  16% (12/71)[Kremote: Counting objects:  18% (13/71)[Kremote: Counting objects:  19% (14/71)[Kremote: Counting objects:  21% (15/71)[Kremote: Counting objects:  22% (16/71)[Kremote: Counting objects:  23% (17/71)[Kremote: Counting objects:  25% (18/71)[Kremote: Counting objects:  26% (19/71)[Kremote: Counting objects:  28% (20/71)[Kremote: Counting objects:  29% (21/71)[Kremote: Counting objects:  30% (22/71)[Kremote: Counting objects:  32% (23/71)[Kremote: Counting objects:  33% (24/71)[Kremote: Counting objects:  35% (25/71)[Kremote: Counting objects:  36% (26/71)[Kremote: Counting objects:  38% (27/71)[Kremote: Counting objects:  39% (28/71)[Kremote: Counting objects:  40% (29/71)[Kremote: Counting objects:  42% (30/71)[Kremote: Counting objects:  43% (31/71)[Kremote: Counting objects:  45% (32/71)[Kremote: Counting objects:  46% (33/71)[Kremote: Counting objects:  47% (34/71)[Kremote: Counting objects:  49% (35/71)[Kremote: Counting objects:  50% (36/71)[Kremote: Counting objects:  52% (37/71)[Kremote: Counting objects:  53% (38/71)[Kremote: Counting objects:  54% (39/71)[Kremote: Counting objects:  56% (40/71)[Kremote: Counting objects:  57% (41/71)[Kremote: Counting objects:  59% (42/71)[Kremote: Counting objects:  60% (43/71)[Kremote: Counting objects:  61% (44/71)[Kremote: Counting objects:  63% (45/71)[Kremote: Counting objects:  64% (46/71)[Kremote: Counting objects:  66% (47/71)[Kremote: Counting objects:  67% (48/71)[Kremote: Counting objects:  69% (49/71)[Kremote: Counting objects:  70% (50/71)[Kremote: Counting objects:  71% (51/71)[Kremote: Counting objects:  73% (52/71)[Kremote: Counting objects:  74% (53/71)[Kremote: Counting objects:  76% (54/71)[Kremote: Counting objects:  77% (55/71)[Kremote: Counting objects:  78% (56/71)[Kremote: Counting objects:  80% (57/71)[Kremote: Counting objects:  81% (58/71)[Kremote: Counting objects:  83% (59/71)[Kremote: Counting objects:  84% (60/71)[Kremote: Counting objects:  85% (61/71)[Kremote: Counting objects:  87% (62/71)[Kremote: Counting objects:  88% (63/71)[Kremote: Counting objects:  90% (64/71)[Kremote: Counting objects:  91% (65/71)[Kremote: Counting objects:  92% (66/71)[Kremote: Counting objects:  94% (67/71)[Kremote: Counting objects:  95% (68/71)[Kremote: Counting objects:  97% (69/71)[Kremote: Counting objects:  98% (70/71)[Kremote: Counting objects: 100% (71/71)[Kremote: Counting objects: 100% (71/71), done.[K
+17.3s 7 remote: Compressing objects:   1% (1/52)[Kremote: Compressing objects:   3% (2/52)[Kremote: Compressing objects:   5% (3/52)[Kremote: Compressing objects:   7% (4/52)[Kremote: Compressing objects:   9% (5/52)[Kremote: Compressing objects:  11% (6/52)[Kremote: Compressing objects:  13% (7/52)[Kremote: Compressing objects:  15% (8/52)[Kremote: Compressing objects:  17% (9/52)[Kremote: Compressing objects:  19% (10/52)[Kremote: Compressing objects:  21% (11/52)[Kremote: Compressing objects:  23% (12/52)[Kremote: Compressing objects:  25% (13/52)[Kremote: Compressing objects:  26% (14/52)[Kremote: Compressing objects:  28% (15/52)[Kremote: Compressing objects:  30% (16/52)[Kremote: Compressing objects:  32% (17/52)[Kremote: Compressing objects:  34% (18/52)[Kremote: Compressing objects:  36% (19/52)[Kremote: Compressing objects:  38% (20/52)[Kremote: Compressing objects:  40% (21/52)[Kremote: Compressing objects:  42% (22/52)[Kremote: Compressing objects:  44% (23/52)[Kremote: Compressing objects:  46% (24/52)[Kremote: Compressing objects:  48% (25/52)[Kremote: Compressing objects:  50% (26/52)[Kremote: Compressing objects:  51% (27/52)[Kremote: Compressing objects:  53% (28/52)[Kremote: Compressing objects:  55% (29/52)[Kremote: Compressing objects:  57% (30/52)[Kremote: Compressing objects:  59% (31/52)[Kremote: Compressing objects:  61% (32/52)[Kremote: Compressing objects:  63% (33/52)[Kremote: Compressing objects:  65% (34/52)[Kremote: Compressing objects:  67% (35/52)[Kremote: Compressing objects:  69% (36/52)[Kremote: Compressing objects:  71% (37/52)[Kremote: Compressing objects:  73% (38/52)[Kremote: Compressing objects:  75% (39/52)[Kremote: Compressing objects:  76% (40/52)[Kremote: Compressing objects:  78% (41/52)[Kremote: Compressing objects:  80% (42/52)[Kremote: Compressing objects:  82% (43/52)[Kremote: Compressing objects:  84% (44/52)[Kremote: Compressing objects:  86% (45/52)[Kremote: Compressing objects:  88% (46/52)[Kremote: Compressing objects:  90% (47/52)[Kremote: Compressing objects:  92% (48/52)[Kremote: Compressing objects:  94% (49/52)[Kremote: Compressing objects:  96% (50/52)[Kremote: Compressing objects:  98% (51/52)[Kremote: Compressing objects: 100% (52/52)[Kremote: Compressing objects: 100% (52/52), done.[K
+18.0s 8 Receiving objects:   0% (1/379)Receiving objects:   1% (4/379)Receiving objects:   2% (8/379)Receiving objects:   3% (12/379)Receiving objects:   4% (16/379)Receiving objects:   5% (19/379)Receiving objects:   6% (23/379)Receiving objects:   7% (27/379)Receiving objects:   8% (31/379)Receiving objects:   9% (35/379)Receiving objects:  10% (38/379)Receiving objects:  11% (42/379)Receiving objects:  12% (46/379)Receiving objects:  13% (50/379)Receiving objects:  14% (54/379)Receiving objects:  15% (57/379)Receiving objects:  16% (61/379)Receiving objects:  17% (65/379)Receiving objects:  18% (69/379)Receiving objects:  19% (73/379)Receiving objects:  20% (76/379)Receiving objects:  21% (80/379)Receiving objects:  22% (84/379)Receiving objects:  23% (88/379)Receiving objects:  24% (91/379)Receiving objects:  25% (95/379)Receiving objects:  26% (99/379)Receiving objects:  27% (103/379)Receiving objects:  28% (107/379)Receiving objects:  29% (110/379)Receiving objects:  30% (114/379)Receiving objects:  31% (118/379)Receiving objects:  32% (122/379)Receiving objects:  33% (126/379)Receiving objects:  34% (129/379)Receiving objects:  35% (133/379)Receiving objects:  36% (137/379)Receiving objects:  37% (141/379)Receiving objects:  38% (145/379)Receiving objects:  39% (148/379)Receiving objects:  40% (152/379)Receiving objects:  41% (156/379)Receiving objects:  42% (160/379)Receiving objects:  43% (163/379)Receiving objects:  44% (167/379)Receiving objects:  45% (171/379)Receiving objects:  46% (175/379)Receiving objects:  47% (179/379)Receiving objects:  48% (182/379)Receiving objects:  49% (186/379)Receiving objects:  50% (190/379)Receiving objects:  51% (194/379)Receiving objects:  52% (198/379)Receiving objects:  53% (201/379)Receiving objects:  54% (205/379)Receiving objects:  55% (209/379)Receiving objects:  56% (213/379)Receiving objects:  57% (217/379)Receiving objects:  58% (220/379)Receiving objects:  59% (224/379)Receiving objects:  60% (228/379)Receiving objects:  61% (232/379)Receiving objects:  62% (235/379)Receiving objects:  63% (239/379)Receiving objects:  64% (243/379)Receiving objects:  65% (247/379)Receiving objects:  66% (251/379)Receiving objects:  67% (254/379)Receiving objects:  68% (258/379)Receiving objects:  69% (262/379)Receiving objects:  70% (266/379)Receiving objects:  71% (270/379)Receiving objects:  72% (273/379)Receiving objects:  73% (277/379)Receiving objects:  74% (281/379)Receiving objects:  75% (285/379)Receiving objects:  76% (289/379)Receiving objects:  77% (292/379)Receiving objects:  78% (296/379)Receiving objects:  79% (300/379)Receiving objects:  80% (304/379)Receiving objects:  81% (307/379)Receiving objects:  82% (311/379)Receiving objects:  83% (315/379)Receiving objects:  84% (319/379)Receiving objects:  85% (323/379)Receiving objects:  86% (326/379)Receiving objects:  87% (330/379)Receiving objects:  88% (334/379), 5.44 MiB | 10.87 MiB/sremote: Total 379 (delta 28), reused 54 (delta 18), pack-reused 308[K
+18.1s 9 Receiving objects:  89% (338/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  90% (342/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  91% (345/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  92% (349/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  93% (353/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  94% (357/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  95% (361/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  96% (364/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  97% (368/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  98% (372/379), 5.44 MiB | 10.87 MiB/sReceiving objects:  99% (376/379), 5.44 MiB | 10.87 MiB/sReceiving objects: 100% (379/379), 5.44 MiB | 10.87 MiB/sReceiving objects: 100% (379/379), 9.20 MiB | 11.92 MiB/s, done.
+18.1s 10 Resolving deltas:   0% (0/217)Resolving deltas:   1% (3/217)Resolving deltas:   2% (5/217)Resolving deltas:   3% (7/217)Resolving deltas:   4% (9/217)Resolving deltas:   5% (11/217)Resolving deltas:   6% (14/217)Resolving deltas:   7% (16/217)Resolving deltas:   8% (18/217)Resolving deltas:   9% (20/217)Resolving deltas:  10% (22/217)Resolving deltas:  11% (24/217)Resolving deltas:  12% (27/217)Resolving deltas:  13% (29/217)Resolving deltas:  14% (31/217)Resolving deltas:  15% (33/217)Resolving deltas:  16% (35/217)Resolving deltas:  17% (37/217)Resolving deltas:  18% (40/217)Resolving deltas:  19% (42/217)Resolving deltas:  20% (44/217)Resolving deltas:  21% (46/217)Resolving deltas:  22% (48/217)Resolving deltas:  23% (50/217)Resolving deltas:  24% (53/217)Resolving deltas:  25% (55/217)Resolving deltas:  26% (57/217)Resolving deltas:  27% (59/217)Resolving deltas:  28% (61/217)Resolving deltas:  29% (63/217)Resolving deltas:  30% (66/217)Resolving deltas:  31% (68/217)Resolving deltas:  32% (70/217)Resolving deltas:  33% (72/217)Resolving deltas:  34% (74/217)Resolving deltas:  35% (76/217)Resolving deltas:  36% (79/217)Resolving deltas:  37% (81/217)Resolving deltas:  38% (83/217)Resolving deltas:  39% (85/217)Resolving deltas:  40% (87/217)Resolving deltas:  41% (89/217)Resolving deltas:  42% (92/217)Resolving deltas:  43% (94/217)Resolving deltas:  44% (96/217)Resolving deltas:  45% (98/217)Resolving deltas:  46% (100/217)Resolving deltas:  47% (102/217)Resolving deltas:  48% (105/217)Resolving deltas:  49% (107/217)Resolving deltas:  50% (109/217)Resolving deltas:  51% (111/217)Resolving deltas:  52% (113/217)Resolving deltas:  53% (116/217)Resolving deltas:  54% (118/217)Resolving deltas:  55% (120/217)Resolving deltas:  56% (122/217)Resolving deltas:  57% (124/217)Resolving deltas:  58% (126/217)Resolving deltas:  59% (129/217)Resolving deltas:  60% (131/217)Resolving deltas:  61% (133/217)Resolving deltas:  62% (135/217)Resolving deltas:  63% (137/217)Resolving deltas:  64% (139/217)Resolving deltas:  65% (142/217)Resolving deltas:  66% (144/217)Resolving deltas:  67% (146/217)Resolving deltas:  68% (148/217)Resolving deltas:  69% (150/217)Resolving deltas:  70% (152/217)Resolving deltas:  71% (155/217)Resolving deltas:  72% (157/217)Resolving deltas:  73% (159/217)Resolving deltas:  74% (161/217)Resolving deltas:  75% (163/217)Resolving deltas:  76% (165/217)Resolving deltas:  77% (168/217)Resolving deltas:  78% (170/217)Resolving deltas:  79% (172/217)Resolving deltas:  80% (174/217)Resolving deltas:  81% (176/217)Resolving deltas:  82% (178/217)Resolving deltas:  83% (181/217)Resolving deltas:  84% (183/217)Resolving deltas:  85% (185/217)Resolving deltas:  86% (187/217)Resolving deltas:  87% (189/217)Resolving deltas:  88% (191/217)Resolving deltas:  89% (194/217)Resolving deltas:  90% (196/217)Resolving deltas:  91% (198/217)Resolving deltas:  92% (200/217)Resolving deltas:  93% (202/217)Resolving deltas:  94% (204/217)Resolving deltas:  95% (207/217)Resolving deltas:  96% (209/217)Resolving deltas:  97% (211/217)Resolving deltas:  98% (213/217)Resolving deltas:  99% (215/217)Resolving deltas: 100% (217/217)Resolving deltas: 100% (217/217), done.
+18.3s 11 {'data': {'file_path': 'D:\\WORK\\freelance\\agnet\\dataset\\gender.csv', 'image_base_path': 'D:\\WORK\\freelance\\agnet', 'target_fields': ['gender'], 'batch_size': 64, 'workers': 2, 'n_splits': 1, 'train_size': 0.8, 'random_state': 7, 'image_size': 456, 'scale_factor': 10, 'output_dim': 1, 'fp': 'fp32'}, 'model': {'name': 'AGNet', '_base_model': 'resnet34', 'transfer_learning': False, 'mlp_layer_name': 'classifier', 'description': 'age and gender classification neural network', 'lr': 0.01, 'fp': 'fp32', 'model_version': 'gender_estimation_resnet34', 'epochs': 128, 'tqdm_enable': False, 'output_dim': 1, 'model_save_path': '/kaggle/working/gender_resnet34'}}
+35.1s 12 {'data': {'batch_size': 64, 'file_path': 'D:\\WORK\\freelance\\agnet\\dataset\\gender.csv', 'fp': 'fp32', 'image_base_path': 'D:\\WORK\\freelance\\agnet', 'image_size': 456, 'n_splits': 1, 'output_dim': 1, 'random_state': 7, 'scale_factor': 10, 'target_fields': ['gender'], 'train_size': 0.8, 'workers': 2}, 'model': {'_base_model': 'resnet34', 'description': 'age and gender classification neural network', 'epochs': 128, 'fp': 'fp32', 'lr': 0.01, 'mlp_layer_name': 'classifier', 'model_save_path': '/kaggle/working/gender_resnet34', 'model_version': 'gender_estimation_resnet34', 'name': 'AGNet', 'output_dim': 1, 'tqdm_enable': False, 'transfer_learning': False}}
+35.5s 13 base_model
+35.8s 14 Downloading: "https://download.pytorch.org/models/resnet34-b627a593.pth" to /root/.cache/torch/hub/checkpoints/resnet34-b627a593.pth
+37.0s 15 0%|                                               | 0.00/83.3M [00:00<?, ?B/s] 11%|████▏                                 | 9.18M/83.3M [00:00<00:00, 96.2MB/s] 22%|████████▍                             | 18.4M/83.3M [00:00<00:00, 87.9MB/s] 33%|████████████▌                         | 27.5M/83.3M [00:00<00:00, 91.3MB/s] 44%|████████████████▌                     | 36.2M/83.3M [00:00<00:00, 87.9MB/s] 54%|████████████████████▍                 | 44.7M/83.3M [00:00<00:00, 87.6MB/s] 64%|████████████████████████▍             | 53.6M/83.3M [00:00<00:00, 89.5MB/s] 75%|████████████████████████████▎         | 62.1M/83.3M [00:00<00:00, 71.0MB/s] 83%|███████████████████████████████▋      | 69.4M/83.3M [00:00<00:00, 71.4MB/s] 94%|███████████████████████████████████▋  | 78.1M/83.3M [00:01<00:00, 76.8MB/s]100%|██████████████████████████████████████| 83.3M/83.3M [00:01<00:00, 81.3MB/s]
+37.1s 16 classifier resnet34
+37.1s 17 AGNet(
+37.1s 18 (base_model): ResNet(
+37.1s 19 (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+37.1s 20 (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 21 (relu): ReLU(inplace=True)
+37.1s 22 (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+37.1s 23 (layer1): Sequential(
+37.1s 24 (0): BasicBlock(
+37.1s 25 (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 26 (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 27 (relu): ReLU(inplace=True)
+37.1s 28 (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 29 (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 30 )
+37.1s 31 (1): BasicBlock(
+37.1s 32 (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 33 (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 34 (relu): ReLU(inplace=True)
+37.1s 35 (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 36 (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 37 )
+37.1s 38 (2): BasicBlock(
+37.1s 39 (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 40 (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 41 (relu): ReLU(inplace=True)
+37.1s 42 (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 43 (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 44 )
+37.1s 45 )
+37.1s 46 (layer2): Sequential(
+37.1s 47 (0): BasicBlock(
+37.1s 48 (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+37.1s 49 (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 50 (relu): ReLU(inplace=True)
+37.1s 51 (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 52 (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 53 (downsample): Sequential(
+37.1s 54 (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+37.1s 55 (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 56 )
+37.1s 57 )
+37.1s 58 (1): BasicBlock(
+37.1s 59 (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 60 (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 61 (relu): ReLU(inplace=True)
+37.1s 62 (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 63 (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 64 )
+37.1s 65 (2): BasicBlock(
+37.1s 66 (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 67 (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 68 (relu): ReLU(inplace=True)
+37.1s 69 (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 70 (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 71 )
+37.1s 72 (3): BasicBlock(
+37.1s 73 (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 74 (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 75 (relu): ReLU(inplace=True)
+37.1s 76 (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 77 (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 78 )
+37.1s 79 )
+37.1s 80 (layer3): Sequential(
+37.1s 81 (0): BasicBlock(
+37.1s 82 (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+37.1s 83 (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 84 (relu): ReLU(inplace=True)
+37.1s 85 (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 86 (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 87 (downsample): Sequential(
+37.1s 88 (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+37.1s 89 (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 90 )
+37.1s 91 )
+37.1s 92 (1): BasicBlock(
+37.1s 93 (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 94 (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 95 (relu): ReLU(inplace=True)
+37.1s 96 (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 97 (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 98 )
+37.1s 99 (2): BasicBlock(
+37.1s 100 (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 101 (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 102 (relu): ReLU(inplace=True)
+37.1s 103 (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 104 (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 105 )
+37.1s 106 (3): BasicBlock(
+37.1s 107 (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 108 (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 109 (relu): ReLU(inplace=True)
+37.1s 110 (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 111 (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 112 )
+37.1s 113 (4): BasicBlock(
+37.1s 114 (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 115 (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 116 (relu): ReLU(inplace=True)
+37.1s 117 (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 118 (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 119 )
+37.1s 120 (5): BasicBlock(
+37.1s 121 (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 122 (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 123 (relu): ReLU(inplace=True)
+37.1s 124 (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 125 (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 126 )
+37.1s 127 )
+37.1s 128 (layer4): Sequential(
+37.1s 129 (0): BasicBlock(
+37.1s 130 (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+37.1s 131 (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 132 (relu): ReLU(inplace=True)
+37.1s 133 (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 134 (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 135 (downsample): Sequential(
+37.1s 136 (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+37.1s 137 (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 138 )
+37.1s 139 )
+37.1s 140 (1): BasicBlock(
+37.1s 141 (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 142 (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 143 (relu): ReLU(inplace=True)
+37.1s 144 (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 145 (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 146 )
+37.1s 147 (2): BasicBlock(
+37.1s 148 (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 149 (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 150 (relu): ReLU(inplace=True)
+37.1s 151 (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+37.1s 152 (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+37.1s 153 )
+37.1s 154 )
+37.1s 155 (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+37.1s 156 (fc): Sequential(
+37.1s 157 (0): Linear(in_features=512, out_features=1, bias=True)
+37.1s 158 )
+37.1s 159 )
+37.1s 160 )
+37.7s 161 torch.Size([1, 1])
+42.4s 162 /kaggle/working/gender_resnet34/cp
+42.4s 163 ********************
+42.4s 164 EPOCH: 0 started
+50.3s 165 (Train) e=0 b=0 l=0.690, a_l= 0.690, m=0.562, a_m=0.562
+64.0s 166 (Train) e=0 b=20 l=0.758, a_l= 0.841, m=0.422, a_m=0.519
+77.5s 167 (Train) e=0 b=40 l=0.728, a_l= 0.779, m=0.375, a_m=0.526
+91.1s 168 (Train) e=0 b=60 l=0.670, a_l= 0.751, m=0.641, a_m=0.529
+105.1s 169 (Train) e=0 b=80 l=0.637, a_l= 0.738, m=0.672, a_m=0.543
+118.7s 170 (Train) e=0 b=100 l=0.745, a_l= 0.727, m=0.516, a_m=0.554
+133.3s 171 (Train) e=0 b=120 l=0.651, a_l= 0.715, m=0.641, a_m=0.569
+147.0s 172 (Train) e=0 b=140 l=0.700, a_l= 0.709, m=0.562, a_m=0.576
+160.8s 173 (Train) e=0 b=160 l=0.657, a_l= 0.705, m=0.594, a_m=0.578
+174.6s 174 (Train) e=0 b=180 l=0.632, a_l= 0.700, m=0.625, a_m=0.583
+188.4s 175 (Train) e=0 b=200 l=0.546, a_l= 0.691, m=0.703, a_m=0.592
+202.4s 176 (Train) e=0 b=220 l=0.655, a_l= 0.683, m=0.594, a_m=0.600
+216.1s 177 (Train) e=0 b=240 l=0.574, a_l= 0.677, m=0.734, a_m=0.605
+230.1s 178 (Train) e=0 b=260 l=0.401, a_l= 0.665, m=0.844, a_m=0.618
+243.6s 179 (Train) e=0 b=280 l=0.506, a_l= 0.656, m=0.797, a_m=0.627
+257.5s 180 (Train) e=0 b=300 l=0.415, a_l= 0.646, m=0.828, a_m=0.636
+271.5s 181 (Train) e=0 b=320 l=0.383, a_l= 0.636, m=0.812, a_m=0.646
+285.3s 182 (Train) e=0 b=340 l=0.406, a_l= 0.627, m=0.797, a_m=0.654
+299.4s 183 (Train) e=0 b=360 l=0.392, a_l= 0.614, m=0.781, a_m=0.664
+313.1s 184 (Train) e=0 b=380 l=0.507, a_l= 0.605, m=0.750, a_m=0.671
+327.4s 185 (Train) e=0 b=400 l=0.329, a_l= 0.592, m=0.906, a_m=0.680
+341.0s 186 (Train) e=0 b=420 l=0.520, a_l= 0.581, m=0.781, a_m=0.688
+355.0s 187 (Train) e=0 b=440 l=0.237, a_l= 0.571, m=0.906, a_m=0.695
+369.0s 188 (Train) e=0 b=460 l=0.371, a_l= 0.561, m=0.859, a_m=0.703
+383.0s 189 (Train) e=0 b=480 l=0.232, a_l= 0.550, m=0.922, a_m=0.710
+396.6s 190 (Train) e=0 b=500 l=0.308, a_l= 0.541, m=0.797, a_m=0.716
+410.3s 191 (Train) e=0 b=520 l=0.291, a_l= 0.531, m=0.844, a_m=0.722
+424.1s 192 (Train) e=0 b=540 l=0.224, a_l= 0.522, m=0.906, a_m=0.728
+437.6s 193 (Train) e=0 b=560 l=0.196, a_l= 0.514, m=0.906, a_m=0.733
+451.7s 194 (Train) e=0 b=580 l=0.329, a_l= 0.505, m=0.859, a_m=0.739
+465.7s 195 (Train) e=0 b=600 l=0.295, a_l= 0.498, m=0.859, a_m=0.744
+479.8s 196 (Train) e=0 b=620 l=0.234, a_l= 0.490, m=0.875, a_m=0.749
+480.3s 197 (Train) e=0 b=621 l=0.380, a_l= 0.490, m=0.833, a_m=0.749
+566.8s 198 (Eval) e=0 b=155 l=0.294, a_l= 0.271, m=0.923, a_m=0.896
+567.0s 199 >>>model weight saved<<<
+567.0s 200 ********************
+567.0s 201 EPOCH: 1 started
+568.9s 202 (Train) e=1 b=0 l=0.233, a_l= 0.233, m=0.875, a_m=0.875
+583.0s 203 (Train) e=1 b=20 l=0.212, a_l= 0.254, m=0.906, a_m=0.902
+596.4s 204 (Train) e=1 b=40 l=0.201, a_l= 0.245, m=0.953, a_m=0.906
+609.9s 205 (Train) e=1 b=60 l=0.151, a_l= 0.249, m=0.922, a_m=0.905
+623.2s 206 (Train) e=1 b=80 l=0.223, a_l= 0.241, m=0.875, a_m=0.906
+636.8s 207 (Train) e=1 b=100 l=0.275, a_l= 0.242, m=0.906, a_m=0.905
+650.3s 208 (Train) e=1 b=120 l=0.245, a_l= 0.239, m=0.922, a_m=0.906
+663.4s 209 (Train) e=1 b=140 l=0.353, a_l= 0.236, m=0.859, a_m=0.907
+676.9s 210 (Train) e=1 b=160 l=0.221, a_l= 0.236, m=0.906, a_m=0.908
+690.4s 211 (Train) e=1 b=180 l=0.184, a_l= 0.236, m=0.953, a_m=0.909
+703.8s 212 (Train) e=1 b=200 l=0.043, a_l= 0.232, m=1.000, a_m=0.909
+717.2s 213 (Train) e=1 b=220 l=0.231, a_l= 0.227, m=0.906, a_m=0.911
+730.5s 214 (Train) e=1 b=240 l=0.097, a_l= 0.224, m=0.938, a_m=0.912
+744.1s 215 (Train) e=1 b=260 l=0.260, a_l= 0.224, m=0.859, a_m=0.912
+757.4s 216 (Train) e=1 b=280 l=0.152, a_l= 0.222, m=0.953, a_m=0.912
+771.0s 217 (Train) e=1 b=300 l=0.164, a_l= 0.221, m=0.969, a_m=0.913
+784.4s 218 (Train) e=1 b=320 l=0.193, a_l= 0.219, m=0.938, a_m=0.914
+797.8s 219 (Train) e=1 b=340 l=0.385, a_l= 0.217, m=0.844, a_m=0.915
+811.3s 220 (Train) e=1 b=360 l=0.145, a_l= 0.214, m=0.938, a_m=0.916
+824.5s 221 (Train) e=1 b=380 l=0.094, a_l= 0.211, m=0.969, a_m=0.917
+838.0s 222 (Train) e=1 b=400 l=0.108, a_l= 0.210, m=0.953, a_m=0.917
+851.5s 223 (Train) e=1 b=420 l=0.223, a_l= 0.210, m=0.922, a_m=0.918
+865.1s 224 (Train) e=1 b=440 l=0.269, a_l= 0.209, m=0.938, a_m=0.918
+878.6s 225 (Train) e=1 b=460 l=0.061, a_l= 0.207, m=1.000, a_m=0.919
+892.2s 226 (Train) e=1 b=480 l=0.165, a_l= 0.206, m=0.953, a_m=0.919
+905.4s 227 (Train) e=1 b=500 l=0.172, a_l= 0.204, m=0.938, a_m=0.920
+918.8s 228 (Train) e=1 b=520 l=0.179, a_l= 0.204, m=0.906, a_m=0.920
+932.5s 229 (Train) e=1 b=540 l=0.385, a_l= 0.204, m=0.812, a_m=0.920
+945.7s 230 (Train) e=1 b=560 l=0.138, a_l= 0.203, m=0.938, a_m=0.921
+959.3s 231 (Train) e=1 b=580 l=0.193, a_l= 0.202, m=0.922, a_m=0.921
+972.6s 232 (Train) e=1 b=600 l=0.239, a_l= 0.201, m=0.875, a_m=0.921
+985.9s 233 (Train) e=1 b=620 l=0.118, a_l= 0.200, m=0.938, a_m=0.922
+986.4s 234 (Train) e=1 b=621 l=0.072, a_l= 0.200, m=1.000, a_m=0.922
+1066.1s 235 (Eval) e=1 b=155 l=0.179, a_l= 0.229, m=0.885, a_m=0.911
+1066.3s 236 >>>model weight saved<<<
+1066.3s 237 ********************
+1066.3s 238 EPOCH: 2 started
+1068.1s 239 (Train) e=2 b=0 l=0.116, a_l= 0.116, m=0.969, a_m=0.969
+1081.7s 240 (Train) e=2 b=20 l=0.114, a_l= 0.186, m=0.922, a_m=0.926
+1095.3s 241 (Train) e=2 b=40 l=0.131, a_l= 0.177, m=0.938, a_m=0.929
+1108.8s 242 (Train) e=2 b=60 l=0.315, a_l= 0.174, m=0.875, a_m=0.931
+1122.4s 243 (Train) e=2 b=80 l=0.130, a_l= 0.177, m=0.969, a_m=0.930
+1135.8s 244 (Train) e=2 b=100 l=0.154, a_l= 0.172, m=0.922, a_m=0.932
+1149.5s 245 (Train) e=2 b=120 l=0.150, a_l= 0.170, m=0.922, a_m=0.934
+1162.8s 246 (Train) e=2 b=140 l=0.067, a_l= 0.170, m=0.984, a_m=0.935
+1176.0s 247 (Train) e=2 b=160 l=0.223, a_l= 0.170, m=0.906, a_m=0.934
+1189.7s 248 (Train) e=2 b=180 l=0.157, a_l= 0.170, m=0.969, a_m=0.934
+1203.0s 249 (Train) e=2 b=200 l=0.108, a_l= 0.168, m=0.969, a_m=0.935
+1216.4s 250 (Train) e=2 b=220 l=0.119, a_l= 0.167, m=0.969, a_m=0.935
+1230.0s 251 (Train) e=2 b=240 l=0.187, a_l= 0.168, m=0.875, a_m=0.935
+1243.2s 252 (Train) e=2 b=260 l=0.203, a_l= 0.168, m=0.906, a_m=0.934
+1256.6s 253 (Train) e=2 b=280 l=0.047, a_l= 0.166, m=0.984, a_m=0.935
+1270.1s 254 (Train) e=2 b=300 l=0.122, a_l= 0.163, m=0.938, a_m=0.936
+1283.6s 255 (Train) e=2 b=320 l=0.273, a_l= 0.164, m=0.875, a_m=0.936
+1297.0s 256 (Train) e=2 b=340 l=0.214, a_l= 0.164, m=0.891, a_m=0.936
+1310.6s 257 (Train) e=2 b=360 l=0.261, a_l= 0.164, m=0.906, a_m=0.936
+1323.9s 258 (Train) e=2 b=380 l=0.092, a_l= 0.163, m=0.984, a_m=0.936
+1337.3s 259 (Train) e=2 b=400 l=0.137, a_l= 0.162, m=0.906, a_m=0.937
+1350.9s 260 (Train) e=2 b=420 l=0.106, a_l= 0.162, m=0.938, a_m=0.937
+1364.2s 261 (Train) e=2 b=440 l=0.101, a_l= 0.161, m=0.969, a_m=0.937
+1377.9s 262 (Train) e=2 b=460 l=0.135, a_l= 0.161, m=0.953, a_m=0.937
+1391.4s 263 (Train) e=2 b=480 l=0.174, a_l= 0.161, m=0.922, a_m=0.937
+1404.7s 264 (Train) e=2 b=500 l=0.088, a_l= 0.160, m=0.969, a_m=0.937
+1418.1s 265 (Train) e=2 b=520 l=0.135, a_l= 0.159, m=0.953, a_m=0.938
+1431.7s 266 (Train) e=2 b=540 l=0.098, a_l= 0.159, m=0.953, a_m=0.938
+1445.2s 267 (Train) e=2 b=560 l=0.078, a_l= 0.158, m=0.984, a_m=0.938
+1458.6s 268 (Train) e=2 b=580 l=0.159, a_l= 0.158, m=0.953, a_m=0.938
+1472.2s 269 (Train) e=2 b=600 l=0.109, a_l= 0.157, m=0.953, a_m=0.939
+1485.6s 270 (Train) e=2 b=620 l=0.110, a_l= 0.156, m=0.969, a_m=0.939
+1486.1s 271 (Train) e=2 b=621 l=0.119, a_l= 0.156, m=0.944, a_m=0.939
+1566.8s 272 (Eval) e=2 b=155 l=0.127, a_l= 0.153, m=0.962, a_m=0.942
+1566.9s 273 >>>model weight saved<<<
+1566.9s 274 ********************
+1566.9s 275 EPOCH: 3 started
+1568.9s 276 (Train) e=3 b=0 l=0.130, a_l= 0.130, m=0.938, a_m=0.938
+1583.2s 277 (Train) e=3 b=20 l=0.154, a_l= 0.135, m=0.922, a_m=0.946
+1598.2s 278 (Train) e=3 b=40 l=0.181, a_l= 0.141, m=0.906, a_m=0.943
+1612.2s 279 (Train) e=3 b=60 l=0.128, a_l= 0.141, m=0.953, a_m=0.943
+1626.5s 280 (Train) e=3 b=80 l=0.144, a_l= 0.134, m=0.938, a_m=0.946
+1641.4s 281 (Train) e=3 b=100 l=0.278, a_l= 0.135, m=0.875, a_m=0.946
+1655.8s 282 (Train) e=3 b=120 l=0.072, a_l= 0.132, m=0.953, a_m=0.947
+1670.5s 283 (Train) e=3 b=140 l=0.169, a_l= 0.134, m=0.938, a_m=0.947
+1684.8s 284 (Train) e=3 b=160 l=0.116, a_l= 0.135, m=0.953, a_m=0.947
+1699.5s 285 (Train) e=3 b=180 l=0.139, a_l= 0.136, m=0.953, a_m=0.946
+1713.8s 286 (Train) e=3 b=200 l=0.134, a_l= 0.137, m=0.953, a_m=0.945
+1728.7s 287 (Train) e=3 b=220 l=0.086, a_l= 0.137, m=0.938, a_m=0.946
+1743.0s 288 (Train) e=3 b=240 l=0.211, a_l= 0.140, m=0.891, a_m=0.945
+1757.6s 289 (Train) e=3 b=260 l=0.174, a_l= 0.140, m=0.938, a_m=0.945
+1772.4s 290 (Train) e=3 b=280 l=0.058, a_l= 0.139, m=0.984, a_m=0.945
+1786.8s 291 (Train) e=3 b=300 l=0.042, a_l= 0.138, m=1.000, a_m=0.945
+1802.2s 292 (Train) e=3 b=320 l=0.064, a_l= 0.139, m=0.953, a_m=0.945
+1816.8s 293 (Train) e=3 b=340 l=0.190, a_l= 0.138, m=0.922, a_m=0.946
+1832.0s 294 (Train) e=3 b=360 l=0.131, a_l= 0.138, m=0.953, a_m=0.945
+1846.3s 295 (Train) e=3 b=380 l=0.072, a_l= 0.137, m=0.984, a_m=0.945
+1861.1s 296 (Train) e=3 b=400 l=0.166, a_l= 0.137, m=0.953, a_m=0.945
+1875.4s 297 (Train) e=3 b=420 l=0.095, a_l= 0.138, m=0.969, a_m=0.945
+1890.1s 298 (Train) e=3 b=440 l=0.101, a_l= 0.137, m=0.922, a_m=0.946
+1904.5s 299 (Train) e=3 b=460 l=0.128, a_l= 0.136, m=0.953, a_m=0.946
+1919.3s 300 (Train) e=3 b=480 l=0.075, a_l= 0.136, m=0.984, a_m=0.946
+1933.7s 301 (Train) e=3 b=500 l=0.080, a_l= 0.135, m=0.953, a_m=0.946
+1947.6s 302 (Train) e=3 b=520 l=0.080, a_l= 0.135, m=0.969, a_m=0.946
+1961.7s 303 (Train) e=3 b=540 l=0.094, a_l= 0.135, m=0.969, a_m=0.946
+1976.1s 304 (Train) e=3 b=560 l=0.118, a_l= 0.135, m=0.922, a_m=0.946
+1991.1s 305 (Train) e=3 b=580 l=0.105, a_l= 0.135, m=0.938, a_m=0.946
+2005.5s 306 (Train) e=3 b=600 l=0.062, a_l= 0.134, m=0.984, a_m=0.947
+2019.7s 307 (Train) e=3 b=620 l=0.100, a_l= 0.134, m=0.969, a_m=0.947
+2020.2s 308 (Train) e=3 b=621 l=0.293, a_l= 0.134, m=0.806, a_m=0.947
+2099.7s 309 (Eval) e=3 b=155 l=0.153, a_l= 0.162, m=0.923, a_m=0.936
+2099.7s 310 ********************
+2099.7s 311 EPOCH: 4 started
+2101.6s 312 (Train) e=4 b=0 l=0.134, a_l= 0.134, m=0.953, a_m=0.953
+2115.8s 313 (Train) e=4 b=20 l=0.131, a_l= 0.150, m=0.953, a_m=0.939
+2129.1s 314 (Train) e=4 b=40 l=0.360, a_l= 0.143, m=0.891, a_m=0.944
+2142.7s 315 (Train) e=4 b=60 l=0.130, a_l= 0.137, m=0.953, a_m=0.946
+2156.1s 316 (Train) e=4 b=80 l=0.051, a_l= 0.133, m=0.984, a_m=0.948
+2169.5s 317 (Train) e=4 b=100 l=0.089, a_l= 0.130, m=0.922, a_m=0.951
+2183.1s 318 (Train) e=4 b=120 l=0.218, a_l= 0.127, m=0.875, a_m=0.952
+2196.4s 319 (Train) e=4 b=140 l=0.237, a_l= 0.125, m=0.875, a_m=0.952
+2209.8s 320 (Train) e=4 b=160 l=0.139, a_l= 0.125, m=0.969, a_m=0.952
+2223.1s 321 (Train) e=4 b=180 l=0.103, a_l= 0.126, m=0.922, a_m=0.952
+2236.5s 322 (Train) e=4 b=200 l=0.161, a_l= 0.126, m=0.953, a_m=0.951
+2250.0s 323 (Train) e=4 b=220 l=0.025, a_l= 0.123, m=1.000, a_m=0.952
+2263.5s 324 (Train) e=4 b=240 l=0.208, a_l= 0.122, m=0.922, a_m=0.953
+2277.0s 325 (Train) e=4 b=260 l=0.079, a_l= 0.121, m=0.969, a_m=0.954
+2290.2s 326 (Train) e=4 b=280 l=0.100, a_l= 0.120, m=0.969, a_m=0.954
+2303.8s 327 (Train) e=4 b=300 l=0.104, a_l= 0.120, m=0.953, a_m=0.954
+2317.2s 328 (Train) e=4 b=320 l=0.066, a_l= 0.119, m=0.984, a_m=0.954
+2330.6s 329 (Train) e=4 b=340 l=0.122, a_l= 0.119, m=0.969, a_m=0.954
+2344.4s 330 (Train) e=4 b=360 l=0.049, a_l= 0.118, m=0.984, a_m=0.955
+2357.7s 331 (Train) e=4 b=380 l=0.084, a_l= 0.117, m=0.953, a_m=0.955
+2371.4s 332 (Train) e=4 b=400 l=0.060, a_l= 0.116, m=0.969, a_m=0.955
+2384.8s 333 (Train) e=4 b=420 l=0.104, a_l= 0.115, m=0.953, a_m=0.956
+2397.8s 334 (Train) e=4 b=440 l=0.135, a_l= 0.116, m=0.969, a_m=0.956
+2411.3s 335 (Train) e=4 b=460 l=0.142, a_l= 0.116, m=0.953, a_m=0.956
+2424.7s 336 (Train) e=4 b=480 l=0.100, a_l= 0.115, m=0.953, a_m=0.956
+2438.2s 337 (Train) e=4 b=500 l=0.155, a_l= 0.116, m=0.938, a_m=0.955
+2451.6s 338 (Train) e=4 b=520 l=0.099, a_l= 0.116, m=0.969, a_m=0.956
+2465.1s 339 (Train) e=4 b=540 l=0.148, a_l= 0.115, m=0.938, a_m=0.956
+2478.4s 340 (Train) e=4 b=560 l=0.089, a_l= 0.116, m=0.953, a_m=0.956
+2491.6s 341 (Train) e=4 b=580 l=0.078, a_l= 0.116, m=0.984, a_m=0.956
+2505.3s 342 (Train) e=4 b=600 l=0.138, a_l= 0.116, m=0.953, a_m=0.956
+2518.3s 343 (Train) e=4 b=620 l=0.071, a_l= 0.116, m=0.969, a_m=0.956
+2518.8s 344 (Train) e=4 b=621 l=0.124, a_l= 0.116, m=0.944, a_m=0.956
+2611.7s 345 (Eval) e=4 b=155 l=0.081, a_l= 0.135, m=0.923, a_m=0.947
+2611.8s 346 >>>model weight saved<<<
+2611.8s 347 ********************
+2611.8s 348 EPOCH: 5 started
+2613.6s 349 (Train) e=5 b=0 l=0.114, a_l= 0.114, m=0.953, a_m=0.953
+2627.7s 350 (Train) e=5 b=20 l=0.090, a_l= 0.113, m=0.953, a_m=0.955
+2641.0s 351 (Train) e=5 b=40 l=0.112, a_l= 0.105, m=0.953, a_m=0.957
+2654.5s 352 (Train) e=5 b=60 l=0.167, a_l= 0.111, m=0.906, a_m=0.955
+2667.7s 353 (Train) e=5 b=80 l=0.113, a_l= 0.112, m=0.938, a_m=0.954
+2681.0s 354 (Train) e=5 b=100 l=0.081, a_l= 0.114, m=0.969, a_m=0.955
+2694.6s 355 (Train) e=5 b=120 l=0.075, a_l= 0.109, m=0.969, a_m=0.956
+2707.7s 356 (Train) e=5 b=140 l=0.157, a_l= 0.111, m=0.953, a_m=0.956
+2721.2s 357 (Train) e=5 b=160 l=0.021, a_l= 0.110, m=1.000, a_m=0.956
+2734.5s 358 (Train) e=5 b=180 l=0.087, a_l= 0.108, m=0.969, a_m=0.956
+2747.6s 359 (Train) e=5 b=200 l=0.144, a_l= 0.107, m=0.922, a_m=0.957
+2761.1s 360 (Train) e=5 b=220 l=0.049, a_l= 0.106, m=0.984, a_m=0.957
+2774.5s 361 (Train) e=5 b=240 l=0.026, a_l= 0.107, m=1.000, a_m=0.957
+2788.0s 362 (Train) e=5 b=260 l=0.088, a_l= 0.106, m=0.984, a_m=0.957
+2801.1s 363 (Train) e=5 b=280 l=0.064, a_l= 0.104, m=0.953, a_m=0.957
+2814.9s 364 (Train) e=5 b=300 l=0.094, a_l= 0.106, m=0.938, a_m=0.957
+2828.2s 365 (Train) e=5 b=320 l=0.145, a_l= 0.106, m=0.938, a_m=0.957
+2841.6s 366 (Train) e=5 b=340 l=0.303, a_l= 0.107, m=0.891, a_m=0.957
+2855.2s 367 (Train) e=5 b=360 l=0.013, a_l= 0.106, m=1.000, a_m=0.958
+2868.7s 368 (Train) e=5 b=380 l=0.065, a_l= 0.106, m=0.984, a_m=0.958
+2882.3s 369 (Train) e=5 b=400 l=0.032, a_l= 0.107, m=1.000, a_m=0.958
+2895.8s 370 (Train) e=5 b=420 l=0.038, a_l= 0.107, m=0.984, a_m=0.958
+2908.9s 371 (Train) e=5 b=440 l=0.043, a_l= 0.107, m=0.984, a_m=0.958
+2922.5s 372 (Train) e=5 b=460 l=0.020, a_l= 0.106, m=1.000, a_m=0.959
+2935.9s 373 (Train) e=5 b=480 l=0.029, a_l= 0.105, m=1.000, a_m=0.959
+2949.5s 374 (Train) e=5 b=500 l=0.020, a_l= 0.104, m=1.000, a_m=0.960
+2963.0s 375 (Train) e=5 b=520 l=0.164, a_l= 0.104, m=0.938, a_m=0.959
+2976.5s 376 (Train) e=5 b=540 l=0.145, a_l= 0.105, m=0.938, a_m=0.959
+2989.8s 377 (Train) e=5 b=560 l=0.041, a_l= 0.105, m=1.000, a_m=0.959
+3003.0s 378 (Train) e=5 b=580 l=0.089, a_l= 0.105, m=0.984, a_m=0.959
+3016.7s 379 (Train) e=5 b=600 l=0.058, a_l= 0.104, m=0.969, a_m=0.960
+3030.0s 380 (Train) e=5 b=620 l=0.130, a_l= 0.104, m=0.953, a_m=0.959
+3030.5s 381 (Train) e=5 b=621 l=0.096, a_l= 0.104, m=0.972, a_m=0.960
+3110.7s 382 (Eval) e=5 b=155 l=0.104, a_l= 0.133, m=1.000, a_m=0.947
+3110.8s 383 >>>model weight saved<<<
+3110.8s 384 ********************
+3110.8s 385 EPOCH: 6 started
+3112.7s 386 (Train) e=6 b=0 l=0.219, a_l= 0.219, m=0.922, a_m=0.922
+3126.4s 387 (Train) e=6 b=20 l=0.064, a_l= 0.094, m=0.969, a_m=0.963
+3140.0s 388 (Train) e=6 b=40 l=0.093, a_l= 0.101, m=0.969, a_m=0.962
+3153.5s 389 (Train) e=6 b=60 l=0.058, a_l= 0.102, m=0.984, a_m=0.960
+3166.8s 390 (Train) e=6 b=80 l=0.098, a_l= 0.094, m=0.953, a_m=0.963
+3180.3s 391 (Train) e=6 b=100 l=0.088, a_l= 0.098, m=0.953, a_m=0.962
+3193.7s 392 (Train) e=6 b=120 l=0.084, a_l= 0.098, m=0.969, a_m=0.961
+3207.0s 393 (Train) e=6 b=140 l=0.070, a_l= 0.097, m=0.984, a_m=0.962
+3220.3s 394 (Train) e=6 b=160 l=0.042, a_l= 0.098, m=1.000, a_m=0.962
+3233.8s 395 (Train) e=6 b=180 l=0.161, a_l= 0.099, m=0.922, a_m=0.961
+3247.1s 396 (Train) e=6 b=200 l=0.095, a_l= 0.098, m=0.953, a_m=0.961
+3260.3s 397 (Train) e=6 b=220 l=0.064, a_l= 0.096, m=0.984, a_m=0.962
+3273.9s 398 (Train) e=6 b=240 l=0.083, a_l= 0.097, m=0.938, a_m=0.962
+3287.2s 399 (Train) e=6 b=260 l=0.069, a_l= 0.096, m=0.984, a_m=0.963
+3300.8s 400 (Train) e=6 b=280 l=0.117, a_l= 0.095, m=0.938, a_m=0.963
+3314.3s 401 (Train) e=6 b=300 l=0.138, a_l= 0.095, m=0.969, a_m=0.964
+3327.7s 402 (Train) e=6 b=320 l=0.099, a_l= 0.096, m=0.938, a_m=0.963
+3341.1s 403 (Train) e=6 b=340 l=0.052, a_l= 0.095, m=0.984, a_m=0.963
+3354.3s 404 (Train) e=6 b=360 l=0.141, a_l= 0.094, m=0.953, a_m=0.964
+3367.8s 405 (Train) e=6 b=380 l=0.066, a_l= 0.093, m=0.969, a_m=0.964
+3381.0s 406 (Train) e=6 b=400 l=0.103, a_l= 0.094, m=0.938, a_m=0.964
+3394.6s 407 (Train) e=6 b=420 l=0.173, a_l= 0.095, m=0.938, a_m=0.963
+3407.8s 408 (Train) e=6 b=440 l=0.026, a_l= 0.095, m=1.000, a_m=0.963
+3421.2s 409 (Train) e=6 b=460 l=0.126, a_l= 0.095, m=0.969, a_m=0.963
+3434.7s 410 (Train) e=6 b=480 l=0.087, a_l= 0.095, m=0.969, a_m=0.963
+3448.0s 411 (Train) e=6 b=500 l=0.099, a_l= 0.096, m=0.953, a_m=0.962
+3461.8s 412 (Train) e=6 b=520 l=0.066, a_l= 0.096, m=0.969, a_m=0.962
+3475.2s 413 (Train) e=6 b=540 l=0.178, a_l= 0.096, m=0.953, a_m=0.962
+3488.7s 414 (Train) e=6 b=560 l=0.132, a_l= 0.097, m=0.938, a_m=0.961
+3502.0s 415 (Train) e=6 b=580 l=0.172, a_l= 0.097, m=0.938, a_m=0.961
+3515.4s 416 (Train) e=6 b=600 l=0.114, a_l= 0.097, m=0.922, a_m=0.961
+3528.8s 417 (Train) e=6 b=620 l=0.083, a_l= 0.096, m=0.984, a_m=0.962
+3529.2s 418 (Train) e=6 b=621 l=0.163, a_l= 0.096, m=0.944, a_m=0.962
+3616.3s 419 (Eval) e=6 b=155 l=0.018, a_l= 0.115, m=1.000, a_m=0.954
+3616.4s 420 >>>model weight saved<<<
+3616.4s 421 ********************
+3616.4s 422 EPOCH: 7 started
+3618.2s 423 (Train) e=7 b=0 l=0.095, a_l= 0.095, m=0.953, a_m=0.953
+3632.0s 424 (Train) e=7 b=20 l=0.094, a_l= 0.075, m=0.969, a_m=0.975
+3645.4s 425 (Train) e=7 b=40 l=0.133, a_l= 0.080, m=0.938, a_m=0.970
+3659.0s 426 (Train) e=7 b=60 l=0.131, a_l= 0.078, m=0.969, a_m=0.971
+3672.5s 427 (Train) e=7 b=80 l=0.082, a_l= 0.083, m=0.969, a_m=0.969
+3686.1s 428 (Train) e=7 b=100 l=0.046, a_l= 0.084, m=0.984, a_m=0.968
+3699.8s 429 (Train) e=7 b=120 l=0.105, a_l= 0.088, m=0.938, a_m=0.966
+3713.3s 430 (Train) e=7 b=140 l=0.083, a_l= 0.086, m=0.969, a_m=0.967
+3726.6s 431 (Train) e=7 b=160 l=0.034, a_l= 0.087, m=1.000, a_m=0.966
+3740.1s 432 (Train) e=7 b=180 l=0.090, a_l= 0.086, m=0.953, a_m=0.966
+3753.6s 433 (Train) e=7 b=200 l=0.033, a_l= 0.088, m=1.000, a_m=0.966
+3767.0s 434 (Train) e=7 b=220 l=0.092, a_l= 0.088, m=0.969, a_m=0.966
+3780.7s 435 (Train) e=7 b=240 l=0.041, a_l= 0.086, m=0.984, a_m=0.966
+3794.1s 436 (Train) e=7 b=260 l=0.101, a_l= 0.086, m=0.938, a_m=0.966
+3807.6s 437 (Train) e=7 b=280 l=0.042, a_l= 0.088, m=1.000, a_m=0.965
+3821.1s 438 (Train) e=7 b=300 l=0.056, a_l= 0.088, m=0.984, a_m=0.965
+3834.4s 439 (Train) e=7 b=320 l=0.075, a_l= 0.088, m=0.984, a_m=0.965
+3848.1s 440 (Train) e=7 b=340 l=0.054, a_l= 0.087, m=0.969, a_m=0.966
+3861.7s 441 (Train) e=7 b=360 l=0.109, a_l= 0.087, m=0.984, a_m=0.966
+3875.2s 442 (Train) e=7 b=380 l=0.084, a_l= 0.087, m=0.969, a_m=0.966
+3888.6s 443 (Train) e=7 b=400 l=0.160, a_l= 0.086, m=0.938, a_m=0.967
+3902.3s 444 (Train) e=7 b=420 l=0.123, a_l= 0.087, m=0.938, a_m=0.966
+3915.8s 445 (Train) e=7 b=440 l=0.158, a_l= 0.087, m=0.922, a_m=0.966
+3929.0s 446 (Train) e=7 b=460 l=0.127, a_l= 0.087, m=0.938, a_m=0.966
+3942.7s 447 (Train) e=7 b=480 l=0.092, a_l= 0.087, m=0.953, a_m=0.966
+3956.1s 448 (Train) e=7 b=500 l=0.102, a_l= 0.087, m=0.969, a_m=0.966
+3969.7s 449 (Train) e=7 b=520 l=0.187, a_l= 0.087, m=0.953, a_m=0.966
+3983.4s 450 (Train) e=7 b=540 l=0.093, a_l= 0.087, m=0.953, a_m=0.966
+3996.6s 451 (Train) e=7 b=560 l=0.038, a_l= 0.088, m=1.000, a_m=0.966
+4010.2s 452 (Train) e=7 b=580 l=0.023, a_l= 0.087, m=1.000, a_m=0.966
+4023.7s 453 (Train) e=7 b=600 l=0.126, a_l= 0.087, m=0.938, a_m=0.966
+4037.3s 454 (Train) e=7 b=620 l=0.155, a_l= 0.087, m=0.969, a_m=0.966
+4037.8s 455 (Train) e=7 b=621 l=0.096, a_l= 0.087, m=0.972, a_m=0.966
+4117.1s 456 (Eval) e=7 b=155 l=0.092, a_l= 0.085, m=0.962, a_m=0.968
+4117.2s 457 >>>model weight saved<<<
+4117.2s 458 ********************
+4117.2s 459 EPOCH: 8 started
+4119.1s 460 (Train) e=8 b=0 l=0.101, a_l= 0.101, m=0.969, a_m=0.969
+4133.1s 461 (Train) e=8 b=20 l=0.042, a_l= 0.079, m=0.984, a_m=0.972
+4146.4s 462 (Train) e=8 b=40 l=0.095, a_l= 0.076, m=0.969, a_m=0.971
+4160.0s 463 (Train) e=8 b=60 l=0.051, a_l= 0.072, m=0.984, a_m=0.972
+4173.4s 464 (Train) e=8 b=80 l=0.083, a_l= 0.068, m=0.969, a_m=0.974
+4186.8s 465 (Train) e=8 b=100 l=0.027, a_l= 0.068, m=1.000, a_m=0.974
+4200.4s 466 (Train) e=8 b=120 l=0.090, a_l= 0.069, m=0.969, a_m=0.974
+4213.6s 467 (Train) e=8 b=140 l=0.107, a_l= 0.070, m=0.922, a_m=0.974
+4227.3s 468 (Train) e=8 b=160 l=0.041, a_l= 0.071, m=1.000, a_m=0.974
+4240.8s 469 (Train) e=8 b=180 l=0.060, a_l= 0.074, m=0.969, a_m=0.972
+4253.9s 470 (Train) e=8 b=200 l=0.019, a_l= 0.073, m=0.984, a_m=0.972
+4267.5s 471 (Train) e=8 b=220 l=0.085, a_l= 0.074, m=0.969, a_m=0.972
+4281.1s 472 (Train) e=8 b=240 l=0.057, a_l= 0.074, m=0.984, a_m=0.972
+4294.6s 473 (Train) e=8 b=260 l=0.097, a_l= 0.076, m=0.938, a_m=0.972
+4308.0s 474 (Train) e=8 b=280 l=0.116, a_l= 0.076, m=0.969, a_m=0.971
+4321.6s 475 (Train) e=8 b=300 l=0.088, a_l= 0.076, m=0.969, a_m=0.971
+4334.9s 476 (Train) e=8 b=320 l=0.119, a_l= 0.077, m=0.969, a_m=0.971
+4348.3s 477 (Train) e=8 b=340 l=0.067, a_l= 0.078, m=0.953, a_m=0.970
+4362.0s 478 (Train) e=8 b=360 l=0.076, a_l= 0.079, m=0.969, a_m=0.969
+4375.1s 479 (Train) e=8 b=380 l=0.064, a_l= 0.079, m=0.969, a_m=0.969
+4388.6s 480 (Train) e=8 b=400 l=0.058, a_l= 0.080, m=0.984, a_m=0.969
+4402.1s 481 (Train) e=8 b=420 l=0.154, a_l= 0.081, m=0.938, a_m=0.968
+4415.5s 482 (Train) e=8 b=440 l=0.018, a_l= 0.081, m=1.000, a_m=0.968
+4428.9s 483 (Train) e=8 b=460 l=0.153, a_l= 0.082, m=0.922, a_m=0.968
+4442.2s 484 (Train) e=8 b=480 l=0.051, a_l= 0.081, m=0.953, a_m=0.968
+4455.8s 485 (Train) e=8 b=500 l=0.168, a_l= 0.082, m=0.938, a_m=0.968
+4469.2s 486 (Train) e=8 b=520 l=0.021, a_l= 0.082, m=1.000, a_m=0.968
+4482.6s 487 (Train) e=8 b=540 l=0.218, a_l= 0.082, m=0.922, a_m=0.968
+4496.0s 488 (Train) e=8 b=560 l=0.038, a_l= 0.082, m=0.984, a_m=0.968
+4509.4s 489 (Train) e=8 b=580 l=0.078, a_l= 0.081, m=0.984, a_m=0.968
+4523.1s 490 (Train) e=8 b=600 l=0.072, a_l= 0.081, m=0.984, a_m=0.969
+4536.4s 491 (Train) e=8 b=620 l=0.111, a_l= 0.081, m=0.938, a_m=0.968
+4536.9s 492 (Train) e=8 b=621 l=0.012, a_l= 0.081, m=1.000, a_m=0.969
+4615.9s 493 (Eval) e=8 b=155 l=0.010, a_l= 0.117, m=1.000, a_m=0.962
+4615.9s 494 ********************
+4615.9s 495 EPOCH: 9 started
+4617.8s 496 (Train) e=9 b=0 l=0.040, a_l= 0.040, m=0.984, a_m=0.984
+4632.2s 497 (Train) e=9 b=20 l=0.076, a_l= 0.087, m=0.969, a_m=0.969
+4646.7s 498 (Train) e=9 b=40 l=0.059, a_l= 0.071, m=0.984, a_m=0.974
+4660.7s 499 (Train) e=9 b=60 l=0.059, a_l= 0.065, m=0.969, a_m=0.976
+4675.1s 500 (Train) e=9 b=80 l=0.038, a_l= 0.060, m=0.984, a_m=0.977
+4689.6s 501 (Train) e=9 b=100 l=0.031, a_l= 0.061, m=0.984, a_m=0.976
+4703.6s 502 (Train) e=9 b=120 l=0.012, a_l= 0.059, m=1.000, a_m=0.977
+4717.8s 503 (Train) e=9 b=140 l=0.009, a_l= 0.060, m=1.000, a_m=0.977
+4732.2s 504 (Train) e=9 b=160 l=0.034, a_l= 0.059, m=0.984, a_m=0.977
+4746.1s 505 (Train) e=9 b=180 l=0.052, a_l= 0.059, m=0.984, a_m=0.978
+4760.4s 506 (Train) e=9 b=200 l=0.026, a_l= 0.058, m=0.984, a_m=0.978
+4775.1s 507 (Train) e=9 b=220 l=0.012, a_l= 0.058, m=1.000, a_m=0.978
+4789.0s 508 (Train) e=9 b=240 l=0.018, a_l= 0.058, m=1.000, a_m=0.977
+4803.6s 509 (Train) e=9 b=260 l=0.081, a_l= 0.059, m=0.969, a_m=0.977
+4818.0s 510 (Train) e=9 b=280 l=0.047, a_l= 0.059, m=0.969, a_m=0.976
+4832.2s 511 (Train) e=9 b=300 l=0.026, a_l= 0.059, m=1.000, a_m=0.977
+4846.3s 512 (Train) e=9 b=320 l=0.114, a_l= 0.059, m=0.953, a_m=0.976
+4860.3s 513 (Train) e=9 b=340 l=0.076, a_l= 0.060, m=0.969, a_m=0.977
+4874.5s 514 (Train) e=9 b=360 l=0.022, a_l= 0.060, m=1.000, a_m=0.977
+4888.6s 515 (Train) e=9 b=380 l=0.023, a_l= 0.059, m=0.984, a_m=0.977
+4902.9s 516 (Train) e=9 b=400 l=0.077, a_l= 0.059, m=0.969, a_m=0.977
+4916.9s 517 (Train) e=9 b=420 l=0.029, a_l= 0.059, m=0.984, a_m=0.977
+4931.9s 518 (Train) e=9 b=440 l=0.051, a_l= 0.059, m=0.984, a_m=0.977
+4946.2s 519 (Train) e=9 b=460 l=0.049, a_l= 0.059, m=0.984, a_m=0.977
+4961.0s 520 (Train) e=9 b=480 l=0.112, a_l= 0.059, m=0.969, a_m=0.978
+4975.3s 521 (Train) e=9 b=500 l=0.104, a_l= 0.059, m=0.969, a_m=0.978
+4989.5s 522 (Train) e=9 b=520 l=0.108, a_l= 0.060, m=0.984, a_m=0.977
+5004.1s 523 (Train) e=9 b=540 l=0.032, a_l= 0.060, m=0.984, a_m=0.977
+5018.3s 524 (Train) e=9 b=560 l=0.022, a_l= 0.060, m=0.984, a_m=0.977
+5033.0s 525 (Train) e=9 b=580 l=0.013, a_l= 0.060, m=1.000, a_m=0.977
+5046.9s 526 (Train) e=9 b=600 l=0.060, a_l= 0.061, m=0.969, a_m=0.977
+5061.3s 527 (Train) e=9 b=620 l=0.061, a_l= 0.061, m=0.953, a_m=0.977
+5061.8s 528 (Train) e=9 b=621 l=0.064, a_l= 0.061, m=0.972, a_m=0.977
+5140.8s 529 (Eval) e=9 b=155 l=0.041, a_l= 0.091, m=0.962, a_m=0.964
+5140.8s 530 ********************
+5140.8s 531 EPOCH: 10 started
+5142.7s 532 (Train) e=10 b=0 l=0.011, a_l= 0.011, m=1.000, a_m=1.000
+5157.8s 533 (Train) e=10 b=20 l=0.010, a_l= 0.053, m=1.000, a_m=0.978
+5172.1s 534 (Train) e=10 b=40 l=0.057, a_l= 0.050, m=0.969, a_m=0.980
+5186.6s 535 (Train) e=10 b=60 l=0.022, a_l= 0.047, m=1.000, a_m=0.982
+5200.7s 536 (Train) e=10 b=80 l=0.024, a_l= 0.046, m=1.000, a_m=0.982
+5215.3s 537 (Train) e=10 b=100 l=0.020, a_l= 0.051, m=1.000, a_m=0.981
+5229.4s 538 (Train) e=10 b=120 l=0.022, a_l= 0.051, m=1.000, a_m=0.981
+5243.5s 539 (Train) e=10 b=140 l=0.050, a_l= 0.050, m=0.969, a_m=0.981
+5257.9s 540 (Train) e=10 b=160 l=0.024, a_l= 0.049, m=1.000, a_m=0.981
+5272.0s 541 (Train) e=10 b=180 l=0.027, a_l= 0.049, m=1.000, a_m=0.981
+5286.5s 542 (Train) e=10 b=200 l=0.027, a_l= 0.050, m=1.000, a_m=0.980
+5300.7s 543 (Train) e=10 b=220 l=0.053, a_l= 0.051, m=0.969, a_m=0.980
+5314.9s 544 (Train) e=10 b=240 l=0.072, a_l= 0.051, m=0.969, a_m=0.980
+5329.2s 545 (Train) e=10 b=260 l=0.006, a_l= 0.051, m=1.000, a_m=0.980
+5343.4s 546 (Train) e=10 b=280 l=0.108, a_l= 0.052, m=0.953, a_m=0.980
+5357.7s 547 (Train) e=10 b=300 l=0.042, a_l= 0.052, m=0.969, a_m=0.980
+5371.8s 548 (Train) e=10 b=320 l=0.087, a_l= 0.051, m=0.953, a_m=0.980
+5386.7s 549 (Train) e=10 b=340 l=0.031, a_l= 0.051, m=0.984, a_m=0.980
+5400.8s 550 (Train) e=10 b=360 l=0.063, a_l= 0.051, m=0.984, a_m=0.980
+5415.5s 551 (Train) e=10 b=380 l=0.040, a_l= 0.052, m=0.984, a_m=0.979
+5429.6s 552 (Train) e=10 b=400 l=0.015, a_l= 0.053, m=1.000, a_m=0.979
+5444.0s 553 (Train) e=10 b=420 l=0.097, a_l= 0.053, m=0.969, a_m=0.979
+5458.1s 554 (Train) e=10 b=440 l=0.088, a_l= 0.053, m=0.969, a_m=0.979
+5472.6s 555 (Train) e=10 b=460 l=0.066, a_l= 0.053, m=0.984, a_m=0.979
+5486.7s 556 (Train) e=10 b=480 l=0.040, a_l= 0.053, m=0.984, a_m=0.979
+5500.8s 557 (Train) e=10 b=500 l=0.090, a_l= 0.054, m=0.969, a_m=0.979
+5515.3s 558 (Train) e=10 b=520 l=0.042, a_l= 0.054, m=0.969, a_m=0.979
+5529.3s 559 (Train) e=10 b=540 l=0.054, a_l= 0.053, m=0.969, a_m=0.979
+5543.9s 560 (Train) e=10 b=560 l=0.041, a_l= 0.053, m=0.969, a_m=0.979
+5558.1s 561 (Train) e=10 b=580 l=0.103, a_l= 0.054, m=0.922, a_m=0.979
+5572.5s 562 (Train) e=10 b=600 l=0.024, a_l= 0.054, m=1.000, a_m=0.979
+5586.6s 563 (Train) e=10 b=620 l=0.022, a_l= 0.055, m=1.000, a_m=0.979
+5587.1s 564 (Train) e=10 b=621 l=0.057, a_l= 0.055, m=0.972, a_m=0.979
+5667.2s 565 (Eval) e=10 b=155 l=0.007, a_l= 0.087, m=1.000, a_m=0.967
+5667.2s 566 ********************
+5667.2s 567 EPOCH: 11 started
+5669.1s 568 (Train) e=11 b=0 l=0.016, a_l= 0.016, m=1.000, a_m=1.000
+5684.6s 569 (Train) e=11 b=20 l=0.032, a_l= 0.042, m=0.984, a_m=0.987
+5700.4s 570 (Train) e=11 b=40 l=0.021, a_l= 0.040, m=1.000, a_m=0.988
+5715.8s 571 (Train) e=11 b=60 l=0.096, a_l= 0.043, m=0.969, a_m=0.987
+5731.7s 572 (Train) e=11 b=80 l=0.029, a_l= 0.043, m=1.000, a_m=0.986
+5746.7s 573 (Train) e=11 b=100 l=0.013, a_l= 0.042, m=1.000, a_m=0.985
+5762.6s 574 (Train) e=11 b=120 l=0.035, a_l= 0.040, m=0.984, a_m=0.986
+5777.1s 575 (Train) e=11 b=140 l=0.062, a_l= 0.041, m=0.984, a_m=0.985
+5793.2s 576 (Train) e=11 b=160 l=0.155, a_l= 0.042, m=0.953, a_m=0.985
+5808.7s 577 (Train) e=11 b=180 l=0.066, a_l= 0.042, m=0.984, a_m=0.985
+5824.4s 578 (Train) e=11 b=200 l=0.096, a_l= 0.044, m=0.969, a_m=0.984
+5839.7s 579 (Train) e=11 b=220 l=0.028, a_l= 0.044, m=1.000, a_m=0.984
+5855.1s 580 (Train) e=11 b=240 l=0.009, a_l= 0.044, m=1.000, a_m=0.984
+5870.8s 581 (Train) e=11 b=260 l=0.074, a_l= 0.044, m=0.984, a_m=0.984
+5886.4s 582 (Train) e=11 b=280 l=0.032, a_l= 0.044, m=0.969, a_m=0.984
+5902.4s 583 (Train) e=11 b=300 l=0.089, a_l= 0.044, m=0.969, a_m=0.984
+5918.2s 584 (Train) e=11 b=320 l=0.030, a_l= 0.045, m=0.984, a_m=0.984
+5934.2s 585 (Train) e=11 b=340 l=0.004, a_l= 0.046, m=1.000, a_m=0.983
+5950.1s 586 (Train) e=11 b=360 l=0.022, a_l= 0.046, m=1.000, a_m=0.983
+5966.3s 587 (Train) e=11 b=380 l=0.060, a_l= 0.046, m=0.984, a_m=0.983
+5982.2s 588 (Train) e=11 b=400 l=0.073, a_l= 0.047, m=0.984, a_m=0.983
+5998.0s 589 (Train) e=11 b=420 l=0.179, a_l= 0.047, m=0.938, a_m=0.983
+6014.1s 590 (Train) e=11 b=440 l=0.054, a_l= 0.047, m=0.953, a_m=0.983
+6029.4s 591 (Train) e=11 b=460 l=0.084, a_l= 0.047, m=0.938, a_m=0.983
+6044.9s 592 (Train) e=11 b=480 l=0.067, a_l= 0.048, m=0.953, a_m=0.983
+6060.8s 593 (Train) e=11 b=500 l=0.122, a_l= 0.048, m=0.922, a_m=0.982
+6076.4s 594 (Train) e=11 b=520 l=0.061, a_l= 0.048, m=0.969, a_m=0.982
+6091.9s 595 (Train) e=11 b=540 l=0.027, a_l= 0.048, m=0.984, a_m=0.982
+6107.7s 596 (Train) e=11 b=560 l=0.053, a_l= 0.048, m=0.953, a_m=0.982
+6123.4s 597 (Train) e=11 b=580 l=0.165, a_l= 0.048, m=0.938, a_m=0.982
+6139.4s 598 (Train) e=11 b=600 l=0.095, a_l= 0.048, m=0.953, a_m=0.982
+6155.4s 599 (Train) e=11 b=620 l=0.119, a_l= 0.048, m=0.938, a_m=0.982
+6155.9s 600 (Train) e=11 b=621 l=0.056, a_l= 0.048, m=0.972, a_m=0.982
+6237.7s 601 (Eval) e=11 b=155 l=0.144, a_l= 0.096, m=0.923, a_m=0.968
+6237.7s 602 ********************
+6237.7s 603 EPOCH: 12 started
+6239.3s 604 (Train) e=12 b=0 l=0.006, a_l= 0.006, m=1.000, a_m=1.000
+6253.8s 605 (Train) e=12 b=20 l=0.003, a_l= 0.045, m=1.000, a_m=0.982
+6267.3s 606 (Train) e=12 b=40 l=0.029, a_l= 0.042, m=0.984, a_m=0.983
+6281.1s 607 (Train) e=12 b=60 l=0.059, a_l= 0.040, m=0.969, a_m=0.984
+6294.5s 608 (Train) e=12 b=80 l=0.021, a_l= 0.042, m=0.984, a_m=0.983
+6308.2s 609 (Train) e=12 b=100 l=0.017, a_l= 0.040, m=1.000, a_m=0.985
+6322.0s 610 (Train) e=12 b=120 l=0.032, a_l= 0.040, m=0.984, a_m=0.985
+6335.3s 611 (Train) e=12 b=140 l=0.024, a_l= 0.041, m=1.000, a_m=0.984
+6349.2s 612 (Train) e=12 b=160 l=0.038, a_l= 0.041, m=0.984, a_m=0.984
+6362.9s 613 (Train) e=12 b=180 l=0.042, a_l= 0.041, m=0.984, a_m=0.985
+6376.5s 614 (Train) e=12 b=200 l=0.055, a_l= 0.043, m=0.969, a_m=0.984
+6390.2s 615 (Train) e=12 b=220 l=0.043, a_l= 0.044, m=0.984, a_m=0.983
+6404.0s 616 (Train) e=12 b=240 l=0.095, a_l= 0.043, m=0.969, a_m=0.983
+6417.1s 617 (Train) e=12 b=260 l=0.011, a_l= 0.042, m=1.000, a_m=0.984
+6430.6s 618 (Train) e=12 b=280 l=0.032, a_l= 0.043, m=0.984, a_m=0.983
+6444.2s 619 (Train) e=12 b=300 l=0.083, a_l= 0.044, m=0.969, a_m=0.983
+6457.7s 620 (Train) e=12 b=320 l=0.019, a_l= 0.044, m=1.000, a_m=0.983
+6471.2s 621 (Train) e=12 b=340 l=0.119, a_l= 0.044, m=0.953, a_m=0.983
+6485.1s 622 (Train) e=12 b=360 l=0.045, a_l= 0.045, m=0.984, a_m=0.983
+6498.6s 623 (Train) e=12 b=380 l=0.042, a_l= 0.045, m=0.984, a_m=0.983
+6512.2s 624 (Train) e=12 b=400 l=0.071, a_l= 0.045, m=0.953, a_m=0.982
+6525.8s 625 (Train) e=12 b=420 l=0.072, a_l= 0.045, m=0.969, a_m=0.982
+6539.4s 626 (Train) e=12 b=440 l=0.016, a_l= 0.045, m=1.000, a_m=0.983
+6552.9s 627 (Train) e=12 b=460 l=0.010, a_l= 0.045, m=1.000, a_m=0.982
+6566.6s 628 (Train) e=12 b=480 l=0.012, a_l= 0.045, m=1.000, a_m=0.983
+6580.0s 629 (Train) e=12 b=500 l=0.107, a_l= 0.045, m=0.953, a_m=0.983
+6593.5s 630 (Train) e=12 b=520 l=0.168, a_l= 0.045, m=0.953, a_m=0.983
+6607.3s 631 (Train) e=12 b=540 l=0.036, a_l= 0.044, m=0.969, a_m=0.983
+6620.6s 632 (Train) e=12 b=560 l=0.011, a_l= 0.045, m=1.000, a_m=0.983
+6634.2s 633 (Train) e=12 b=580 l=0.039, a_l= 0.045, m=0.984, a_m=0.983
+6647.9s 634 (Train) e=12 b=600 l=0.033, a_l= 0.045, m=0.984, a_m=0.983
+6661.1s 635 (Train) e=12 b=620 l=0.024, a_l= 0.044, m=0.984, a_m=0.983
+6661.7s 636 (Train) e=12 b=621 l=0.020, a_l= 0.044, m=1.000, a_m=0.983
+6743.7s 637 (Eval) e=12 b=155 l=0.141, a_l= 0.078, m=0.923, a_m=0.973
+6743.8s 638 >>>model weight saved<<<
+6743.8s 639 ********************
+6743.8s 640 EPOCH: 13 started
+6745.7s 641 (Train) e=13 b=0 l=0.034, a_l= 0.034, m=0.984, a_m=0.984
+6759.8s 642 (Train) e=13 b=20 l=0.043, a_l= 0.030, m=0.984, a_m=0.986
+6773.3s 643 (Train) e=13 b=40 l=0.021, a_l= 0.029, m=0.984, a_m=0.986
+6786.9s 644 (Train) e=13 b=60 l=0.016, a_l= 0.031, m=1.000, a_m=0.986
+6800.3s 645 (Train) e=13 b=80 l=0.043, a_l= 0.032, m=0.984, a_m=0.986
+6813.7s 646 (Train) e=13 b=100 l=0.003, a_l= 0.031, m=1.000, a_m=0.987
+6827.4s 647 (Train) e=13 b=120 l=0.049, a_l= 0.031, m=0.984, a_m=0.987
+6840.6s 648 (Train) e=13 b=140 l=0.118, a_l= 0.031, m=0.953, a_m=0.987
+6854.1s 649 (Train) e=13 b=160 l=0.049, a_l= 0.032, m=0.969, a_m=0.987
+6867.7s 650 (Train) e=13 b=180 l=0.032, a_l= 0.031, m=0.984, a_m=0.987
+6881.0s 651 (Train) e=13 b=200 l=0.005, a_l= 0.031, m=1.000, a_m=0.987
+6894.7s 652 (Train) e=13 b=220 l=0.019, a_l= 0.030, m=0.984, a_m=0.988
+6908.3s 653 (Train) e=13 b=240 l=0.029, a_l= 0.030, m=0.969, a_m=0.988
+6921.7s 654 (Train) e=13 b=260 l=0.025, a_l= 0.030, m=1.000, a_m=0.988
+6935.1s 655 (Train) e=13 b=280 l=0.093, a_l= 0.031, m=0.969, a_m=0.988
+6948.8s 656 (Train) e=13 b=300 l=0.015, a_l= 0.033, m=1.000, a_m=0.987
+6962.2s 657 (Train) e=13 b=320 l=0.021, a_l= 0.033, m=1.000, a_m=0.987
+6975.6s 658 (Train) e=13 b=340 l=0.060, a_l= 0.034, m=0.984, a_m=0.987
+6989.2s 659 (Train) e=13 b=360 l=0.079, a_l= 0.034, m=0.953, a_m=0.987
+7002.5s 660 (Train) e=13 b=380 l=0.099, a_l= 0.035, m=0.953, a_m=0.986
+7016.0s 661 (Train) e=13 b=400 l=0.011, a_l= 0.035, m=1.000, a_m=0.986
+7029.6s 662 (Train) e=13 b=420 l=0.034, a_l= 0.035, m=0.969, a_m=0.986
+7043.2s 663 (Train) e=13 b=440 l=0.004, a_l= 0.035, m=1.000, a_m=0.986
+7056.8s 664 (Train) e=13 b=460 l=0.060, a_l= 0.035, m=0.984, a_m=0.986
+7070.5s 665 (Train) e=13 b=480 l=0.006, a_l= 0.036, m=1.000, a_m=0.986
+7084.1s 666 (Train) e=13 b=500 l=0.061, a_l= 0.036, m=0.984, a_m=0.986
+7097.5s 667 (Train) e=13 b=520 l=0.033, a_l= 0.036, m=0.969, a_m=0.986
+7111.4s 668 (Train) e=13 b=540 l=0.027, a_l= 0.037, m=0.969, a_m=0.985
+7124.6s 669 (Train) e=13 b=560 l=0.012, a_l= 0.037, m=1.000, a_m=0.985
+7138.2s 670 (Train) e=13 b=580 l=0.019, a_l= 0.037, m=0.984, a_m=0.985
+7152.3s 671 (Train) e=13 b=600 l=0.037, a_l= 0.037, m=0.969, a_m=0.985
+7165.4s 672 (Train) e=13 b=620 l=0.018, a_l= 0.037, m=1.000, a_m=0.985
+7165.9s 673 (Train) e=13 b=621 l=0.057, a_l= 0.037, m=0.972, a_m=0.985
+7248.4s 674 (Eval) e=13 b=155 l=0.239, a_l= 0.084, m=0.962, a_m=0.971
+7248.4s 675 ********************
+7248.4s 676 EPOCH: 14 started
+7250.2s 677 (Train) e=14 b=0 l=0.002, a_l= 0.002, m=1.000, a_m=1.000
+7264.0s 678 (Train) e=14 b=20 l=0.052, a_l= 0.029, m=0.984, a_m=0.990
+7277.9s 679 (Train) e=14 b=40 l=0.020, a_l= 0.030, m=1.000, a_m=0.988
+7291.4s 680 (Train) e=14 b=60 l=0.003, a_l= 0.028, m=1.000, a_m=0.989
+7304.6s 681 (Train) e=14 b=80 l=0.018, a_l= 0.027, m=1.000, a_m=0.990
+7318.1s 682 (Train) e=14 b=100 l=0.024, a_l= 0.028, m=0.984, a_m=0.990
+7331.8s 683 (Train) e=14 b=120 l=0.003, a_l= 0.027, m=1.000, a_m=0.991
+7345.2s 684 (Train) e=14 b=140 l=0.007, a_l= 0.026, m=1.000, a_m=0.991
+7358.7s 685 (Train) e=14 b=160 l=0.006, a_l= 0.027, m=1.000, a_m=0.991
+7372.4s 686 (Train) e=14 b=180 l=0.013, a_l= 0.027, m=1.000, a_m=0.991
+7385.9s 687 (Train) e=14 b=200 l=0.035, a_l= 0.027, m=0.984, a_m=0.991
+7399.5s 688 (Train) e=14 b=220 l=0.027, a_l= 0.026, m=0.984, a_m=0.991
+7413.3s 689 (Train) e=14 b=240 l=0.011, a_l= 0.026, m=1.000, a_m=0.991
+7426.6s 690 (Train) e=14 b=260 l=0.037, a_l= 0.027, m=0.969, a_m=0.991
+7440.5s 691 (Train) e=14 b=280 l=0.024, a_l= 0.026, m=0.984, a_m=0.991
+7454.0s 692 (Train) e=14 b=300 l=0.010, a_l= 0.026, m=1.000, a_m=0.991
+7467.6s 693 (Train) e=14 b=320 l=0.012, a_l= 0.027, m=1.000, a_m=0.991
+7481.2s 694 (Train) e=14 b=340 l=0.015, a_l= 0.028, m=1.000, a_m=0.990
+7494.7s 695 (Train) e=14 b=360 l=0.088, a_l= 0.029, m=0.953, a_m=0.990
+7508.2s 696 (Train) e=14 b=380 l=0.014, a_l= 0.029, m=1.000, a_m=0.990
+7521.8s 697 (Train) e=14 b=400 l=0.007, a_l= 0.030, m=1.000, a_m=0.990
+7535.7s 698 (Train) e=14 b=420 l=0.015, a_l= 0.030, m=1.000, a_m=0.989
+7548.9s 699 (Train) e=14 b=440 l=0.050, a_l= 0.030, m=0.969, a_m=0.989
+7562.5s 700 (Train) e=14 b=460 l=0.009, a_l= 0.031, m=1.000, a_m=0.989
+7576.3s 701 (Train) e=14 b=480 l=0.036, a_l= 0.031, m=0.984, a_m=0.989
+7589.7s 702 (Train) e=14 b=500 l=0.027, a_l= 0.031, m=0.984, a_m=0.989
+7603.1s 703 (Train) e=14 b=520 l=0.031, a_l= 0.031, m=0.984, a_m=0.989
+7616.8s 704 (Train) e=14 b=540 l=0.019, a_l= 0.031, m=0.984, a_m=0.989
+7630.1s 705 (Train) e=14 b=560 l=0.007, a_l= 0.031, m=1.000, a_m=0.989
+7643.5s 706 (Train) e=14 b=580 l=0.009, a_l= 0.031, m=1.000, a_m=0.989
+7657.4s 707 (Train) e=14 b=600 l=0.034, a_l= 0.031, m=0.984, a_m=0.989
+7670.7s 708 (Train) e=14 b=620 l=0.016, a_l= 0.031, m=1.000, a_m=0.989
+7671.1s 709 (Train) e=14 b=621 l=0.051, a_l= 0.031, m=0.972, a_m=0.989
+7753.4s 710 (Eval) e=14 b=155 l=0.006, a_l= 0.091, m=1.000, a_m=0.971
+7753.4s 711 ********************
+7753.4s 712 EPOCH: 15 started
+7755.3s 713 (Train) e=15 b=0 l=0.002, a_l= 0.002, m=1.000, a_m=1.000
+7769.2s 714 (Train) e=15 b=20 l=0.072, a_l= 0.021, m=0.969, a_m=0.991
+7782.7s 715 (Train) e=15 b=40 l=0.029, a_l= 0.021, m=0.984, a_m=0.991
+7796.4s 716 (Train) e=15 b=60 l=0.004, a_l= 0.025, m=1.000, a_m=0.989
+7809.7s 717 (Train) e=15 b=80 l=0.016, a_l= 0.025, m=0.984, a_m=0.989
+7823.4s 718 (Train) e=15 b=100 l=0.008, a_l= 0.027, m=1.000, a_m=0.989
+7837.0s 719 (Train) e=15 b=120 l=0.021, a_l= 0.027, m=0.984, a_m=0.989
+7850.2s 720 (Train) e=15 b=140 l=0.012, a_l= 0.028, m=1.000, a_m=0.988
+7863.7s 721 (Train) e=15 b=160 l=0.032, a_l= 0.029, m=1.000, a_m=0.988
+7877.3s 722 (Train) e=15 b=180 l=0.033, a_l= 0.029, m=0.984, a_m=0.988
+7890.7s 723 (Train) e=15 b=200 l=0.012, a_l= 0.028, m=1.000, a_m=0.989
+7904.0s 724 (Train) e=15 b=220 l=0.003, a_l= 0.027, m=1.000, a_m=0.989
+7917.7s 725 (Train) e=15 b=240 l=0.023, a_l= 0.027, m=0.984, a_m=0.989
+7930.9s 726 (Train) e=15 b=260 l=0.015, a_l= 0.026, m=1.000, a_m=0.989
+7944.7s 727 (Train) e=15 b=280 l=0.002, a_l= 0.026, m=1.000, a_m=0.989
+7958.3s 728 (Train) e=15 b=300 l=0.003, a_l= 0.027, m=1.000, a_m=0.989
+7971.8s 729 (Train) e=15 b=320 l=0.025, a_l= 0.027, m=0.984, a_m=0.989
+7985.4s 730 (Train) e=15 b=340 l=0.010, a_l= 0.028, m=1.000, a_m=0.989
+7999.0s 731 (Train) e=15 b=360 l=0.002, a_l= 0.029, m=1.000, a_m=0.988
+8012.6s 732 (Train) e=15 b=380 l=0.025, a_l= 0.029, m=0.984, a_m=0.988
+8026.1s 733 (Train) e=15 b=400 l=0.016, a_l= 0.029, m=0.984, a_m=0.988
+8039.8s 734 (Train) e=15 b=420 l=0.064, a_l= 0.028, m=0.984, a_m=0.988
+8053.2s 735 (Train) e=15 b=440 l=0.002, a_l= 0.029, m=1.000, a_m=0.988
+8066.5s 736 (Train) e=15 b=460 l=0.055, a_l= 0.029, m=0.969, a_m=0.988
+8080.4s 737 (Train) e=15 b=480 l=0.020, a_l= 0.029, m=0.984, a_m=0.988
+8093.6s 738 (Train) e=15 b=500 l=0.016, a_l= 0.029, m=0.984, a_m=0.988
+8107.2s 739 (Train) e=15 b=520 l=0.027, a_l= 0.029, m=0.984, a_m=0.988
+8121.1s 740 (Train) e=15 b=540 l=0.008, a_l= 0.029, m=1.000, a_m=0.988
+8134.4s 741 (Train) e=15 b=560 l=0.006, a_l= 0.029, m=1.000, a_m=0.988
+8147.9s 742 (Train) e=15 b=580 l=0.026, a_l= 0.029, m=0.984, a_m=0.988
+8161.7s 743 (Train) e=15 b=600 l=0.005, a_l= 0.029, m=1.000, a_m=0.988
+8175.0s 744 (Train) e=15 b=620 l=0.026, a_l= 0.029, m=0.984, a_m=0.988
+8175.5s 745 (Train) e=15 b=621 l=0.005, a_l= 0.029, m=1.000, a_m=0.988
+8257.4s 746 (Eval) e=15 b=155 l=0.106, a_l= 0.123, m=0.962, a_m=0.965
+8257.4s 747 ********************
+8257.4s 748 EPOCH: 16 started
+8259.5s 749 (Train) e=16 b=0 l=0.060, a_l= 0.060, m=0.969, a_m=0.969
+8273.5s 750 (Train) e=16 b=20 l=0.018, a_l= 0.036, m=0.984, a_m=0.984
+8287.0s 751 (Train) e=16 b=40 l=0.001, a_l= 0.029, m=1.000, a_m=0.989
+8301.1s 752 (Train) e=16 b=60 l=0.003, a_l= 0.024, m=1.000, a_m=0.990
+8314.4s 753 (Train) e=16 b=80 l=0.003, a_l= 0.021, m=1.000, a_m=0.992
+8327.9s 754 (Train) e=16 b=100 l=0.008, a_l= 0.025, m=1.000, a_m=0.991
+8341.7s 755 (Train) e=16 b=120 l=0.055, a_l= 0.023, m=0.969, a_m=0.991
+8354.9s 756 (Train) e=16 b=140 l=0.003, a_l= 0.022, m=1.000, a_m=0.992
+8368.6s 757 (Train) e=16 b=160 l=0.021, a_l= 0.021, m=1.000, a_m=0.992
+8381.9s 758 (Train) e=16 b=180 l=0.024, a_l= 0.022, m=0.984, a_m=0.992
+8395.5s 759 (Train) e=16 b=200 l=0.026, a_l= 0.021, m=0.984, a_m=0.993
+8408.9s 760 (Train) e=16 b=220 l=0.001, a_l= 0.020, m=1.000, a_m=0.993
+8422.6s 761 (Train) e=16 b=240 l=0.020, a_l= 0.020, m=0.984, a_m=0.993
+8435.8s 762 (Train) e=16 b=260 l=0.002, a_l= 0.019, m=1.000, a_m=0.993
+8449.2s 763 (Train) e=16 b=280 l=0.052, a_l= 0.019, m=0.969, a_m=0.993
+8462.7s 764 (Train) e=16 b=300 l=0.001, a_l= 0.019, m=1.000, a_m=0.993
+8476.2s 765 (Train) e=16 b=320 l=0.047, a_l= 0.019, m=0.969, a_m=0.993
+8489.9s 766 (Train) e=16 b=340 l=0.038, a_l= 0.019, m=0.969, a_m=0.993
+8503.6s 767 (Train) e=16 b=360 l=0.022, a_l= 0.018, m=0.984, a_m=0.993
+8516.8s 768 (Train) e=16 b=380 l=0.001, a_l= 0.019, m=1.000, a_m=0.993
+8530.6s 769 (Train) e=16 b=400 l=0.055, a_l= 0.019, m=0.969, a_m=0.993
+8544.1s 770 (Train) e=16 b=420 l=0.166, a_l= 0.020, m=0.953, a_m=0.992
+8557.8s 771 (Train) e=16 b=440 l=0.005, a_l= 0.020, m=1.000, a_m=0.992
+8571.4s 772 (Train) e=16 b=460 l=0.001, a_l= 0.021, m=1.000, a_m=0.992
+8585.1s 773 (Train) e=16 b=480 l=0.015, a_l= 0.021, m=0.984, a_m=0.992
+8598.5s 774 (Train) e=16 b=500 l=0.096, a_l= 0.022, m=0.953, a_m=0.992
+8611.8s 775 (Train) e=16 b=520 l=0.019, a_l= 0.022, m=0.984, a_m=0.991
+8625.7s 776 (Train) e=16 b=540 l=0.022, a_l= 0.022, m=0.984, a_m=0.991
+8639.0s 777 (Train) e=16 b=560 l=0.058, a_l= 0.022, m=0.984, a_m=0.991
+8652.7s 778 (Train) e=16 b=580 l=0.045, a_l= 0.023, m=0.984, a_m=0.991
+8666.2s 779 (Train) e=16 b=600 l=0.009, a_l= 0.023, m=1.000, a_m=0.991
+8679.7s 780 (Train) e=16 b=620 l=0.036, a_l= 0.023, m=0.969, a_m=0.991
+8680.1s 781 (Train) e=16 b=621 l=0.001, a_l= 0.023, m=1.000, a_m=0.991
+8762.4s 782 (Eval) e=16 b=155 l=0.006, a_l= 0.101, m=1.000, a_m=0.970
+8762.4s 783 ********************
+8762.4s 784 EPOCH: 17 started
+8764.2s 785 (Train) e=17 b=0 l=0.014, a_l= 0.014, m=1.000, a_m=1.000
+8778.2s 786 (Train) e=17 b=20 l=0.047, a_l= 0.020, m=0.984, a_m=0.993
+8791.8s 787 (Train) e=17 b=40 l=0.003, a_l= 0.018, m=1.000, a_m=0.993
+8805.3s 788 (Train) e=17 b=60 l=0.013, a_l= 0.017, m=1.000, a_m=0.993
+8818.9s 789 (Train) e=17 b=80 l=0.002, a_l= 0.017, m=1.000, a_m=0.993
+8832.5s 790 (Train) e=17 b=100 l=0.006, a_l= 0.016, m=1.000, a_m=0.994
+8846.3s 791 (Train) e=17 b=120 l=0.008, a_l= 0.015, m=1.000, a_m=0.994
+8859.7s 792 (Train) e=17 b=140 l=0.004, a_l= 0.014, m=1.000, a_m=0.995
+8873.2s 793 (Train) e=17 b=160 l=0.011, a_l= 0.014, m=1.000, a_m=0.995
+8886.9s 794 (Train) e=17 b=180 l=0.030, a_l= 0.014, m=0.984, a_m=0.994
+8900.3s 795 (Train) e=17 b=200 l=0.032, a_l= 0.015, m=0.984, a_m=0.994
+8914.1s 796 (Train) e=17 b=220 l=0.001, a_l= 0.017, m=1.000, a_m=0.993
+8927.8s 797 (Train) e=17 b=240 l=0.061, a_l= 0.019, m=0.953, a_m=0.992
+8941.2s 798 (Train) e=17 b=260 l=0.033, a_l= 0.020, m=1.000, a_m=0.992
+8954.8s 799 (Train) e=17 b=280 l=0.018, a_l= 0.021, m=0.984, a_m=0.991
+8968.6s 800 (Train) e=17 b=300 l=0.008, a_l= 0.021, m=1.000, a_m=0.991
+8981.9s 801 (Train) e=17 b=320 l=0.009, a_l= 0.021, m=1.000, a_m=0.991
+8995.5s 802 (Train) e=17 b=340 l=0.059, a_l= 0.022, m=0.984, a_m=0.991
+9009.5s 803 (Train) e=17 b=360 l=0.038, a_l= 0.023, m=0.969, a_m=0.991
+9022.8s 804 (Train) e=17 b=380 l=0.016, a_l= 0.023, m=0.984, a_m=0.991
+9036.4s 805 (Train) e=17 b=400 l=0.003, a_l= 0.023, m=1.000, a_m=0.991
+9050.0s 806 (Train) e=17 b=420 l=0.003, a_l= 0.023, m=1.000, a_m=0.991
+9063.4s 807 (Train) e=17 b=440 l=0.012, a_l= 0.023, m=1.000, a_m=0.991
+9077.1s 808 (Train) e=17 b=460 l=0.062, a_l= 0.022, m=0.984, a_m=0.991
+9090.7s 809 (Train) e=17 b=480 l=0.001, a_l= 0.022, m=1.000, a_m=0.991
+9104.2s 810 (Train) e=17 b=500 l=0.008, a_l= 0.022, m=1.000, a_m=0.991
+9117.5s 811 (Train) e=17 b=520 l=0.025, a_l= 0.021, m=0.969, a_m=0.991
+9131.6s 812 (Train) e=17 b=540 l=0.001, a_l= 0.022, m=1.000, a_m=0.991
+9145.0s 813 (Train) e=17 b=560 l=0.001, a_l= 0.021, m=1.000, a_m=0.991
+9158.5s 814 (Train) e=17 b=580 l=0.002, a_l= 0.021, m=1.000, a_m=0.992
+9172.0s 815 (Train) e=17 b=600 l=0.211, a_l= 0.021, m=0.938, a_m=0.991
+9185.3s 816 (Train) e=17 b=620 l=0.017, a_l= 0.021, m=0.984, a_m=0.992
+9185.7s 817 (Train) e=17 b=621 l=0.273, a_l= 0.022, m=0.944, a_m=0.991
+9268.6s 818 (Eval) e=17 b=155 l=0.159, a_l= 0.098, m=0.962, a_m=0.972
+9268.6s 819 ********************
+9268.6s 820 EPOCH: 18 started
+9270.4s 821 (Train) e=18 b=0 l=0.024, a_l= 0.024, m=0.984, a_m=0.984
+9284.2s 822 (Train) e=18 b=20 l=0.002, a_l= 0.009, m=1.000, a_m=0.997
+9297.8s 823 (Train) e=18 b=40 l=0.051, a_l= 0.012, m=0.984, a_m=0.995
+9311.6s 824 (Train) e=18 b=60 l=0.024, a_l= 0.013, m=0.984, a_m=0.994
+9325.0s 825 (Train) e=18 b=80 l=0.002, a_l= 0.012, m=1.000, a_m=0.995
+9338.6s 826 (Train) e=18 b=100 l=0.003, a_l= 0.011, m=1.000, a_m=0.996
+9352.3s 827 (Train) e=18 b=120 l=0.016, a_l= 0.011, m=1.000, a_m=0.996
+9365.7s 828 (Train) e=18 b=140 l=0.001, a_l= 0.010, m=1.000, a_m=0.997
+9379.2s 829 (Train) e=18 b=160 l=0.011, a_l= 0.010, m=1.000, a_m=0.997
+9393.2s 830 (Train) e=18 b=180 l=0.009, a_l= 0.010, m=1.000, a_m=0.996
+9406.4s 831 (Train) e=18 b=200 l=0.001, a_l= 0.010, m=1.000, a_m=0.997
+9420.0s 832 (Train) e=18 b=220 l=0.000, a_l= 0.010, m=1.000, a_m=0.997
+9433.9s 833 (Train) e=18 b=240 l=0.010, a_l= 0.009, m=1.000, a_m=0.997
+9447.3s 834 (Train) e=18 b=260 l=0.001, a_l= 0.009, m=1.000, a_m=0.997
+9461.0s 835 (Train) e=18 b=280 l=0.012, a_l= 0.009, m=0.984, a_m=0.997
+9474.5s 836 (Train) e=18 b=300 l=0.001, a_l= 0.009, m=1.000, a_m=0.997
+9487.8s 837 (Train) e=18 b=320 l=0.001, a_l= 0.009, m=1.000, a_m=0.997
+9501.4s 838 (Train) e=18 b=340 l=0.008, a_l= 0.008, m=1.000, a_m=0.997
+9515.4s 839 (Train) e=18 b=360 l=0.001, a_l= 0.008, m=1.000, a_m=0.997
+9528.7s 840 (Train) e=18 b=380 l=0.000, a_l= 0.008, m=1.000, a_m=0.997
+9542.1s 841 (Train) e=18 b=400 l=0.002, a_l= 0.008, m=1.000, a_m=0.997
+9555.7s 842 (Train) e=18 b=420 l=0.000, a_l= 0.008, m=1.000, a_m=0.997
+9568.9s 843 (Train) e=18 b=440 l=0.041, a_l= 0.008, m=0.984, a_m=0.997
+9583.1s 844 (Train) e=18 b=460 l=0.022, a_l= 0.008, m=0.984, a_m=0.997
+9596.7s 845 (Train) e=18 b=480 l=0.002, a_l= 0.008, m=1.000, a_m=0.997
+9610.2s 846 (Train) e=18 b=500 l=0.004, a_l= 0.008, m=1.000, a_m=0.997
+9623.8s 847 (Train) e=18 b=520 l=0.001, a_l= 0.008, m=1.000, a_m=0.997
+9637.6s 848 (Train) e=18 b=540 l=0.002, a_l= 0.009, m=1.000, a_m=0.997
+9651.0s 849 (Train) e=18 b=560 l=0.001, a_l= 0.008, m=1.000, a_m=0.997
+9664.5s 850 (Train) e=18 b=580 l=0.012, a_l= 0.008, m=1.000, a_m=0.997
+9678.4s 851 (Train) e=18 b=600 l=0.002, a_l= 0.008, m=1.000, a_m=0.997
+9691.4s 852 (Train) e=18 b=620 l=0.015, a_l= 0.008, m=0.984, a_m=0.997
+9691.9s 853 (Train) e=18 b=621 l=0.001, a_l= 0.008, m=1.000, a_m=0.997
+9781.5s 854 (Eval) e=18 b=155 l=0.056, a_l= 0.111, m=0.962, a_m=0.973
+9781.5s 855 ********************
+9781.5s 856 EPOCH: 19 started
+9783.3s 857 (Train) e=19 b=0 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+9797.6s 858 (Train) e=19 b=20 l=0.012, a_l= 0.003, m=0.984, a_m=0.999
+9813.0s 859 (Train) e=19 b=40 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+9827.0s 860 (Train) e=19 b=60 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+9841.4s 861 (Train) e=19 b=80 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+9855.7s 862 (Train) e=19 b=100 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+9870.7s 863 (Train) e=19 b=120 l=0.002, a_l= 0.003, m=1.000, a_m=0.999
+9885.0s 864 (Train) e=19 b=140 l=0.037, a_l= 0.003, m=0.984, a_m=0.999
+9900.2s 865 (Train) e=19 b=160 l=0.005, a_l= 0.003, m=1.000, a_m=0.999
+9914.5s 866 (Train) e=19 b=180 l=0.001, a_l= 0.004, m=1.000, a_m=0.999
+9929.3s 867 (Train) e=19 b=200 l=0.001, a_l= 0.004, m=1.000, a_m=0.999
+9943.7s 868 (Train) e=19 b=220 l=0.003, a_l= 0.003, m=1.000, a_m=0.999
+9957.8s 869 (Train) e=19 b=240 l=0.004, a_l= 0.003, m=1.000, a_m=0.999
+9972.7s 870 (Train) e=19 b=260 l=0.006, a_l= 0.003, m=1.000, a_m=0.999
+9987.3s 871 (Train) e=19 b=280 l=0.003, a_l= 0.003, m=1.000, a_m=0.999
+10002.0s 872 (Train) e=19 b=300 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+10016.1s 873 (Train) e=19 b=320 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+10031.2s 874 (Train) e=19 b=340 l=0.008, a_l= 0.003, m=1.000, a_m=0.999
+10045.5s 875 (Train) e=19 b=360 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+10060.1s 876 (Train) e=19 b=380 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+10074.5s 877 (Train) e=19 b=400 l=0.030, a_l= 0.003, m=0.984, a_m=0.999
+10089.1s 878 (Train) e=19 b=420 l=0.005, a_l= 0.004, m=1.000, a_m=0.999
+10103.8s 879 (Train) e=19 b=440 l=0.002, a_l= 0.004, m=1.000, a_m=0.999
+10118.5s 880 (Train) e=19 b=460 l=0.002, a_l= 0.004, m=1.000, a_m=0.999
+10133.2s 881 (Train) e=19 b=480 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+10147.5s 882 (Train) e=19 b=500 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+10162.7s 883 (Train) e=19 b=520 l=0.004, a_l= 0.004, m=1.000, a_m=0.999
+10176.8s 884 (Train) e=19 b=540 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+10191.8s 885 (Train) e=19 b=560 l=0.021, a_l= 0.005, m=0.984, a_m=0.999
+10206.4s 886 (Train) e=19 b=580 l=0.002, a_l= 0.005, m=1.000, a_m=0.998
+10220.9s 887 (Train) e=19 b=600 l=0.005, a_l= 0.005, m=1.000, a_m=0.998
+10235.3s 888 (Train) e=19 b=620 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+10235.8s 889 (Train) e=19 b=621 l=0.007, a_l= 0.005, m=1.000, a_m=0.998
+10318.2s 890 (Eval) e=19 b=155 l=0.000, a_l= 0.131, m=1.000, a_m=0.969
+10318.2s 891 ********************
+10318.2s 892 EPOCH: 20 started
+10320.0s 893 (Train) e=20 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+10333.9s 894 (Train) e=20 b=20 l=0.001, a_l= 0.004, m=1.000, a_m=0.998
+10347.4s 895 (Train) e=20 b=40 l=0.000, a_l= 0.005, m=1.000, a_m=0.997
+10361.2s 896 (Train) e=20 b=60 l=0.007, a_l= 0.004, m=1.000, a_m=0.998
+10374.5s 897 (Train) e=20 b=80 l=0.000, a_l= 0.006, m=1.000, a_m=0.998
+10387.9s 898 (Train) e=20 b=100 l=0.001, a_l= 0.005, m=1.000, a_m=0.998
+10401.9s 899 (Train) e=20 b=120 l=0.001, a_l= 0.005, m=1.000, a_m=0.998
+10415.8s 900 (Train) e=20 b=140 l=0.044, a_l= 0.006, m=0.984, a_m=0.998
+10429.7s 901 (Train) e=20 b=160 l=0.001, a_l= 0.005, m=1.000, a_m=0.998
+10444.0s 902 (Train) e=20 b=180 l=0.009, a_l= 0.006, m=1.000, a_m=0.998
+10457.7s 903 (Train) e=20 b=200 l=0.008, a_l= 0.006, m=1.000, a_m=0.998
+10471.3s 904 (Train) e=20 b=220 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+10485.2s 905 (Train) e=20 b=240 l=0.001, a_l= 0.006, m=1.000, a_m=0.998
+10498.4s 906 (Train) e=20 b=260 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+10512.1s 907 (Train) e=20 b=280 l=0.004, a_l= 0.006, m=1.000, a_m=0.998
+10525.8s 908 (Train) e=20 b=300 l=0.004, a_l= 0.006, m=1.000, a_m=0.998
+10539.2s 909 (Train) e=20 b=320 l=0.000, a_l= 0.006, m=1.000, a_m=0.998
+10552.6s 910 (Train) e=20 b=340 l=0.022, a_l= 0.006, m=0.984, a_m=0.998
+10566.4s 911 (Train) e=20 b=360 l=0.001, a_l= 0.006, m=1.000, a_m=0.998
+10579.8s 912 (Train) e=20 b=380 l=0.005, a_l= 0.006, m=1.000, a_m=0.998
+10593.2s 913 (Train) e=20 b=400 l=0.002, a_l= 0.006, m=1.000, a_m=0.998
+10607.0s 914 (Train) e=20 b=420 l=0.064, a_l= 0.007, m=0.984, a_m=0.998
+10620.3s 915 (Train) e=20 b=440 l=0.001, a_l= 0.007, m=1.000, a_m=0.998
+10633.8s 916 (Train) e=20 b=460 l=0.001, a_l= 0.007, m=1.000, a_m=0.998
+10647.7s 917 (Train) e=20 b=480 l=0.003, a_l= 0.007, m=1.000, a_m=0.998
+10660.7s 918 (Train) e=20 b=500 l=0.004, a_l= 0.007, m=1.000, a_m=0.998
+10674.5s 919 (Train) e=20 b=520 l=0.000, a_l= 0.007, m=1.000, a_m=0.997
+10688.0s 920 (Train) e=20 b=540 l=0.001, a_l= 0.007, m=1.000, a_m=0.997
+10701.4s 921 (Train) e=20 b=560 l=0.002, a_l= 0.007, m=1.000, a_m=0.997
+10714.7s 922 (Train) e=20 b=580 l=0.004, a_l= 0.007, m=1.000, a_m=0.997
+10728.4s 923 (Train) e=20 b=600 l=0.006, a_l= 0.008, m=1.000, a_m=0.997
+10741.6s 924 (Train) e=20 b=620 l=0.003, a_l= 0.008, m=1.000, a_m=0.997
+10742.1s 925 (Train) e=20 b=621 l=0.001, a_l= 0.008, m=1.000, a_m=0.997
+10825.5s 926 (Eval) e=20 b=155 l=0.089, a_l= 0.124, m=0.962, a_m=0.972
+10825.5s 927 ********************
+10825.5s 928 EPOCH: 21 started
+10827.3s 929 (Train) e=21 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+10842.0s 930 (Train) e=21 b=20 l=0.000, a_l= 0.006, m=1.000, a_m=0.999
+10857.0s 931 (Train) e=21 b=40 l=0.001, a_l= 0.008, m=1.000, a_m=0.998
+10871.3s 932 (Train) e=21 b=60 l=0.056, a_l= 0.008, m=0.969, a_m=0.997
+10885.9s 933 (Train) e=21 b=80 l=0.001, a_l= 0.009, m=1.000, a_m=0.997
+10900.7s 934 (Train) e=21 b=100 l=0.006, a_l= 0.009, m=1.000, a_m=0.997
+10915.1s 935 (Train) e=21 b=120 l=0.002, a_l= 0.010, m=1.000, a_m=0.997
+10930.0s 936 (Train) e=21 b=140 l=0.001, a_l= 0.010, m=1.000, a_m=0.997
+10944.7s 937 (Train) e=21 b=160 l=0.012, a_l= 0.010, m=1.000, a_m=0.997
+10959.5s 938 (Train) e=21 b=180 l=0.000, a_l= 0.010, m=1.000, a_m=0.997
+10974.1s 939 (Train) e=21 b=200 l=0.012, a_l= 0.009, m=1.000, a_m=0.997
+10989.2s 940 (Train) e=21 b=220 l=0.000, a_l= 0.010, m=1.000, a_m=0.997
+11003.6s 941 (Train) e=21 b=240 l=0.000, a_l= 0.009, m=1.000, a_m=0.997
+11018.4s 942 (Train) e=21 b=260 l=0.002, a_l= 0.009, m=1.000, a_m=0.997
+11033.0s 943 (Train) e=21 b=280 l=0.000, a_l= 0.008, m=1.000, a_m=0.997
+11047.2s 944 (Train) e=21 b=300 l=0.001, a_l= 0.008, m=1.000, a_m=0.997
+11062.2s 945 (Train) e=21 b=320 l=0.000, a_l= 0.008, m=1.000, a_m=0.997
+11077.1s 946 (Train) e=21 b=340 l=0.013, a_l= 0.008, m=1.000, a_m=0.998
+11091.8s 947 (Train) e=21 b=360 l=0.001, a_l= 0.008, m=1.000, a_m=0.998
+11106.3s 948 (Train) e=21 b=380 l=0.000, a_l= 0.007, m=1.000, a_m=0.998
+11121.3s 949 (Train) e=21 b=400 l=0.009, a_l= 0.008, m=1.000, a_m=0.998
+11135.8s 950 (Train) e=21 b=420 l=0.005, a_l= 0.008, m=1.000, a_m=0.998
+11150.7s 951 (Train) e=21 b=440 l=0.000, a_l= 0.008, m=1.000, a_m=0.997
+11165.1s 952 (Train) e=21 b=460 l=0.008, a_l= 0.008, m=1.000, a_m=0.997
+11179.6s 953 (Train) e=21 b=480 l=0.002, a_l= 0.008, m=1.000, a_m=0.997
+11194.4s 954 (Train) e=21 b=500 l=0.006, a_l= 0.008, m=1.000, a_m=0.997
+11209.1s 955 (Train) e=21 b=520 l=0.002, a_l= 0.008, m=1.000, a_m=0.998
+11223.4s 956 (Train) e=21 b=540 l=0.001, a_l= 0.008, m=1.000, a_m=0.998
+11237.7s 957 (Train) e=21 b=560 l=0.003, a_l= 0.008, m=1.000, a_m=0.997
+11252.7s 958 (Train) e=21 b=580 l=0.002, a_l= 0.008, m=1.000, a_m=0.998
+11267.1s 959 (Train) e=21 b=600 l=0.000, a_l= 0.007, m=1.000, a_m=0.998
+11281.9s 960 (Train) e=21 b=620 l=0.012, a_l= 0.008, m=1.000, a_m=0.997
+11282.5s 961 (Train) e=21 b=621 l=0.001, a_l= 0.008, m=1.000, a_m=0.997
+11364.2s 962 (Eval) e=21 b=155 l=0.169, a_l= 0.110, m=0.923, a_m=0.976
+11364.2s 963 ********************
+11364.2s 964 EPOCH: 22 started
+11366.1s 965 (Train) e=22 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+11380.4s 966 (Train) e=22 b=20 l=0.001, a_l= 0.006, m=1.000, a_m=0.999
+11393.8s 967 (Train) e=22 b=40 l=0.002, a_l= 0.004, m=1.000, a_m=0.999
+11407.7s 968 (Train) e=22 b=60 l=0.011, a_l= 0.004, m=1.000, a_m=0.999
+11420.8s 969 (Train) e=22 b=80 l=0.001, a_l= 0.006, m=1.000, a_m=0.999
+11434.3s 970 (Train) e=22 b=100 l=0.000, a_l= 0.006, m=1.000, a_m=0.999
+11448.1s 971 (Train) e=22 b=120 l=0.001, a_l= 0.005, m=1.000, a_m=0.999
+11461.4s 972 (Train) e=22 b=140 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+11475.0s 973 (Train) e=22 b=160 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+11488.6s 974 (Train) e=22 b=180 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+11502.1s 975 (Train) e=22 b=200 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+11515.6s 976 (Train) e=22 b=220 l=0.004, a_l= 0.005, m=1.000, a_m=0.999
+11529.3s 977 (Train) e=22 b=240 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+11542.8s 978 (Train) e=22 b=260 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+11556.2s 979 (Train) e=22 b=280 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+11570.0s 980 (Train) e=22 b=300 l=0.001, a_l= 0.004, m=1.000, a_m=0.999
+11583.2s 981 (Train) e=22 b=320 l=0.002, a_l= 0.004, m=1.000, a_m=0.999
+11596.5s 982 (Train) e=22 b=340 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11610.2s 983 (Train) e=22 b=360 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11623.5s 984 (Train) e=22 b=380 l=0.005, a_l= 0.004, m=1.000, a_m=0.999
+11637.1s 985 (Train) e=22 b=400 l=0.002, a_l= 0.004, m=1.000, a_m=0.999
+11650.9s 986 (Train) e=22 b=420 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11664.3s 987 (Train) e=22 b=440 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11677.6s 988 (Train) e=22 b=460 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11691.3s 989 (Train) e=22 b=480 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11704.8s 990 (Train) e=22 b=500 l=0.001, a_l= 0.004, m=1.000, a_m=0.999
+11718.3s 991 (Train) e=22 b=520 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11732.1s 992 (Train) e=22 b=540 l=0.016, a_l= 0.004, m=0.984, a_m=0.999
+11745.4s 993 (Train) e=22 b=560 l=0.065, a_l= 0.004, m=0.969, a_m=0.999
+11759.2s 994 (Train) e=22 b=580 l=0.001, a_l= 0.004, m=1.000, a_m=0.999
+11772.9s 995 (Train) e=22 b=600 l=0.023, a_l= 0.004, m=0.984, a_m=0.999
+11786.2s 996 (Train) e=22 b=620 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11786.6s 997 (Train) e=22 b=621 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+11868.9s 998 (Eval) e=22 b=155 l=0.016, a_l= 0.145, m=1.000, a_m=0.972
+11868.9s 999 ********************
+11868.9s 1000 EPOCH: 23 started
+11870.7s 1001 (Train) e=23 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+11884.8s 1002 (Train) e=23 b=20 l=0.003, a_l= 0.012, m=1.000, a_m=0.993
+11898.3s 1003 (Train) e=23 b=40 l=0.003, a_l= 0.010, m=1.000, a_m=0.995
+11912.1s 1004 (Train) e=23 b=60 l=0.007, a_l= 0.009, m=1.000, a_m=0.995
+11925.2s 1005 (Train) e=23 b=80 l=0.002, a_l= 0.011, m=1.000, a_m=0.995
+11938.9s 1006 (Train) e=23 b=100 l=0.002, a_l= 0.011, m=1.000, a_m=0.995
+11952.7s 1007 (Train) e=23 b=120 l=0.002, a_l= 0.010, m=1.000, a_m=0.996
+11966.0s 1008 (Train) e=23 b=140 l=0.001, a_l= 0.010, m=1.000, a_m=0.996
+11979.5s 1009 (Train) e=23 b=160 l=0.001, a_l= 0.010, m=1.000, a_m=0.996
+11993.3s 1010 (Train) e=23 b=180 l=0.016, a_l= 0.011, m=0.984, a_m=0.996
+12006.6s 1011 (Train) e=23 b=200 l=0.001, a_l= 0.011, m=1.000, a_m=0.996
+12020.4s 1012 (Train) e=23 b=220 l=0.002, a_l= 0.012, m=1.000, a_m=0.996
+12033.9s 1013 (Train) e=23 b=240 l=0.002, a_l= 0.012, m=1.000, a_m=0.996
+12047.3s 1014 (Train) e=23 b=260 l=0.012, a_l= 0.012, m=0.984, a_m=0.996
+12061.0s 1015 (Train) e=23 b=280 l=0.009, a_l= 0.012, m=1.000, a_m=0.996
+12074.7s 1016 (Train) e=23 b=300 l=0.003, a_l= 0.012, m=1.000, a_m=0.995
+12088.0s 1017 (Train) e=23 b=320 l=0.005, a_l= 0.012, m=1.000, a_m=0.996
+12101.5s 1018 (Train) e=23 b=340 l=0.001, a_l= 0.013, m=1.000, a_m=0.995
+12115.6s 1019 (Train) e=23 b=360 l=0.004, a_l= 0.013, m=1.000, a_m=0.995
+12128.8s 1020 (Train) e=23 b=380 l=0.001, a_l= 0.013, m=1.000, a_m=0.995
+12142.4s 1021 (Train) e=23 b=400 l=0.000, a_l= 0.013, m=1.000, a_m=0.996
+12156.3s 1022 (Train) e=23 b=420 l=0.001, a_l= 0.012, m=1.000, a_m=0.996
+12169.5s 1023 (Train) e=23 b=440 l=0.004, a_l= 0.012, m=1.000, a_m=0.996
+12183.1s 1024 (Train) e=23 b=460 l=0.002, a_l= 0.012, m=1.000, a_m=0.996
+12196.8s 1025 (Train) e=23 b=480 l=0.014, a_l= 0.012, m=1.000, a_m=0.996
+12210.4s 1026 (Train) e=23 b=500 l=0.005, a_l= 0.012, m=1.000, a_m=0.996
+12223.9s 1027 (Train) e=23 b=520 l=0.000, a_l= 0.012, m=1.000, a_m=0.996
+12237.6s 1028 (Train) e=23 b=540 l=0.049, a_l= 0.011, m=0.984, a_m=0.996
+12251.1s 1029 (Train) e=23 b=560 l=0.000, a_l= 0.011, m=1.000, a_m=0.996
+12264.6s 1030 (Train) e=23 b=580 l=0.000, a_l= 0.011, m=1.000, a_m=0.996
+12278.4s 1031 (Train) e=23 b=600 l=0.001, a_l= 0.011, m=1.000, a_m=0.996
+12291.7s 1032 (Train) e=23 b=620 l=0.011, a_l= 0.011, m=1.000, a_m=0.996
+12292.2s 1033 (Train) e=23 b=621 l=0.015, a_l= 0.011, m=1.000, a_m=0.996
+12381.3s 1034 (Eval) e=23 b=155 l=0.012, a_l= 0.122, m=1.000, a_m=0.972
+12381.3s 1035 ********************
+12381.3s 1036 EPOCH: 24 started
+12383.1s 1037 (Train) e=24 b=0 l=0.004, a_l= 0.004, m=1.000, a_m=1.000
+12397.2s 1038 (Train) e=24 b=20 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12411.0s 1039 (Train) e=24 b=40 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12424.9s 1040 (Train) e=24 b=60 l=0.002, a_l= 0.003, m=1.000, a_m=0.999
+12438.3s 1041 (Train) e=24 b=80 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12451.7s 1042 (Train) e=24 b=100 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+12465.4s 1043 (Train) e=24 b=120 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+12478.8s 1044 (Train) e=24 b=140 l=0.008, a_l= 0.003, m=1.000, a_m=0.999
+12492.5s 1045 (Train) e=24 b=160 l=0.006, a_l= 0.003, m=1.000, a_m=0.999
+12506.4s 1046 (Train) e=24 b=180 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12519.3s 1047 (Train) e=24 b=200 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+12533.1s 1048 (Train) e=24 b=220 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12547.0s 1049 (Train) e=24 b=240 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+12560.1s 1050 (Train) e=24 b=260 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12573.4s 1051 (Train) e=24 b=280 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12587.1s 1052 (Train) e=24 b=300 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+12600.5s 1053 (Train) e=24 b=320 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12614.0s 1054 (Train) e=24 b=340 l=0.053, a_l= 0.003, m=0.984, a_m=0.999
+12628.0s 1055 (Train) e=24 b=360 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12641.2s 1056 (Train) e=24 b=380 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12655.0s 1057 (Train) e=24 b=400 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12668.8s 1058 (Train) e=24 b=420 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+12682.0s 1059 (Train) e=24 b=440 l=0.010, a_l= 0.003, m=1.000, a_m=0.999
+12695.5s 1060 (Train) e=24 b=460 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+12709.4s 1061 (Train) e=24 b=480 l=0.003, a_l= 0.003, m=1.000, a_m=0.999
+12723.1s 1062 (Train) e=24 b=500 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+12736.6s 1063 (Train) e=24 b=520 l=0.003, a_l= 0.003, m=1.000, a_m=0.999
+12750.5s 1064 (Train) e=24 b=540 l=0.218, a_l= 0.004, m=0.953, a_m=0.999
+12764.0s 1065 (Train) e=24 b=560 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+12777.4s 1066 (Train) e=24 b=580 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+12791.4s 1067 (Train) e=24 b=600 l=0.005, a_l= 0.005, m=1.000, a_m=0.999
+12804.5s 1068 (Train) e=24 b=620 l=0.012, a_l= 0.006, m=1.000, a_m=0.998
+12805.0s 1069 (Train) e=24 b=621 l=0.035, a_l= 0.006, m=0.972, a_m=0.998
+12888.2s 1070 (Eval) e=24 b=155 l=0.186, a_l= 0.149, m=0.962, a_m=0.968
+12888.2s 1071 ********************
+12888.2s 1072 EPOCH: 25 started
+12890.0s 1073 (Train) e=25 b=0 l=0.008, a_l= 0.008, m=1.000, a_m=1.000
+12905.2s 1074 (Train) e=25 b=20 l=0.008, a_l= 0.007, m=1.000, a_m=0.998
+12920.1s 1075 (Train) e=25 b=40 l=0.006, a_l= 0.007, m=1.000, a_m=0.998
+12934.0s 1076 (Train) e=25 b=60 l=0.095, a_l= 0.009, m=0.969, a_m=0.998
+12948.8s 1077 (Train) e=25 b=80 l=0.005, a_l= 0.009, m=1.000, a_m=0.997
+12963.4s 1078 (Train) e=25 b=100 l=0.001, a_l= 0.008, m=1.000, a_m=0.998
+12978.2s 1079 (Train) e=25 b=120 l=0.001, a_l= 0.007, m=1.000, a_m=0.998
+12992.3s 1080 (Train) e=25 b=140 l=0.000, a_l= 0.007, m=1.000, a_m=0.998
+13007.5s 1081 (Train) e=25 b=160 l=0.000, a_l= 0.007, m=1.000, a_m=0.998
+13021.4s 1082 (Train) e=25 b=180 l=0.020, a_l= 0.007, m=0.984, a_m=0.998
+13036.2s 1083 (Train) e=25 b=200 l=0.001, a_l= 0.007, m=1.000, a_m=0.998
+13050.7s 1084 (Train) e=25 b=220 l=0.001, a_l= 0.006, m=1.000, a_m=0.998
+13064.9s 1085 (Train) e=25 b=240 l=0.001, a_l= 0.007, m=1.000, a_m=0.998
+13079.9s 1086 (Train) e=25 b=260 l=0.001, a_l= 0.006, m=1.000, a_m=0.998
+13094.6s 1087 (Train) e=25 b=280 l=0.000, a_l= 0.006, m=1.000, a_m=0.998
+13109.1s 1088 (Train) e=25 b=300 l=0.000, a_l= 0.006, m=1.000, a_m=0.998
+13123.3s 1089 (Train) e=25 b=320 l=0.005, a_l= 0.006, m=1.000, a_m=0.998
+13138.5s 1090 (Train) e=25 b=340 l=0.002, a_l= 0.006, m=1.000, a_m=0.998
+13152.4s 1091 (Train) e=25 b=360 l=0.001, a_l= 0.006, m=1.000, a_m=0.998
+13167.5s 1092 (Train) e=25 b=380 l=0.000, a_l= 0.006, m=1.000, a_m=0.998
+13182.0s 1093 (Train) e=25 b=400 l=0.001, a_l= 0.005, m=1.000, a_m=0.998
+13196.4s 1094 (Train) e=25 b=420 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+13210.9s 1095 (Train) e=25 b=440 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+13225.4s 1096 (Train) e=25 b=460 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+13240.1s 1097 (Train) e=25 b=480 l=0.002, a_l= 0.005, m=1.000, a_m=0.999
+13254.3s 1098 (Train) e=25 b=500 l=0.003, a_l= 0.005, m=1.000, a_m=0.999
+13269.6s 1099 (Train) e=25 b=520 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+13283.8s 1100 (Train) e=25 b=540 l=0.003, a_l= 0.004, m=1.000, a_m=0.999
+13298.7s 1101 (Train) e=25 b=560 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13313.2s 1102 (Train) e=25 b=580 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13327.9s 1103 (Train) e=25 b=600 l=0.001, a_l= 0.004, m=1.000, a_m=0.999
+13342.1s 1104 (Train) e=25 b=620 l=0.070, a_l= 0.004, m=0.969, a_m=0.999
+13342.7s 1105 (Train) e=25 b=621 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13425.1s 1106 (Eval) e=25 b=155 l=0.036, a_l= 0.131, m=0.962, a_m=0.974
+13425.1s 1107 ********************
+13425.1s 1108 EPOCH: 26 started
+13426.9s 1109 (Train) e=26 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+13441.8s 1110 (Train) e=26 b=20 l=0.004, a_l= 0.003, m=1.000, a_m=0.999
+13457.0s 1111 (Train) e=26 b=40 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+13471.1s 1112 (Train) e=26 b=60 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+13486.2s 1113 (Train) e=26 b=80 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+13500.9s 1114 (Train) e=26 b=100 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+13516.1s 1115 (Train) e=26 b=120 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+13530.9s 1116 (Train) e=26 b=140 l=0.002, a_l= 0.002, m=1.000, a_m=1.000
+13545.6s 1117 (Train) e=26 b=160 l=0.001, a_l= 0.002, m=1.000, a_m=1.000
+13559.8s 1118 (Train) e=26 b=180 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+13574.1s 1119 (Train) e=26 b=200 l=0.004, a_l= 0.002, m=1.000, a_m=1.000
+13589.2s 1120 (Train) e=26 b=220 l=0.052, a_l= 0.002, m=0.984, a_m=0.999
+13603.6s 1121 (Train) e=26 b=240 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+13618.3s 1122 (Train) e=26 b=260 l=0.025, a_l= 0.003, m=0.984, a_m=0.999
+13632.9s 1123 (Train) e=26 b=280 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+13647.7s 1124 (Train) e=26 b=300 l=0.011, a_l= 0.003, m=1.000, a_m=0.999
+13661.8s 1125 (Train) e=26 b=320 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+13677.1s 1126 (Train) e=26 b=340 l=0.017, a_l= 0.004, m=1.000, a_m=0.999
+13691.5s 1127 (Train) e=26 b=360 l=0.002, a_l= 0.004, m=1.000, a_m=0.999
+13706.4s 1128 (Train) e=26 b=380 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13721.2s 1129 (Train) e=26 b=400 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13735.6s 1130 (Train) e=26 b=420 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13750.5s 1131 (Train) e=26 b=440 l=0.004, a_l= 0.004, m=1.000, a_m=0.999
+13765.3s 1132 (Train) e=26 b=460 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13780.0s 1133 (Train) e=26 b=480 l=0.003, a_l= 0.004, m=1.000, a_m=0.999
+13794.9s 1134 (Train) e=26 b=500 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13809.9s 1135 (Train) e=26 b=520 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13824.3s 1136 (Train) e=26 b=540 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13839.4s 1137 (Train) e=26 b=560 l=0.008, a_l= 0.004, m=1.000, a_m=0.999
+13854.0s 1138 (Train) e=26 b=580 l=0.003, a_l= 0.004, m=1.000, a_m=0.999
+13868.9s 1139 (Train) e=26 b=600 l=0.000, a_l= 0.005, m=1.000, a_m=0.999
+13883.3s 1140 (Train) e=26 b=620 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+13883.7s 1141 (Train) e=26 b=621 l=0.016, a_l= 0.005, m=1.000, a_m=0.999
+13965.6s 1142 (Eval) e=26 b=155 l=0.060, a_l= 0.141, m=0.962, a_m=0.972
+13965.6s 1143 ********************
+13965.6s 1144 EPOCH: 27 started
+13967.4s 1145 (Train) e=27 b=0 l=0.010, a_l= 0.010, m=1.000, a_m=1.000
+13981.7s 1146 (Train) e=27 b=20 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+13996.5s 1147 (Train) e=27 b=40 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+14010.6s 1148 (Train) e=27 b=60 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+14024.8s 1149 (Train) e=27 b=80 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+14040.0s 1150 (Train) e=27 b=100 l=0.026, a_l= 0.002, m=0.984, a_m=0.999
+14054.2s 1151 (Train) e=27 b=120 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+14068.8s 1152 (Train) e=27 b=140 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+14083.4s 1153 (Train) e=27 b=160 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14098.1s 1154 (Train) e=27 b=180 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14112.6s 1155 (Train) e=27 b=200 l=0.007, a_l= 0.002, m=1.000, a_m=0.999
+14127.5s 1156 (Train) e=27 b=220 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14141.4s 1157 (Train) e=27 b=240 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14155.7s 1158 (Train) e=27 b=260 l=0.004, a_l= 0.002, m=1.000, a_m=0.999
+14170.7s 1159 (Train) e=27 b=280 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14184.9s 1160 (Train) e=27 b=300 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14199.9s 1161 (Train) e=27 b=320 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14214.3s 1162 (Train) e=27 b=340 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14229.1s 1163 (Train) e=27 b=360 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14243.3s 1164 (Train) e=27 b=380 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+14258.1s 1165 (Train) e=27 b=400 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14272.2s 1166 (Train) e=27 b=420 l=0.009, a_l= 0.002, m=1.000, a_m=0.999
+14287.1s 1167 (Train) e=27 b=440 l=0.003, a_l= 0.002, m=1.000, a_m=0.999
+14302.0s 1168 (Train) e=27 b=460 l=0.021, a_l= 0.002, m=0.984, a_m=0.999
+14316.1s 1169 (Train) e=27 b=480 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14330.8s 1170 (Train) e=27 b=500 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14345.7s 1171 (Train) e=27 b=520 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+14360.2s 1172 (Train) e=27 b=540 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14374.4s 1173 (Train) e=27 b=560 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14389.8s 1174 (Train) e=27 b=580 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14404.1s 1175 (Train) e=27 b=600 l=0.015, a_l= 0.002, m=0.984, a_m=0.999
+14418.7s 1176 (Train) e=27 b=620 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14419.2s 1177 (Train) e=27 b=621 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14509.6s 1178 (Eval) e=27 b=155 l=0.035, a_l= 0.129, m=0.962, a_m=0.977
+14509.6s 1179 ********************
+14509.6s 1180 EPOCH: 28 started
+14511.2s 1181 (Train) e=28 b=0 l=0.002, a_l= 0.002, m=1.000, a_m=1.000
+14525.5s 1182 (Train) e=28 b=20 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+14538.9s 1183 (Train) e=28 b=40 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+14552.9s 1184 (Train) e=28 b=60 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+14566.1s 1185 (Train) e=28 b=80 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+14579.8s 1186 (Train) e=28 b=100 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14593.7s 1187 (Train) e=28 b=120 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+14606.9s 1188 (Train) e=28 b=140 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+14620.6s 1189 (Train) e=28 b=160 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+14634.4s 1190 (Train) e=28 b=180 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+14648.1s 1191 (Train) e=28 b=200 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14661.3s 1192 (Train) e=28 b=220 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14675.4s 1193 (Train) e=28 b=240 l=0.008, a_l= 0.002, m=1.000, a_m=0.999
+14688.5s 1194 (Train) e=28 b=260 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+14702.0s 1195 (Train) e=28 b=280 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14715.7s 1196 (Train) e=28 b=300 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+14728.9s 1197 (Train) e=28 b=320 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14742.5s 1198 (Train) e=28 b=340 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+14756.3s 1199 (Train) e=28 b=360 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14769.7s 1200 (Train) e=28 b=380 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14783.3s 1201 (Train) e=28 b=400 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14797.3s 1202 (Train) e=28 b=420 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14810.6s 1203 (Train) e=28 b=440 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14824.0s 1204 (Train) e=28 b=460 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+14837.9s 1205 (Train) e=28 b=480 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+14851.3s 1206 (Train) e=28 b=500 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+14865.1s 1207 (Train) e=28 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+14878.9s 1208 (Train) e=28 b=540 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+14892.1s 1209 (Train) e=28 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+14905.6s 1210 (Train) e=28 b=580 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+14919.6s 1211 (Train) e=28 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+14932.9s 1212 (Train) e=28 b=620 l=0.002, a_l= 0.001, m=1.000, a_m=1.000
+14933.4s 1213 (Train) e=28 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15015.5s 1214 (Eval) e=28 b=155 l=0.196, a_l= 0.136, m=0.962, a_m=0.977
+15015.5s 1215 ********************
+15015.5s 1216 EPOCH: 29 started
+15017.4s 1217 (Train) e=29 b=0 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+15031.5s 1218 (Train) e=29 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+15044.9s 1219 (Train) e=29 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+15058.6s 1220 (Train) e=29 b=60 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15072.1s 1221 (Train) e=29 b=80 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15085.9s 1222 (Train) e=29 b=100 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15099.8s 1223 (Train) e=29 b=120 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+15113.1s 1224 (Train) e=29 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15126.6s 1225 (Train) e=29 b=160 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+15140.4s 1226 (Train) e=29 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15153.7s 1227 (Train) e=29 b=200 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15167.3s 1228 (Train) e=29 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15181.3s 1229 (Train) e=29 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15194.6s 1230 (Train) e=29 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15208.0s 1231 (Train) e=29 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15222.0s 1232 (Train) e=29 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15235.3s 1233 (Train) e=29 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15249.2s 1234 (Train) e=29 b=340 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15262.9s 1235 (Train) e=29 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15276.0s 1236 (Train) e=29 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15289.6s 1237 (Train) e=29 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15303.2s 1238 (Train) e=29 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15316.6s 1239 (Train) e=29 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15330.1s 1240 (Train) e=29 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15343.8s 1241 (Train) e=29 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15357.0s 1242 (Train) e=29 b=500 l=0.002, a_l= 0.001, m=1.000, a_m=1.000
+15370.6s 1243 (Train) e=29 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15384.6s 1244 (Train) e=29 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15397.9s 1245 (Train) e=29 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15411.6s 1246 (Train) e=29 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15425.3s 1247 (Train) e=29 b=600 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+15438.6s 1248 (Train) e=29 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+15439.1s 1249 (Train) e=29 b=621 l=0.044, a_l= 0.001, m=0.972, a_m=1.000
+15521.4s 1250 (Eval) e=29 b=155 l=0.047, a_l= 0.147, m=0.962, a_m=0.975
+15521.4s 1251 ********************
+15521.4s 1252 EPOCH: 30 started
+15523.4s 1253 (Train) e=30 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+15538.7s 1254 (Train) e=30 b=20 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+15553.3s 1255 (Train) e=30 b=40 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+15568.0s 1256 (Train) e=30 b=60 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+15582.2s 1257 (Train) e=30 b=80 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15597.3s 1258 (Train) e=30 b=100 l=0.001, a_l= 0.004, m=1.000, a_m=0.998
+15611.6s 1259 (Train) e=30 b=120 l=0.001, a_l= 0.004, m=1.000, a_m=0.998
+15626.0s 1260 (Train) e=30 b=140 l=0.000, a_l= 0.004, m=1.000, a_m=0.998
+15641.3s 1261 (Train) e=30 b=160 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+15655.2s 1262 (Train) e=30 b=180 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+15670.3s 1263 (Train) e=30 b=200 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+15685.2s 1264 (Train) e=30 b=220 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+15699.7s 1265 (Train) e=30 b=240 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+15714.0s 1266 (Train) e=30 b=260 l=0.003, a_l= 0.005, m=1.000, a_m=0.999
+15729.6s 1267 (Train) e=30 b=280 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+15743.8s 1268 (Train) e=30 b=300 l=0.001, a_l= 0.005, m=1.000, a_m=0.998
+15758.7s 1269 (Train) e=30 b=320 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15773.7s 1270 (Train) e=30 b=340 l=0.018, a_l= 0.004, m=0.984, a_m=0.999
+15787.9s 1271 (Train) e=30 b=360 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15802.7s 1272 (Train) e=30 b=380 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15817.5s 1273 (Train) e=30 b=400 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15832.2s 1274 (Train) e=30 b=420 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15846.6s 1275 (Train) e=30 b=440 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15861.7s 1276 (Train) e=30 b=460 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15875.7s 1277 (Train) e=30 b=480 l=0.007, a_l= 0.004, m=1.000, a_m=0.999
+15890.5s 1278 (Train) e=30 b=500 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+15905.4s 1279 (Train) e=30 b=520 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+15919.8s 1280 (Train) e=30 b=540 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+15934.1s 1281 (Train) e=30 b=560 l=0.001, a_l= 0.003, m=1.000, a_m=0.999
+15948.7s 1282 (Train) e=30 b=580 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+15963.4s 1283 (Train) e=30 b=600 l=0.003, a_l= 0.004, m=1.000, a_m=0.999
+15977.8s 1284 (Train) e=30 b=620 l=0.008, a_l= 0.004, m=1.000, a_m=0.999
+15978.2s 1285 (Train) e=30 b=621 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+16061.3s 1286 (Eval) e=30 b=155 l=0.049, a_l= 0.132, m=0.962, a_m=0.976
+16061.3s 1287 ********************
+16061.3s 1288 EPOCH: 31 started
+16063.0s 1289 (Train) e=31 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+16076.8s 1290 (Train) e=31 b=20 l=0.000, a_l= 0.007, m=1.000, a_m=0.999
+16090.5s 1291 (Train) e=31 b=40 l=0.000, a_l= 0.009, m=1.000, a_m=0.999
+16104.3s 1292 (Train) e=31 b=60 l=0.000, a_l= 0.006, m=1.000, a_m=0.999
+16117.7s 1293 (Train) e=31 b=80 l=0.001, a_l= 0.005, m=1.000, a_m=0.999
+16131.1s 1294 (Train) e=31 b=100 l=0.001, a_l= 0.005, m=1.000, a_m=0.999
+16145.0s 1295 (Train) e=31 b=120 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+16158.4s 1296 (Train) e=31 b=140 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+16171.8s 1297 (Train) e=31 b=160 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+16185.6s 1298 (Train) e=31 b=180 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+16198.9s 1299 (Train) e=31 b=200 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+16212.8s 1300 (Train) e=31 b=220 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+16226.6s 1301 (Train) e=31 b=240 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+16239.9s 1302 (Train) e=31 b=260 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+16253.6s 1303 (Train) e=31 b=280 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+16267.3s 1304 (Train) e=31 b=300 l=0.009, a_l= 0.003, m=1.000, a_m=0.999
+16280.8s 1305 (Train) e=31 b=320 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+16294.2s 1306 (Train) e=31 b=340 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16308.2s 1307 (Train) e=31 b=360 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16321.3s 1308 (Train) e=31 b=380 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16334.9s 1309 (Train) e=31 b=400 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16348.9s 1310 (Train) e=31 b=420 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16362.0s 1311 (Train) e=31 b=440 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16375.5s 1312 (Train) e=31 b=460 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16389.0s 1313 (Train) e=31 b=480 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16402.5s 1314 (Train) e=31 b=500 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+16416.0s 1315 (Train) e=31 b=520 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+16430.1s 1316 (Train) e=31 b=540 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16443.1s 1317 (Train) e=31 b=560 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16456.7s 1318 (Train) e=31 b=580 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16470.8s 1319 (Train) e=31 b=600 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16484.0s 1320 (Train) e=31 b=620 l=0.007, a_l= 0.002, m=1.000, a_m=0.999
+16484.5s 1321 (Train) e=31 b=621 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+16568.4s 1322 (Eval) e=31 b=155 l=0.112, a_l= 0.131, m=0.962, a_m=0.977
+16568.4s 1323 ********************
+16568.4s 1324 EPOCH: 32 started
+16570.2s 1325 (Train) e=32 b=0 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+16585.0s 1326 (Train) e=32 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+16600.2s 1327 (Train) e=32 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+16614.6s 1328 (Train) e=32 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+16629.7s 1329 (Train) e=32 b=80 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+16644.5s 1330 (Train) e=32 b=100 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+16659.1s 1331 (Train) e=32 b=120 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16673.4s 1332 (Train) e=32 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16688.5s 1333 (Train) e=32 b=160 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+16702.9s 1334 (Train) e=32 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16717.4s 1335 (Train) e=32 b=200 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16732.5s 1336 (Train) e=32 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16747.0s 1337 (Train) e=32 b=240 l=0.008, a_l= 0.001, m=1.000, a_m=1.000
+16762.1s 1338 (Train) e=32 b=260 l=0.003, a_l= 0.001, m=1.000, a_m=1.000
+16776.6s 1339 (Train) e=32 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16791.2s 1340 (Train) e=32 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16805.7s 1341 (Train) e=32 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16821.2s 1342 (Train) e=32 b=340 l=0.003, a_l= 0.001, m=1.000, a_m=1.000
+16835.2s 1343 (Train) e=32 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16850.1s 1344 (Train) e=32 b=380 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+16864.8s 1345 (Train) e=32 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16879.0s 1346 (Train) e=32 b=420 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+16893.4s 1347 (Train) e=32 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16908.3s 1348 (Train) e=32 b=460 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+16923.0s 1349 (Train) e=32 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16937.5s 1350 (Train) e=32 b=500 l=0.002, a_l= 0.001, m=1.000, a_m=1.000
+16952.7s 1351 (Train) e=32 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16966.6s 1352 (Train) e=32 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16981.7s 1353 (Train) e=32 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+16996.4s 1354 (Train) e=32 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17011.3s 1355 (Train) e=32 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17025.8s 1356 (Train) e=32 b=620 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+17026.3s 1357 (Train) e=32 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17109.4s 1358 (Eval) e=32 b=155 l=0.006, a_l= 0.141, m=1.000, a_m=0.977
+17109.4s 1359 ********************
+17109.4s 1360 EPOCH: 33 started
+17111.1s 1361 (Train) e=33 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+17125.0s 1362 (Train) e=33 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+17138.6s 1363 (Train) e=33 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+17152.5s 1364 (Train) e=33 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+17165.6s 1365 (Train) e=33 b=80 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+17179.5s 1366 (Train) e=33 b=100 l=0.001, a_l= 0.000, m=1.000, a_m=1.000
+17193.2s 1367 (Train) e=33 b=120 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+17206.6s 1368 (Train) e=33 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17220.1s 1369 (Train) e=33 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17234.0s 1370 (Train) e=33 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17247.5s 1371 (Train) e=33 b=200 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17260.8s 1372 (Train) e=33 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17274.8s 1373 (Train) e=33 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17288.1s 1374 (Train) e=33 b=260 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+17301.7s 1375 (Train) e=33 b=280 l=0.016, a_l= 0.001, m=0.984, a_m=1.000
+17315.6s 1376 (Train) e=33 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17329.0s 1377 (Train) e=33 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17342.6s 1378 (Train) e=33 b=340 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17356.6s 1379 (Train) e=33 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17369.7s 1380 (Train) e=33 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17383.4s 1381 (Train) e=33 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17397.3s 1382 (Train) e=33 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17410.7s 1383 (Train) e=33 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17424.4s 1384 (Train) e=33 b=460 l=0.008, a_l= 0.001, m=1.000, a_m=1.000
+17438.3s 1385 (Train) e=33 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17451.4s 1386 (Train) e=33 b=500 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17465.1s 1387 (Train) e=33 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17479.0s 1388 (Train) e=33 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17492.4s 1389 (Train) e=33 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17506.1s 1390 (Train) e=33 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17519.9s 1391 (Train) e=33 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17533.0s 1392 (Train) e=33 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17533.5s 1393 (Train) e=33 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17616.9s 1394 (Eval) e=33 b=155 l=0.387, a_l= 0.141, m=0.923, a_m=0.978
+17616.9s 1395 ********************
+17616.9s 1396 EPOCH: 34 started
+17618.5s 1397 (Train) e=34 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+17633.0s 1398 (Train) e=34 b=20 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+17648.1s 1399 (Train) e=34 b=40 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+17662.7s 1400 (Train) e=34 b=60 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+17677.4s 1401 (Train) e=34 b=80 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+17692.4s 1402 (Train) e=34 b=100 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+17706.9s 1403 (Train) e=34 b=120 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+17721.8s 1404 (Train) e=34 b=140 l=0.055, a_l= 0.002, m=0.969, a_m=0.999
+17736.6s 1405 (Train) e=34 b=160 l=0.000, a_l= 0.003, m=1.000, a_m=0.999
+17751.3s 1406 (Train) e=34 b=180 l=0.004, a_l= 0.003, m=1.000, a_m=0.999
+17765.8s 1407 (Train) e=34 b=200 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+17781.1s 1408 (Train) e=34 b=220 l=0.010, a_l= 0.005, m=1.000, a_m=0.999
+17795.3s 1409 (Train) e=34 b=240 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+17809.8s 1410 (Train) e=34 b=260 l=0.012, a_l= 0.005, m=0.984, a_m=0.998
+17824.7s 1411 (Train) e=34 b=280 l=0.013, a_l= 0.005, m=1.000, a_m=0.998
+17839.4s 1412 (Train) e=34 b=300 l=0.004, a_l= 0.005, m=1.000, a_m=0.998
+17854.2s 1413 (Train) e=34 b=320 l=0.052, a_l= 0.005, m=0.984, a_m=0.998
+17868.8s 1414 (Train) e=34 b=340 l=0.001, a_l= 0.005, m=1.000, a_m=0.998
+17883.4s 1415 (Train) e=34 b=360 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+17898.1s 1416 (Train) e=34 b=380 l=0.000, a_l= 0.005, m=1.000, a_m=0.998
+17913.4s 1417 (Train) e=34 b=400 l=0.001, a_l= 0.005, m=1.000, a_m=0.998
+17927.4s 1418 (Train) e=34 b=420 l=0.001, a_l= 0.005, m=1.000, a_m=0.998
+17942.3s 1419 (Train) e=34 b=440 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+17957.2s 1420 (Train) e=34 b=460 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+17971.6s 1421 (Train) e=34 b=480 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+17986.0s 1422 (Train) e=34 b=500 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+18000.8s 1423 (Train) e=34 b=520 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+18015.6s 1424 (Train) e=34 b=540 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+18029.9s 1425 (Train) e=34 b=560 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+18044.9s 1426 (Train) e=34 b=580 l=0.001, a_l= 0.004, m=1.000, a_m=0.999
+18059.2s 1427 (Train) e=34 b=600 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+18074.1s 1428 (Train) e=34 b=620 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+18074.6s 1429 (Train) e=34 b=621 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+18156.8s 1430 (Eval) e=34 b=155 l=0.004, a_l= 0.148, m=1.000, a_m=0.973
+18156.8s 1431 ********************
+18156.8s 1432 EPOCH: 35 started
+18158.6s 1433 (Train) e=35 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+18174.0s 1434 (Train) e=35 b=20 l=0.012, a_l= 0.002, m=1.000, a_m=0.999
+18188.6s 1435 (Train) e=35 b=40 l=0.000, a_l= 0.004, m=1.000, a_m=0.999
+18203.3s 1436 (Train) e=35 b=60 l=0.005, a_l= 0.003, m=1.000, a_m=0.999
+18217.6s 1437 (Train) e=35 b=80 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+18232.8s 1438 (Train) e=35 b=100 l=0.001, a_l= 0.002, m=1.000, a_m=1.000
+18247.0s 1439 (Train) e=35 b=120 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+18262.2s 1440 (Train) e=35 b=140 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+18276.8s 1441 (Train) e=35 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18291.2s 1442 (Train) e=35 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18305.9s 1443 (Train) e=35 b=200 l=0.009, a_l= 0.001, m=1.000, a_m=1.000
+18320.7s 1444 (Train) e=35 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18335.6s 1445 (Train) e=35 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18349.8s 1446 (Train) e=35 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18365.2s 1447 (Train) e=35 b=280 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+18379.2s 1448 (Train) e=35 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18394.3s 1449 (Train) e=35 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18409.0s 1450 (Train) e=35 b=340 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18423.6s 1451 (Train) e=35 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18438.4s 1452 (Train) e=35 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18453.7s 1453 (Train) e=35 b=400 l=0.016, a_l= 0.001, m=1.000, a_m=1.000
+18467.9s 1454 (Train) e=35 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18482.3s 1455 (Train) e=35 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18497.3s 1456 (Train) e=35 b=460 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+18511.4s 1457 (Train) e=35 b=480 l=0.054, a_l= 0.001, m=0.984, a_m=1.000
+18526.3s 1458 (Train) e=35 b=500 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18541.0s 1459 (Train) e=35 b=520 l=0.004, a_l= 0.001, m=1.000, a_m=1.000
+18556.0s 1460 (Train) e=35 b=540 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+18570.3s 1461 (Train) e=35 b=560 l=0.053, a_l= 0.002, m=0.984, a_m=1.000
+18585.7s 1462 (Train) e=35 b=580 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+18599.8s 1463 (Train) e=35 b=600 l=0.006, a_l= 0.002, m=1.000, a_m=0.999
+18614.6s 1464 (Train) e=35 b=620 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+18615.1s 1465 (Train) e=35 b=621 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+18696.8s 1466 (Eval) e=35 b=155 l=0.001, a_l= 0.148, m=1.000, a_m=0.974
+18696.8s 1467 ********************
+18696.8s 1468 EPOCH: 36 started
+18698.7s 1469 (Train) e=36 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+18713.9s 1470 (Train) e=36 b=20 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18728.6s 1471 (Train) e=36 b=40 l=0.010, a_l= 0.001, m=1.000, a_m=1.000
+18743.1s 1472 (Train) e=36 b=60 l=0.000, a_l= 0.002, m=1.000, a_m=0.999
+18757.5s 1473 (Train) e=36 b=80 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+18772.6s 1474 (Train) e=36 b=100 l=0.000, a_l= 0.002, m=1.000, a_m=1.000
+18786.8s 1475 (Train) e=36 b=120 l=0.001, a_l= 0.002, m=1.000, a_m=0.999
+18801.4s 1476 (Train) e=36 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=0.999
+18816.8s 1477 (Train) e=36 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18831.2s 1478 (Train) e=36 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18846.0s 1479 (Train) e=36 b=200 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18860.8s 1480 (Train) e=36 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18875.4s 1481 (Train) e=36 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18889.6s 1482 (Train) e=36 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18904.8s 1483 (Train) e=36 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18918.9s 1484 (Train) e=36 b=300 l=0.004, a_l= 0.001, m=1.000, a_m=1.000
+18933.7s 1485 (Train) e=36 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18948.1s 1486 (Train) e=36 b=340 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+18962.4s 1487 (Train) e=36 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18977.6s 1488 (Train) e=36 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+18992.3s 1489 (Train) e=36 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19009.5s 1490 (Train) e=36 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19025.4s 1491 (Train) e=36 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19041.0s 1492 (Train) e=36 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19056.6s 1493 (Train) e=36 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19072.5s 1494 (Train) e=36 b=500 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+19088.1s 1495 (Train) e=36 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19103.7s 1496 (Train) e=36 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19119.5s 1497 (Train) e=36 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19135.0s 1498 (Train) e=36 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19151.2s 1499 (Train) e=36 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19166.8s 1500 (Train) e=36 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19167.3s 1501 (Train) e=36 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19260.1s 1502 (Eval) e=36 b=155 l=0.000, a_l= 0.137, m=1.000, a_m=0.977
+19260.1s 1503 ********************
+19260.1s 1504 EPOCH: 37 started
+19261.7s 1505 (Train) e=37 b=0 l=0.002, a_l= 0.002, m=1.000, a_m=1.000
+19275.7s 1506 (Train) e=37 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19290.3s 1507 (Train) e=37 b=40 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19304.0s 1508 (Train) e=37 b=60 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+19318.2s 1509 (Train) e=37 b=80 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19332.4s 1510 (Train) e=37 b=100 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19345.9s 1511 (Train) e=37 b=120 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19360.3s 1512 (Train) e=37 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19374.8s 1513 (Train) e=37 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19388.9s 1514 (Train) e=37 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19403.1s 1515 (Train) e=37 b=200 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19417.6s 1516 (Train) e=37 b=220 l=0.063, a_l= 0.001, m=0.984, a_m=1.000
+19431.5s 1517 (Train) e=37 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19445.9s 1518 (Train) e=37 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19460.4s 1519 (Train) e=37 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19473.7s 1520 (Train) e=37 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19488.3s 1521 (Train) e=37 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19502.4s 1522 (Train) e=37 b=340 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+19516.7s 1523 (Train) e=37 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19530.3s 1524 (Train) e=37 b=380 l=0.005, a_l= 0.001, m=1.000, a_m=1.000
+19544.6s 1525 (Train) e=37 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19558.6s 1526 (Train) e=37 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19573.0s 1527 (Train) e=37 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19587.4s 1528 (Train) e=37 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19601.2s 1529 (Train) e=37 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19615.3s 1530 (Train) e=37 b=500 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19629.9s 1531 (Train) e=37 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19643.7s 1532 (Train) e=37 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19657.5s 1533 (Train) e=37 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19671.8s 1534 (Train) e=37 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19685.5s 1535 (Train) e=37 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19699.1s 1536 (Train) e=37 b=620 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+19699.6s 1537 (Train) e=37 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19782.2s 1538 (Eval) e=37 b=155 l=0.001, a_l= 0.143, m=1.000, a_m=0.977
+19782.2s 1539 ********************
+19782.2s 1540 EPOCH: 38 started
+19783.8s 1541 (Train) e=38 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19797.7s 1542 (Train) e=38 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19811.3s 1543 (Train) e=38 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19825.1s 1544 (Train) e=38 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19838.3s 1545 (Train) e=38 b=80 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19851.8s 1546 (Train) e=38 b=100 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19865.8s 1547 (Train) e=38 b=120 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19879.1s 1548 (Train) e=38 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19892.7s 1549 (Train) e=38 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19906.5s 1550 (Train) e=38 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19919.7s 1551 (Train) e=38 b=200 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19933.4s 1552 (Train) e=38 b=220 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+19947.2s 1553 (Train) e=38 b=240 l=0.003, a_l= 0.000, m=1.000, a_m=1.000
+19960.3s 1554 (Train) e=38 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19973.8s 1555 (Train) e=38 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+19987.8s 1556 (Train) e=38 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20001.1s 1557 (Train) e=38 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20014.6s 1558 (Train) e=38 b=340 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20028.7s 1559 (Train) e=38 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20041.8s 1560 (Train) e=38 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20055.5s 1561 (Train) e=38 b=400 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+20069.2s 1562 (Train) e=38 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20082.4s 1563 (Train) e=38 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20096.1s 1564 (Train) e=38 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20110.1s 1565 (Train) e=38 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20123.4s 1566 (Train) e=38 b=500 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20136.8s 1567 (Train) e=38 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20151.1s 1568 (Train) e=38 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20164.5s 1569 (Train) e=38 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20178.2s 1570 (Train) e=38 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20193.2s 1571 (Train) e=38 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20206.3s 1572 (Train) e=38 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20206.8s 1573 (Train) e=38 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20290.3s 1574 (Eval) e=38 b=155 l=0.004, a_l= 0.153, m=1.000, a_m=0.975
+20290.3s 1575 ********************
+20290.3s 1576 EPOCH: 39 started
+20292.2s 1577 (Train) e=39 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20306.1s 1578 (Train) e=39 b=20 l=0.003, a_l= 0.000, m=1.000, a_m=1.000
+20319.8s 1579 (Train) e=39 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20333.7s 1580 (Train) e=39 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20347.2s 1581 (Train) e=39 b=80 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20360.9s 1582 (Train) e=39 b=100 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20375.0s 1583 (Train) e=39 b=120 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20388.4s 1584 (Train) e=39 b=140 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20401.9s 1585 (Train) e=39 b=160 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20416.1s 1586 (Train) e=39 b=180 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20429.3s 1587 (Train) e=39 b=200 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20442.9s 1588 (Train) e=39 b=220 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20456.9s 1589 (Train) e=39 b=240 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20469.9s 1590 (Train) e=39 b=260 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20483.3s 1591 (Train) e=39 b=280 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20497.4s 1592 (Train) e=39 b=300 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20510.7s 1593 (Train) e=39 b=320 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20524.3s 1594 (Train) e=39 b=340 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20538.5s 1595 (Train) e=39 b=360 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20552.0s 1596 (Train) e=39 b=380 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20565.6s 1597 (Train) e=39 b=400 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20579.6s 1598 (Train) e=39 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20592.7s 1599 (Train) e=39 b=440 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+20606.3s 1600 (Train) e=39 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20620.2s 1601 (Train) e=39 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20633.7s 1602 (Train) e=39 b=500 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20647.4s 1603 (Train) e=39 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20661.2s 1604 (Train) e=39 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20674.6s 1605 (Train) e=39 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20688.1s 1606 (Train) e=39 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20702.6s 1607 (Train) e=39 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20715.7s 1608 (Train) e=39 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20716.1s 1609 (Train) e=39 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20806.6s 1610 (Eval) e=39 b=155 l=0.239, a_l= 0.147, m=0.962, a_m=0.974
+20806.6s 1611 ********************
+20806.6s 1612 EPOCH: 40 started
+20808.3s 1613 (Train) e=40 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20822.5s 1614 (Train) e=40 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+20836.6s 1615 (Train) e=40 b=40 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20850.6s 1616 (Train) e=40 b=60 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20864.2s 1617 (Train) e=40 b=80 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20877.7s 1618 (Train) e=40 b=100 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20892.1s 1619 (Train) e=40 b=120 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20905.5s 1620 (Train) e=40 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20919.1s 1621 (Train) e=40 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20933.2s 1622 (Train) e=40 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20946.5s 1623 (Train) e=40 b=200 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20960.0s 1624 (Train) e=40 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20973.9s 1625 (Train) e=40 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+20987.7s 1626 (Train) e=40 b=260 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+21001.4s 1627 (Train) e=40 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21015.3s 1628 (Train) e=40 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21028.6s 1629 (Train) e=40 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21042.1s 1630 (Train) e=40 b=340 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21056.1s 1631 (Train) e=40 b=360 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+21069.4s 1632 (Train) e=40 b=380 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+21083.2s 1633 (Train) e=40 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21097.1s 1634 (Train) e=40 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21110.6s 1635 (Train) e=40 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21124.2s 1636 (Train) e=40 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21138.3s 1637 (Train) e=40 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21151.7s 1638 (Train) e=40 b=500 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21165.3s 1639 (Train) e=40 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21179.2s 1640 (Train) e=40 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21192.5s 1641 (Train) e=40 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21206.2s 1642 (Train) e=40 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21220.5s 1643 (Train) e=40 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21233.5s 1644 (Train) e=40 b=620 l=0.035, a_l= 0.001, m=0.984, a_m=1.000
+21234.0s 1645 (Train) e=40 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21317.4s 1646 (Eval) e=40 b=155 l=0.755, a_l= 0.172, m=0.923, a_m=0.975
+21317.4s 1647 ********************
+21317.4s 1648 EPOCH: 41 started
+21319.1s 1649 (Train) e=41 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21333.5s 1650 (Train) e=41 b=20 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+21347.1s 1651 (Train) e=41 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21361.1s 1652 (Train) e=41 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21374.5s 1653 (Train) e=41 b=80 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21388.1s 1654 (Train) e=41 b=100 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21402.4s 1655 (Train) e=41 b=120 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21415.7s 1656 (Train) e=41 b=140 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21429.3s 1657 (Train) e=41 b=160 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21443.3s 1658 (Train) e=41 b=180 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21456.6s 1659 (Train) e=41 b=200 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21470.5s 1660 (Train) e=41 b=220 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21484.4s 1661 (Train) e=41 b=240 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21497.7s 1662 (Train) e=41 b=260 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21511.3s 1663 (Train) e=41 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21525.3s 1664 (Train) e=41 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21538.7s 1665 (Train) e=41 b=320 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+21552.2s 1666 (Train) e=41 b=340 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21566.3s 1667 (Train) e=41 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21579.2s 1668 (Train) e=41 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21592.8s 1669 (Train) e=41 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21606.8s 1670 (Train) e=41 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21620.0s 1671 (Train) e=41 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21633.6s 1672 (Train) e=41 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21647.6s 1673 (Train) e=41 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21660.8s 1674 (Train) e=41 b=500 l=0.003, a_l= 0.001, m=1.000, a_m=1.000
+21674.4s 1675 (Train) e=41 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21688.3s 1676 (Train) e=41 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21701.5s 1677 (Train) e=41 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21714.9s 1678 (Train) e=41 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21729.1s 1679 (Train) e=41 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21742.3s 1680 (Train) e=41 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21742.7s 1681 (Train) e=41 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21832.5s 1682 (Eval) e=41 b=155 l=0.007, a_l= 0.155, m=1.000, a_m=0.976
+21832.5s 1683 ********************
+21832.5s 1684 EPOCH: 42 started
+21834.2s 1685 (Train) e=42 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21848.7s 1686 (Train) e=42 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21863.1s 1687 (Train) e=42 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21876.1s 1688 (Train) e=42 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21889.8s 1689 (Train) e=42 b=80 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21903.9s 1690 (Train) e=42 b=100 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+21917.4s 1691 (Train) e=42 b=120 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+21931.0s 1692 (Train) e=42 b=140 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21945.3s 1693 (Train) e=42 b=160 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21958.2s 1694 (Train) e=42 b=180 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21971.7s 1695 (Train) e=42 b=200 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21985.5s 1696 (Train) e=42 b=220 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+21998.7s 1697 (Train) e=42 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22012.3s 1698 (Train) e=42 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22026.2s 1699 (Train) e=42 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22039.3s 1700 (Train) e=42 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22052.9s 1701 (Train) e=42 b=320 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+22066.8s 1702 (Train) e=42 b=340 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+22080.4s 1703 (Train) e=42 b=360 l=0.034, a_l= 0.001, m=0.984, a_m=1.000
+22093.8s 1704 (Train) e=42 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22107.9s 1705 (Train) e=42 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22121.1s 1706 (Train) e=42 b=420 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+22134.6s 1707 (Train) e=42 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22148.5s 1708 (Train) e=42 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22161.6s 1709 (Train) e=42 b=480 l=0.006, a_l= 0.001, m=1.000, a_m=1.000
+22175.3s 1710 (Train) e=42 b=500 l=0.018, a_l= 0.001, m=0.984, a_m=1.000
+22189.3s 1711 (Train) e=42 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22202.4s 1712 (Train) e=42 b=540 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22216.1s 1713 (Train) e=42 b=560 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+22230.6s 1714 (Train) e=42 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22244.4s 1715 (Train) e=42 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22258.2s 1716 (Train) e=42 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22258.6s 1717 (Train) e=42 b=621 l=0.002, a_l= 0.001, m=1.000, a_m=1.000
+22342.7s 1718 (Eval) e=42 b=155 l=0.000, a_l= 0.159, m=1.000, a_m=0.975
+22342.7s 1719 ********************
+22342.7s 1720 EPOCH: 43 started
+22344.5s 1721 (Train) e=43 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+22358.7s 1722 (Train) e=43 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+22372.1s 1723 (Train) e=43 b=40 l=0.011, a_l= 0.001, m=1.000, a_m=1.000
+22385.8s 1724 (Train) e=43 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+22399.7s 1725 (Train) e=43 b=80 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+22413.3s 1726 (Train) e=43 b=100 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+22427.2s 1727 (Train) e=43 b=120 l=0.002, a_l= 0.001, m=1.000, a_m=1.000
+22440.5s 1728 (Train) e=43 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22454.2s 1729 (Train) e=43 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22468.3s 1730 (Train) e=43 b=180 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+22481.5s 1731 (Train) e=43 b=200 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22495.0s 1732 (Train) e=43 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22509.2s 1733 (Train) e=43 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22522.5s 1734 (Train) e=43 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22536.0s 1735 (Train) e=43 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22550.4s 1736 (Train) e=43 b=300 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22563.4s 1737 (Train) e=43 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22577.1s 1738 (Train) e=43 b=340 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22591.3s 1739 (Train) e=43 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22604.8s 1740 (Train) e=43 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22618.6s 1741 (Train) e=43 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22632.8s 1742 (Train) e=43 b=420 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22645.9s 1743 (Train) e=43 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22659.5s 1744 (Train) e=43 b=460 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22673.4s 1745 (Train) e=43 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22687.0s 1746 (Train) e=43 b=500 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+22700.6s 1747 (Train) e=43 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22714.9s 1748 (Train) e=43 b=540 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+22728.2s 1749 (Train) e=43 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22741.9s 1750 (Train) e=43 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22755.9s 1751 (Train) e=43 b=600 l=0.038, a_l= 0.001, m=0.984, a_m=1.000
+22769.1s 1752 (Train) e=43 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22769.6s 1753 (Train) e=43 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22854.1s 1754 (Eval) e=43 b=155 l=0.000, a_l= 0.173, m=1.000, a_m=0.974
+22854.1s 1755 ********************
+22854.1s 1756 EPOCH: 44 started
+22855.9s 1757 (Train) e=44 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+22871.0s 1758 (Train) e=44 b=20 l=0.002, a_l= 0.002, m=1.000, a_m=0.999
+22886.4s 1759 (Train) e=44 b=40 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22900.8s 1760 (Train) e=44 b=60 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22916.1s 1761 (Train) e=44 b=80 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+22931.1s 1762 (Train) e=44 b=100 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22945.5s 1763 (Train) e=44 b=120 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22960.0s 1764 (Train) e=44 b=140 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22975.6s 1765 (Train) e=44 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+22989.6s 1766 (Train) e=44 b=180 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23004.6s 1767 (Train) e=44 b=200 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23019.5s 1768 (Train) e=44 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23034.1s 1769 (Train) e=44 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23048.7s 1770 (Train) e=44 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23064.0s 1771 (Train) e=44 b=280 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23078.1s 1772 (Train) e=44 b=300 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+23092.3s 1773 (Train) e=44 b=320 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23107.6s 1774 (Train) e=44 b=340 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23121.1s 1775 (Train) e=44 b=360 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23136.3s 1776 (Train) e=44 b=380 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23151.1s 1777 (Train) e=44 b=400 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23165.6s 1778 (Train) e=44 b=420 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+23179.8s 1779 (Train) e=44 b=440 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23195.0s 1780 (Train) e=44 b=460 l=0.002, a_l= 0.001, m=1.000, a_m=1.000
+23209.0s 1781 (Train) e=44 b=480 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23224.2s 1782 (Train) e=44 b=500 l=0.003, a_l= 0.001, m=1.000, a_m=1.000
+23239.2s 1783 (Train) e=44 b=520 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23253.1s 1784 (Train) e=44 b=540 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+23267.8s 1785 (Train) e=44 b=560 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23282.7s 1786 (Train) e=44 b=580 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23297.1s 1787 (Train) e=44 b=600 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23311.3s 1788 (Train) e=44 b=620 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23311.8s 1789 (Train) e=44 b=621 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23395.2s 1790 (Eval) e=44 b=155 l=0.327, a_l= 0.159, m=0.962, a_m=0.974
+23395.2s 1791 ********************
+23395.2s 1792 EPOCH: 45 started
+23396.9s 1793 (Train) e=45 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23410.8s 1794 (Train) e=45 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23424.7s 1795 (Train) e=45 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23438.7s 1796 (Train) e=45 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23451.9s 1797 (Train) e=45 b=80 l=0.004, a_l= 0.001, m=1.000, a_m=1.000
+23465.4s 1798 (Train) e=45 b=100 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23479.5s 1799 (Train) e=45 b=120 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23492.4s 1800 (Train) e=45 b=140 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+23506.0s 1801 (Train) e=45 b=160 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23520.2s 1802 (Train) e=45 b=180 l=0.001, a_l= 0.001, m=1.000, a_m=1.000
+23533.5s 1803 (Train) e=45 b=200 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23547.1s 1804 (Train) e=45 b=220 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23561.1s 1805 (Train) e=45 b=240 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23574.2s 1806 (Train) e=45 b=260 l=0.000, a_l= 0.001, m=1.000, a_m=1.000
+23588.0s 1807 (Train) e=45 b=280 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23602.1s 1808 (Train) e=45 b=300 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23615.1s 1809 (Train) e=45 b=320 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23628.6s 1810 (Train) e=45 b=340 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23643.0s 1811 (Train) e=45 b=360 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23656.6s 1812 (Train) e=45 b=380 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23670.3s 1813 (Train) e=45 b=400 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23684.5s 1814 (Train) e=45 b=420 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23697.8s 1815 (Train) e=45 b=440 l=0.005, a_l= 0.000, m=1.000, a_m=1.000
+23711.6s 1816 (Train) e=45 b=460 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23725.6s 1817 (Train) e=45 b=480 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23738.8s 1818 (Train) e=45 b=500 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23752.7s 1819 (Train) e=45 b=520 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23766.6s 1820 (Train) e=45 b=540 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23780.2s 1821 (Train) e=45 b=560 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23793.8s 1822 (Train) e=45 b=580 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23808.1s 1823 (Train) e=45 b=600 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23821.0s 1824 (Train) e=45 b=620 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23821.5s 1825 (Train) e=45 b=621 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23905.8s 1826 (Eval) e=45 b=155 l=0.267, a_l= 0.153, m=0.923, a_m=0.976
+23905.8s 1827 ********************
+23905.8s 1828 EPOCH: 46 started
+23907.7s 1829 (Train) e=46 b=0 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23921.6s 1830 (Train) e=46 b=20 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23935.4s 1831 (Train) e=46 b=40 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23949.5s 1832 (Train) e=46 b=60 l=0.000, a_l= 0.000, m=1.000, a_m=1.000
+23962.8s 1833 (Train) e=46 b=80 l=0.000, a_l= 0.000, m=1.000, a_m=1.000

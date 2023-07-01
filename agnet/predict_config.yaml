@@ -8,7 +8,6 @@ model:
   name: AGNet
   GENDER_FACE_MARGIN: 10
   AGE_FACE_MARGIN: 10
-  age_mae: 6.8
   description: age and gender classification neural network
   # resnet50, resnet34, efficientnet_b5
   # for efficientnet_b5 image_size should be 456
