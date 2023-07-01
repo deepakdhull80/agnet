@@ -372,6 +372,7 @@ def get_predictor(args):
     )
 
 if __name__ == '__main__':
+    import pandas as pd
     args = argparser()
     predictor = get_predictor(args)
 
@@ -394,6 +395,7 @@ if __name__ == '__main__':
     # res = predictor.predict_byarray(image)
     # print(res)
 
+
     ## test predict and save image
     for file in file_names:
         
@@ -408,38 +410,35 @@ if __name__ == '__main__':
         print(file, "completed")
 
     exit()
+    '''
 
-    # from glob import glob
-    # import pandas as pd
-    # paths = glob("D:\WORK/freelance/agnet/dataset/utkface/*/*.jpg")
-    # save_path = "D:\WORK/freelance/agnet\dataset/age-dataset"
-    # for i, p in tqdm(enumerate(paths), total=len(paths)):
-    #     try:
-    #         image = Image.open(p)
-    #         label = int(p.split("/")[-1].split("\\")[-1].split("_")[0])
-    #         predictor.extract_face(image,label,save_path,i)
-    #     except:
-    #         pass
-    # exit()
 
-    df = pd.DataFrame()
-    df['file_paths'] = paths
-    df['file_paths'] = df['file_paths'].map(lambda x: x.replace("\\",'/'))
-    df['gender'] = df['file_paths'].map(lambda x: int(x.split("/")[-1].split('_')[1]))
-    df['age'] = df['file_paths'].map(lambda x: int(x.split("/")[-1].split('_')[0]))
+    # df = pd.DataFrame()
+    # df['file_paths'] = paths
+    # df['file_paths'] = df['file_paths'].map(lambda x: x.replace("\\",'/'))
+    # df['gender'] = df['file_paths'].map(lambda x: int(x.split("/")[-1].split('_')[1]))
+    # df['age'] = df['file_paths'].map(lambda x: int(x.split("/")[-1].split('_')[0]))
+    df = pd.read_parquet("dataset/eval/audience.pq")
     gender_predict = []
     age_predict = []
-    for file in tqdm(paths, total=len(paths)):
+    for idx, row in tqdm(df.iterrows(), total=df.shape[0]):
         try:
+            file = row['img_path']
+            if not os.path.exists(file):
+                raise Exception("file path not found")
             res = predictor.predict_byfile(file)
-            if len(res['predict'])==0:
-                gender_predict.append(None)
-                continue
-            p = "|".join(map(lambda x: '0' if x['gender'] == 'male' else '1',res['predict']))
-            gender_predict.append(p)
+            predict = res['predict']
+            if len(predict)==0:
+                raise Exception("len of predict is zero")
+            gender_predict.append(predict[0]['gender'])
+            age_predict.append(predict[0]['age'])
         except Exception as e:
             print(e)
             gender_predict.append(None)
+            age_predict.append(None)
 
     df['p_gender'] = gender_predict
-    df.to_csv("test/eval/eval_utkface.csv",index=False)
+    df['p_age'] = age_predict
+    df.to_csv("dataset/eval/eval_audience_result.csv",index=False)
+
+    '''

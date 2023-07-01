@@ -13,7 +13,7 @@ model:
   # resnet50, resnet34, efficientnet_b5
   # for efficientnet_b5 image_size should be 456
   age_base_model: resnet34
-  age_model_path: cp/model_age_estimator_resnet34_22.pt
+  age_model_path: cp/model_age_estimator_resnet34_20_better.pt
   gender_base_model: resnet34
   gender_model_path: cp/model_gender_estimation_resnet34_12_better.pt
   FACE_PRESENT_THRESHOLD: 0.8
