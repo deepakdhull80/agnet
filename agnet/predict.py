@@ -328,8 +328,8 @@ def argparser():
     parser.add_argument("--device",'-d',dest="device",default="cpu",choices=['cpu','cuda'])
     return parser.parse_args()
 
-def load_weights(model: torch.nn.Module, ck_path):
-    params = torch.load(ck_path)
+def load_weights(model: torch.nn.Module, ck_path, map_location='cpu'):
+    params = torch.load(ck_path,map_location=map_location)
     print(model.load_state_dict(params['state_dict']))
     return model
 
@@ -350,7 +350,7 @@ def get_predictor(args):
         estimator='gender'
     )
     gender_model = AGNet(gender_base_model,  **gender_dict)
-    gender_model = load_weights(gender_model, config['model']['gender_model_path'])
+    gender_model = load_weights(gender_model, config['model']['gender_model_path'], args.device)
 
     AGE_FACE_MARGIN = config['model']['AGE_FACE_MARGIN']
     
@@ -363,7 +363,7 @@ def get_predictor(args):
         estimator='age'
     )
     age_model = AGNet(age_base_model,  **age_dict)
-    age_model = load_weights(age_model, config['model']['age_model_path'])
+    age_model = load_weights(age_model, config['model']['age_model_path'], args.device)
     
     return Predictor(
         mtcnn, 
