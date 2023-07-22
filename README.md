@@ -2,6 +2,7 @@
 ## About
 AGNET - age and gender network. In which, we focuses on age estimation, gender classification from still facial images of an individual. We train different models for each problem. We trained 2 CNN based network completely 2 different task.
 
+![alt text](https://github.com/deepakdhull80/agnet/blob/main/test/images/predict/owen-cannon-6TLCSMj8zgE-unsplash.jpg?raw=true)
 ### Dataset
 
 Here i have used listed datasets to train AGNET.
